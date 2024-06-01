@@ -1,5 +1,6 @@
 #include <ME.h>
 #include <CClock.h>
+#include <aaa_util.h>
 #include <MultiEnstring.h>
 #include <toml.hpp>
 #include <sol/sol.hpp>
@@ -170,7 +171,6 @@ void init(){
     glGenVertexArrays(numVAOs,vao);
     glBindVertexArray(vao[0]);
 
-
     vbo.AppendVBOs(numVBOs);
 
     float rect[] = {
@@ -218,10 +218,22 @@ void init(){
     cube.BindVBO(vbo[3]);
     vcx.SetBindings(0,1);
 
-    shader.CreateProgram();
-    shader.LoadLinkLogF((resbeg + MAIN_VERT).c_str(),(resbeg + MAIN_FRAG).c_str());
-    game.PushObj({&vcx,&cube});
+    {
+        ifstream ifs(resbeg + MAIN_SHADER_LUA);
+        string data = alib::Util::readAll(ifs);
+        ifs.close();
 
+        shader_inter.set("vert","");
+        shader_inter.set("frag","");
+        shader_inter.script(data);
+
+        string vert = shader_inter["vert"];
+        string frag = shader_inter["frag"];
+
+        shader.CreateProgram();
+        shader.LoadLinkLogM(vert.c_str(),frag.c_str());
+        game.PushObj({&vcx,&cube});
+    }
     test.LoadFromFile((resbeg + "/imgs/sb.png").c_str());
     test.UploadToOpenGL();
 

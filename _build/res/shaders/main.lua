@@ -1,3 +1,4 @@
+vert = [[
 #version 460 core
 
 layout(location = 0) in vec3 pos;
@@ -16,4 +17,21 @@ void main(){
     coord = cd;
     depth = gl_InstanceID;
 }
+]]
 
+frag = [[
+#version 430
+#extension GL_EXT_gpu_shader4 : enable
+
+
+layout(binding = 0) uniform sampler2DArray tex;
+
+out vec4 color;
+in vec2 coord;
+in flat int depth;
+
+void main(){
+    vec4 pick = texture2DArray(tex,vec3(coord,depth));
+    color = pick;
+}
+]]

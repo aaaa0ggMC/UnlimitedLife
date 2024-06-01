@@ -16,3 +16,4 @@ Used Libraries 使用的库
     OUTER SFML develop/2.6+ https://github.com/SFML/SFML/tree/7987d3cedc7190ca639ece7a6190af5544ec7ec7 ZLIB
     OUTER TOML++ v3.4.0 https://github.com/marzer/tomlplusplus/releases/tag/v3.4.0 MIT
     OUTER SOL2 v3.3.0 https://github.com/ThePhD/sol2/releases/tag/v3.3.0 MIT
+    OUTER LUA v5.4 https://www.lua.org/versions.html LUA(Commerce Free)
