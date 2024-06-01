@@ -1,0 +1,20 @@
+Compiler 编译器
+    Compiler-w64devkit-1.23.0
+    https://github.com/skeeto/w64devkit/releases/tag/v1.23.0
+
+Used Libraries 使用的库
+    INNER aaaa0ggmcLib
+    INNER MyEngine
+
+    OUTER RapidJson
+    OUTER GLEW
+    OUTER GLFW3
+    OUTER Freetype2
+    OUTER GoogleBenchmark
+    OUTER GLM
+    OUTER SOLOUD
+    OUTER LIBNOISE
+    OUTER SFML
+    OUTER TOML++
+
+    OUTER-HIDDEN SDL2

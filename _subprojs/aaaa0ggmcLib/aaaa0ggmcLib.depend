@@ -1,0 +1,235 @@
+# depslib dependency file v1.0
+1712147350 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\cclock.cpp
+	"CClock.h"
+
+1712147350 e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\cclock.h
+	<windows.h>
+
+1716642715 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\logger.cpp
+	<windows.h>
+	"Logger.h"
+	<time.h>
+	<string.h>
+	<stdlib.h>
+	<iostream>
+	<malloc.h>
+	"aaa_util.h"
+
+1716642645 e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\logger.h
+	<memory>
+	<string>
+	<windows.h>
+	<fstream>
+	"CClock.h"
+
+1716642949 e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\aaa_util.h
+	<string>
+	<vector>
+	<fstream>
+
+1716643025 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\aaa_util.cpp
+	"aaa_util.h"
+	<time.h>
+	<malloc.h>
+	<stdio.h>
+	<windows.h>
+	<direct.h>
+	<io.h>
+	<sys/stat.h>
+	<stdint.h>
+	<psapi.h>
+
+1682668230 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\rapidjson.cpp
+	"rapidjson.h"
+	<rapidjson/rapidjson.h>
+	<rapidjson/document.h>
+	<rapidjson/allocators.h>
+	<rapidjson/stringbuffer.h>
+	<rapidjson/writer.h>
+
+1682685392 e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\rapidjson.h
+	<string>
+	<vector>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\rapidjson.h
+	<cstdlib>
+	<cstring>
+	"rapidjson/..."
+	<string>
+	"msinttypes/stdint.h"
+	"msinttypes/inttypes.h"
+	<stdint.h>
+	<inttypes.h>
+	<endian.h>
+	"rapidjson/..."
+	<cassert>
+	<utility>
+	<cassert>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\msinttypes\stdint.h
+	<stdint.h>
+	<limits.h>
+	<wchar.h>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\msinttypes\inttypes.h
+	"stdint.h"
+	<inttypes.h>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\document.h
+	"reader.h"
+	"internal/meta.h"
+	"internal/strfunc.h"
+	"memorystream.h"
+	"encodedstream.h"
+	<new>
+	<limits>
+	<compare>
+	<iterator>
+	<map>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\reader.h
+	"allocators.h"
+	"stream.h"
+	"encodedstream.h"
+	"internal/clzll.h"
+	"internal/meta.h"
+	"internal/stack.h"
+	"internal/strtod.h"
+	<limits>
+	<intrin.h>
+	<nmmintrin.h>
+	<emmintrin.h>
+	<arm_neon.h>
+	<stdexcept>
+	"rapidjson/error/error.h"
+	"rapidjson/reader.h"
+	"error/error.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\allocators.h
+	"rapidjson.h"
+	"internal/meta.h"
+	<memory>
+	<type_traits>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\meta.h
+	"../rapidjson.h"
+	<type_traits>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\stream.h
+	"rapidjson.h"
+	"encodings.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\encodings.h
+	"rapidjson.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\encodedstream.h
+	"stream.h"
+	"memorystream.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\memorystream.h
+	"stream.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\clzll.h
+	"../rapidjson.h"
+	<intrin.h>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\stack.h
+	"../allocators.h"
+	"swap.h"
+	<cstddef>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\swap.h
+	"../rapidjson.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\strtod.h
+	"ieee754.h"
+	"biginteger.h"
+	"diyfp.h"
+	"pow10.h"
+	<climits>
+	<limits>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\ieee754.h
+	"../rapidjson.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\biginteger.h
+	"../rapidjson.h"
+	<intrin.h>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\diyfp.h
+	"../rapidjson.h"
+	"clzll.h"
+	<limits>
+	<intrin.h>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\pow10.h
+	"../rapidjson.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\error\error.h
+	"../rapidjson.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\strfunc.h
+	"../stream.h"
+	<cwchar>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\stringbuffer.h
+	"stream.h"
+	"internal/stack.h"
+	<utility>
+	"internal/stack.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\writer.h
+	"stream.h"
+	"internal/clzll.h"
+	"internal/meta.h"
+	"internal/stack.h"
+	"internal/strfunc.h"
+	"internal/dtoa.h"
+	"internal/itoa.h"
+	"stringbuffer.h"
+	<new>
+	<intrin.h>
+	<nmmintrin.h>
+	<emmintrin.h>
+	<arm_neon.h>
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\dtoa.h
+	"itoa.h"
+	"diyfp.h"
+	"ieee754.h"
+
+1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\itoa.h
+	"../rapidjson.h"
+
+1716643238 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\multienstring.cpp
+	"MultiEnString.h"
+	"aaa_util.h"
+	<locale>
+	<codecvt>
+	<string.h>
+	<windows.h>
+
+1712290121 e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\multienstring.h
+	<string>
+
+1716643287 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\translator.cpp
+	"Translator.h"
+	"aaa_util.h"
+	"rapidjson.h"
+	<unordered_map>
+	<algorithm>
+	<windows.h>
+
+1716643268 e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\translator.h
+	<string>
+	<vector>
+	<unordered_map>
+	"MultiEnString.h"
+	<stdarg.h>
+
+1682668832 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\main.cpp
+	"main.h"
+
+1682685506 e:\unlimitedlife\_subprojs\aaaa0ggmclib\main.h
+	<windows.h>
+

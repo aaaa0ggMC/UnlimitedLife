@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="aaaa0ggmcLib" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="com/;def/;comhds/" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../_build/aaaa0ggmcLibD" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="user32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="../../_build/aaaa0ggmcLib" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="user32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++20" />
+			<Add option="-fexceptions" />
+			<Add directory="../../_depend/headers" />
+		</Compiler>
+		<Linker>
+			<Add option="-static-libstdc++" />
+			<Add option="-static-libgcc" />
+			<Add library="user32" />
+			<Add library="winmm" />
+		</Linker>
+		<Unit filename="../../_depend/headers/CClock.h">
+			<Option virtualFolder="comhds/" />
+		</Unit>
+		<Unit filename="../../_depend/headers/Logger.h">
+			<Option virtualFolder="comhds/" />
+		</Unit>
+		<Unit filename="../../_depend/headers/MultiEnString.h">
+			<Option virtualFolder="comhds/" />
+		</Unit>
+		<Unit filename="../../_depend/headers/Translator.h">
+			<Option virtualFolder="comhds/" />
+		</Unit>
+		<Unit filename="../../_depend/headers/aaa_util.h">
+			<Option virtualFolder="comhds/" />
+		</Unit>
+		<Unit filename="../../_depend/headers/rapidjson.h">
+			<Option virtualFolder="comhds/" />
+		</Unit>
+		<Unit filename="headers/CClock.cpp">
+			<Option virtualFolder="com/" />
+		</Unit>
+		<Unit filename="headers/Logger.cpp">
+			<Option virtualFolder="com/" />
+		</Unit>
+		<Unit filename="headers/MultiEnString.cpp">
+			<Option virtualFolder="com/" />
+		</Unit>
+		<Unit filename="headers/Translator.cpp">
+			<Option virtualFolder="com/" />
+		</Unit>
+		<Unit filename="headers/aaa_util.cpp">
+			<Option virtualFolder="com/" />
+		</Unit>
+		<Unit filename="headers/rapidjson.cpp">
+			<Option virtualFolder="com/" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option virtualFolder="def/" />
+		</Unit>
+		<Unit filename="main.h">
+			<Option virtualFolder="def/" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
