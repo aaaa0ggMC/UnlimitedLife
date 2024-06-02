@@ -16,8 +16,10 @@
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
+					<Add option="-Wfatal-errors" />
 					<Add option="-Wall" />
 					<Add option="-g" />
+					<Add option="-DDEBUG" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -63,8 +65,99 @@
 		</Linker>
 		<Unit filename="../../_depend/headers/ME.h">
 			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="ME.cpp">
+		<Unit filename="../../_depend/headers/com/camera.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/font.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/gobject.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/lights.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/macros.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/me_math.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/model.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/program.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/shader.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/texture.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/util/GPUInfo.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/util/glsupport.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/utility.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/vbo.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/window.h">
+			<Option virtualFolder="headers/" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="camera.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="font.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="gobject.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="me_math.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="model.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="program.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="shader.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="texture.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="utility.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="vbo.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="window.cpp">
 			<Option virtualFolder="main/" />
 		</Unit>
 		<Extensions />

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1716953894 source:e:\unlimitedlife\_subprojs\myengine\me.cpp
+1717304178 source:e:\unlimitedlife\_subprojs\myengine\me.cpp
 	"ME.h"
 	<sys/stat.h>
 	<GLFW/glfw3.h>
@@ -12,7 +12,6 @@
 	<sstream>
 	<atomic>
 	<aaa_util.h>
-	<stb_image.h>
 	<string.h>
 
 1716638628 e:\unlimitedlife\_subprojs\myengine\me.h
@@ -1026,24 +1025,7 @@
 	"stbi_ext_c.h"
 	"stbi_qoi_c.h"
 
-1716638628 e:\unlimitedlife\_depend\headers\me.h
-	<GL/glew.h>
-	<GLFW/glfw3.h>
-	<glm/glm.hpp>
-	<glm/gtc/type_ptr.hpp>
-	<glm/gtc/matrix_transform.hpp>
-	<glm/gtc/quaternion.hpp>
-	<string>
-	<iostream>
-	<unordered_set>
-	<vector>
-	<thread>
-	<stdlib.h>
-	<omp.h>
-	<unordered_map>
-	<functional>
-	<MultiEnString.h>
-	<ft2build.h>
+1717303837 e:\unlimitedlife\_depend\headers\me.h
 
 1712290121 e:\unlimitedlife\_depend\headers\multienstring.h
 	<string>
@@ -1052,4 +1034,137 @@
 	<string>
 	<vector>
 	<fstream>
+
+1717304088 source:e:\unlimitedlife\_subprojs\myengine\font.cpp
+	"com/font.h"
+	<MultiEnString.h>
+
+1717304001 e:\unlimitedlife\_depend\headers\com\font.h
+	<com/utility.h>
+	<com/texture.h>
+	<unordered_map>
+	<ft2build.h>
+
+1717303919 e:\unlimitedlife\_depend\headers\com\utility.h
+	<string>
+	<unordered_set>
+	<com/macros.h>
+	"util/GPUInfo.h"
+	"util/glsupport.h"
+
+1717304073 e:\unlimitedlife\_depend\headers\com\macros.h
+
+1717303950 e:\unlimitedlife\_depend\headers\com\util\gpuinfo.h
+	<string>
+	<vector>
+
+1717303339 e:\unlimitedlife\_depend\headers\com\util\glsupport.h
+	<GL/glew.h>
+
+1717303978 e:\unlimitedlife\_depend\headers\com\texture.h
+	<GL/glew.h>
+	<com/macros.h>
+	<com/utility.h>
+
+1717304135 source:e:\unlimitedlife\_subprojs\myengine\gobject.cpp
+	<com/gobject.h>
+
+1717303928 e:\unlimitedlife\_depend\headers\com\gobject.h
+	<GL/glew.h>
+	<glm/gtc/type_ptr.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/quaternion.hpp>
+	<com/vbo.h>
+	<com/macros.h>
+	<com/utility.h>
+
+1717303937 e:\unlimitedlife\_depend\headers\com\vbo.h
+	<GL/glew.h>
+	<vector>
+	<com/macros.h>
+	<com/utility.h>
+
+1717304119 source:e:\unlimitedlife\_subprojs\myengine\camera.cpp
+	<com/camera.h>
+	<com/window.h>
+
+1717303750 e:\unlimitedlife\_depend\headers\com\camera.h
+	"gobject.h"
+	<vector>
+	"macros.h"
+	"utility.h"
+
+1717304151 e:\unlimitedlife\_depend\headers\com\window.h
+	<com/utility.h>
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+	<glm/glm.hpp>
+	<glm/gtc/type_ptr.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/quaternion.hpp>
+	<thread>
+	<com/camera.h>
+	<com/model.h>
+	<com/gobject.h>
+	<com/utility.h>
+
+1717304169 e:\unlimitedlife\_depend\headers\com\model.h
+	<com/gobject.h>
+	<vector>
+	<com/vbo.h>
+	<com/utility.h>
+
+1717304183 source:e:\unlimitedlife\_subprojs\myengine\me_math.cpp
+	<com/me_math.h>
+
+1717303619 e:\unlimitedlife\_depend\headers\com\me_math.h
+	"gobject.h"
+
+1717304194 source:e:\unlimitedlife\_subprojs\myengine\program.cpp
+	"com/program.h"
+
+1717303779 e:\unlimitedlife\_depend\headers\com\program.h
+	"gobject.h"
+	<vector>
+
+1717304238 source:e:\unlimitedlife\_subprojs\myengine\shader.cpp
+	<com/shader.h>
+	<com/utility.h>
+	<fstream>
+
+1717304248 e:\unlimitedlife\_depend\headers\com\shader.h
+	<GL/glew.h>
+	<glm/glm.hpp>
+	<glm/gtc/type_ptr.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/quaternion.hpp>
+	<string>
+	<com/macros.h>
+	<com/utility.h>
+
+1717304263 source:e:\unlimitedlife\_subprojs\myengine\model.cpp
+	<com/model.h>
+	<memory>
+	<sstream>
+	<fstream>
+
+1717304271 source:e:\unlimitedlife\_subprojs\myengine\texture.cpp
+	<com/texture.h>
+	<com/utility.h>
+	<math.h>
+	<stb_image.h>
+
+1717304288 source:e:\unlimitedlife\_subprojs\myengine\vbo.cpp
+	<com/vbo.h>
+
+1717304345 source:e:\unlimitedlife\_subprojs\myengine\utility.cpp
+	<com/utility.h>
+	<iostream>
+	<sys/stat.h>
+	<GLFW/glfw3.h>
+
+1717304370 source:e:\unlimitedlife\_subprojs\myengine\window.cpp
+	<com/window.h>
+	<GLFW/glfw3native.h>
+	<com/texture.h>
 
