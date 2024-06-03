@@ -5032,812 +5032,898 @@ EXPORTS
     _glfwChooseFBConfig @5031
     _glfwChooseVideoMode @5032
     _glfwCompareVideoModes @5033
-    _glfwCreateContextEGL @5034
-    _glfwCreateContextOSMesa @5035
-    _glfwCreateContextWGL @5036
-    _glfwCreateUTF8FromWideStringWin32 @5037
-    _glfwCreateWideStringFromUTF8Win32 @5038
-    _glfwDefaultMappings @5039 DATA
-    _glfwDetectJoystickConnectionWin32 @5040
-    _glfwDetectJoystickDisconnectionWin32 @5041
-    _glfwEncodeUTF8 @5042
-    _glfwFreeGammaArrays @5043
-    _glfwFreeJoystick @5044
-    _glfwFreeMonitor @5045
-    _glfwGetMonitorContentScaleWin32 @5046
-    _glfwGetVulkanResultString @5047
-    _glfwInitEGL @5048
-    _glfwInitGamepadMappings @5049
-    _glfwInitJoysticksWin32 @5050
-    _glfwInitOSMesa @5051
-    _glfwInitTimerWin32 @5052
-    _glfwInitVulkan @5053
-    _glfwInitWGL @5054
-    _glfwInputChar @5055
-    _glfwInputCursorEnter @5056
-    _glfwInputCursorPos @5057
-    _glfwInputDrop @5058
-    _glfwInputError @5059
-    _glfwInputErrorWin32 @5060
-    _glfwInputFramebufferSize @5061
-    _glfwInputJoystick @5062
-    _glfwInputJoystickAxis @5063
-    _glfwInputJoystickButton @5064
-    _glfwInputJoystickHat @5065
-    _glfwInputKey @5066
-    _glfwInputMonitor @5067
-    _glfwInputMonitorWindow @5068
-    _glfwInputMouseClick @5069
-    _glfwInputScroll @5070
-    _glfwInputWindowCloseRequest @5071
-    _glfwInputWindowContentScale @5072
-    _glfwInputWindowDamage @5073
-    _glfwInputWindowFocus @5074
-    _glfwInputWindowIconify @5075
-    _glfwInputWindowMaximize @5076
-    _glfwInputWindowMonitor @5077
-    _glfwInputWindowPos @5078
-    _glfwInputWindowSize @5079
-    _glfwIsValidContextConfig @5080
-    _glfwIsWindows10BuildOrGreaterWin32 @5081
-    _glfwIsWindowsVersionOrGreaterWin32 @5082
-    _glfwParseUriList @5083
-    _glfwPlatformCreateCursor @5084
-    _glfwPlatformCreateMutex @5085
-    _glfwPlatformCreateStandardCursor @5086
-    _glfwPlatformCreateTls @5087
-    _glfwPlatformCreateWindow @5088
-    _glfwPlatformCreateWindowSurface @5089
-    _glfwPlatformDestroyCursor @5090
-    _glfwPlatformDestroyMutex @5091
-    _glfwPlatformDestroyTls @5092
-    _glfwPlatformDestroyWindow @5093
-    _glfwPlatformFocusWindow @5094
-    _glfwPlatformFramebufferTransparent @5095
-    _glfwPlatformFreeMonitor @5096
-    _glfwPlatformGetClipboardString @5097
-    _glfwPlatformGetCursorPos @5098
-    _glfwPlatformGetFramebufferSize @5099
-    _glfwPlatformGetGammaRamp @5100
-    _glfwPlatformGetKeyScancode @5101
-    _glfwPlatformGetMonitorContentScale @5102
-    _glfwPlatformGetMonitorPos @5103
-    _glfwPlatformGetMonitorWorkarea @5104
-    _glfwPlatformGetPhysicalDevicePresentationSupport @5105
-    _glfwPlatformGetRequiredInstanceExtensions @5106
-    _glfwPlatformGetScancodeName @5107
-    _glfwPlatformGetTimerFrequency @5108
-    _glfwPlatformGetTimerValue @5109
-    _glfwPlatformGetTls @5110
-    _glfwPlatformGetVersionString @5111
-    _glfwPlatformGetVideoMode @5112
-    _glfwPlatformGetVideoModes @5113
-    _glfwPlatformGetWindowContentScale @5114
-    _glfwPlatformGetWindowFrameSize @5115
-    _glfwPlatformGetWindowOpacity @5116
-    _glfwPlatformGetWindowPos @5117
-    _glfwPlatformGetWindowSize @5118
-    _glfwPlatformHideWindow @5119
-    _glfwPlatformIconifyWindow @5120
-    _glfwPlatformInit @5121
-    _glfwPlatformLockMutex @5122
-    _glfwPlatformMaximizeWindow @5123
-    _glfwPlatformPollEvents @5124
-    _glfwPlatformPollJoystick @5125
-    _glfwPlatformPostEmptyEvent @5126
-    _glfwPlatformRawMouseMotionSupported @5127
-    _glfwPlatformRequestWindowAttention @5128
-    _glfwPlatformRestoreWindow @5129
-    _glfwPlatformSetClipboardString @5130
-    _glfwPlatformSetCursor @5131
-    _glfwPlatformSetCursorMode @5132
-    _glfwPlatformSetCursorPos @5133
-    _glfwPlatformSetGammaRamp @5134
-    _glfwPlatformSetRawMouseMotion @5135
-    _glfwPlatformSetTls @5136
-    _glfwPlatformSetWindowAspectRatio @5137
-    _glfwPlatformSetWindowDecorated @5138
-    _glfwPlatformSetWindowFloating @5139
-    _glfwPlatformSetWindowIcon @5140
-    _glfwPlatformSetWindowMonitor @5141
-    _glfwPlatformSetWindowOpacity @5142
-    _glfwPlatformSetWindowPos @5143
-    _glfwPlatformSetWindowResizable @5144
-    _glfwPlatformSetWindowSize @5145
-    _glfwPlatformSetWindowSizeLimits @5146
-    _glfwPlatformSetWindowTitle @5147
-    _glfwPlatformShowWindow @5148
-    _glfwPlatformTerminate @5149
-    _glfwPlatformUnlockMutex @5150
-    _glfwPlatformUpdateGamepadGUID @5151
-    _glfwPlatformWaitEvents @5152
-    _glfwPlatformWaitEventsTimeout @5153
-    _glfwPlatformWindowFocused @5154
-    _glfwPlatformWindowHovered @5155
-    _glfwPlatformWindowIconified @5156
-    _glfwPlatformWindowMaximized @5157
-    _glfwPlatformWindowVisible @5158
-    _glfwPollMonitorsWin32 @5159
-    _glfwRefreshContextAttribs @5160
-    _glfwRegisterWindowClassWin32 @5161
-    _glfwRestoreVideoModeWin32 @5162
-    _glfwSetVideoModeWin32 @5163
-    _glfwSplitBPP @5164
-    _glfwStringInExtensionString @5165
-    _glfwTerminateEGL @5166
-    _glfwTerminateJoysticksWin32 @5167
-    _glfwTerminateOSMesa @5168
-    _glfwTerminateVulkan @5169
-    _glfwTerminateWGL @5170
-    _glfwUnregisterWindowClassWin32 @5171
-    _glfwUpdateKeyNamesWin32 @5172
-    _glfw_fmaxf @5173
-    _glfw_fminf @5174
-    _glfw_max @5175
-    _glfw_min @5176
-    _glfw_strdup @5177
-    _pthread_cleanup_dest @5178
-    _pthread_get_state @5179
-    _pthread_invoke_cancel @5180
-    _pthread_key_dest @5181 DATA
-    _pthread_rel_time_in_ms @5182
-    _pthread_set_state @5183
-    _pthread_setnobreak @5184
-    _pthread_time_in_ms @5185
-    _pthread_time_in_ms_from_timespec @5186
-    _pthread_tryjoin @5187
-    _pthread_wait_for_multiple_objects @5188
-    _pthread_wait_for_single_object @5189
-    af_adlm_dflt_style_class @5190 DATA
-    af_adlm_nonbase_uniranges @5191 DATA
-    af_adlm_script_class @5192 DATA
-    af_adlm_uniranges @5193 DATA
-    af_arab_dflt_style_class @5194 DATA
-    af_arab_nonbase_uniranges @5195 DATA
-    af_arab_script_class @5196 DATA
-    af_arab_uniranges @5197 DATA
-    af_armn_dflt_style_class @5198 DATA
-    af_armn_nonbase_uniranges @5199 DATA
-    af_armn_script_class @5200 DATA
-    af_armn_uniranges @5201 DATA
-    af_autofitter_interface @5202 DATA
-    af_avst_dflt_style_class @5203 DATA
-    af_avst_nonbase_uniranges @5204 DATA
-    af_avst_script_class @5205 DATA
-    af_avst_uniranges @5206 DATA
-    af_bamu_dflt_style_class @5207 DATA
-    af_bamu_nonbase_uniranges @5208 DATA
-    af_bamu_script_class @5209 DATA
-    af_bamu_uniranges @5210 DATA
-    af_beng_dflt_style_class @5211 DATA
-    af_beng_nonbase_uniranges @5212 DATA
-    af_beng_script_class @5213 DATA
-    af_beng_uniranges @5214 DATA
-    af_blue_strings @5215 DATA
-    af_blue_stringsets @5216 DATA
-    af_buhd_dflt_style_class @5217 DATA
-    af_buhd_nonbase_uniranges @5218 DATA
-    af_buhd_script_class @5219 DATA
-    af_buhd_uniranges @5220 DATA
-    af_cakm_dflt_style_class @5221 DATA
-    af_cakm_nonbase_uniranges @5222 DATA
-    af_cakm_script_class @5223 DATA
-    af_cakm_uniranges @5224 DATA
-    af_cans_dflt_style_class @5225 DATA
-    af_cans_nonbase_uniranges @5226 DATA
-    af_cans_script_class @5227 DATA
-    af_cans_uniranges @5228 DATA
-    af_cari_dflt_style_class @5229 DATA
-    af_cari_nonbase_uniranges @5230 DATA
-    af_cari_script_class @5231 DATA
-    af_cari_uniranges @5232 DATA
-    af_cher_dflt_style_class @5233 DATA
-    af_cher_nonbase_uniranges @5234 DATA
-    af_cher_script_class @5235 DATA
-    af_cher_uniranges @5236 DATA
-    af_cjk_writing_system_class @5237 DATA
-    af_copt_dflt_style_class @5238 DATA
-    af_copt_nonbase_uniranges @5239 DATA
-    af_copt_script_class @5240 DATA
-    af_copt_uniranges @5241 DATA
-    af_cprt_dflt_style_class @5242 DATA
-    af_cprt_nonbase_uniranges @5243 DATA
-    af_cprt_script_class @5244 DATA
-    af_cprt_uniranges @5245 DATA
-    af_cyrl_c2cp_style_class @5246 DATA
-    af_cyrl_c2sc_style_class @5247 DATA
-    af_cyrl_dflt_style_class @5248 DATA
-    af_cyrl_nonbase_uniranges @5249 DATA
-    af_cyrl_ordn_style_class @5250 DATA
-    af_cyrl_pcap_style_class @5251 DATA
-    af_cyrl_script_class @5252 DATA
-    af_cyrl_sinf_style_class @5253 DATA
-    af_cyrl_smcp_style_class @5254 DATA
-    af_cyrl_subs_style_class @5255 DATA
-    af_cyrl_sups_style_class @5256 DATA
-    af_cyrl_titl_style_class @5257 DATA
-    af_cyrl_uniranges @5258 DATA
-    af_deva_dflt_style_class @5259 DATA
-    af_deva_nonbase_uniranges @5260 DATA
-    af_deva_script_class @5261 DATA
-    af_deva_uniranges @5262 DATA
-    af_dsrt_dflt_style_class @5263 DATA
-    af_dsrt_nonbase_uniranges @5264 DATA
-    af_dsrt_script_class @5265 DATA
-    af_dsrt_uniranges @5266 DATA
-    af_dummy_writing_system_class @5267 DATA
-    af_ethi_dflt_style_class @5268 DATA
-    af_ethi_nonbase_uniranges @5269 DATA
-    af_ethi_script_class @5270 DATA
-    af_ethi_uniranges @5271 DATA
-    af_geok_dflt_style_class @5272 DATA
-    af_geok_nonbase_uniranges @5273 DATA
-    af_geok_script_class @5274 DATA
-    af_geok_uniranges @5275 DATA
-    af_geor_dflt_style_class @5276 DATA
-    af_geor_nonbase_uniranges @5277 DATA
-    af_geor_script_class @5278 DATA
-    af_geor_uniranges @5279 DATA
-    af_glag_dflt_style_class @5280 DATA
-    af_glag_nonbase_uniranges @5281 DATA
-    af_glag_script_class @5282 DATA
-    af_glag_uniranges @5283 DATA
-    af_goth_dflt_style_class @5284 DATA
-    af_goth_nonbase_uniranges @5285 DATA
-    af_goth_script_class @5286 DATA
-    af_goth_uniranges @5287 DATA
-    af_grek_c2cp_style_class @5288 DATA
-    af_grek_c2sc_style_class @5289 DATA
-    af_grek_dflt_style_class @5290 DATA
-    af_grek_nonbase_uniranges @5291 DATA
-    af_grek_ordn_style_class @5292 DATA
-    af_grek_pcap_style_class @5293 DATA
-    af_grek_script_class @5294 DATA
-    af_grek_sinf_style_class @5295 DATA
-    af_grek_smcp_style_class @5296 DATA
-    af_grek_subs_style_class @5297 DATA
-    af_grek_sups_style_class @5298 DATA
-    af_grek_titl_style_class @5299 DATA
-    af_grek_uniranges @5300 DATA
-    af_gujr_dflt_style_class @5301 DATA
-    af_gujr_nonbase_uniranges @5302 DATA
-    af_gujr_script_class @5303 DATA
-    af_gujr_uniranges @5304 DATA
-    af_guru_dflt_style_class @5305 DATA
-    af_guru_nonbase_uniranges @5306 DATA
-    af_guru_script_class @5307 DATA
-    af_guru_uniranges @5308 DATA
-    af_hani_dflt_style_class @5309 DATA
-    af_hani_nonbase_uniranges @5310 DATA
-    af_hani_script_class @5311 DATA
-    af_hani_uniranges @5312 DATA
-    af_hebr_dflt_style_class @5313 DATA
-    af_hebr_nonbase_uniranges @5314 DATA
-    af_hebr_script_class @5315 DATA
-    af_hebr_uniranges @5316 DATA
-    af_indic_writing_system_class @5317 DATA
-    af_kali_dflt_style_class @5318 DATA
-    af_kali_nonbase_uniranges @5319 DATA
-    af_kali_script_class @5320 DATA
-    af_kali_uniranges @5321 DATA
-    af_khmr_dflt_style_class @5322 DATA
-    af_khmr_nonbase_uniranges @5323 DATA
-    af_khmr_script_class @5324 DATA
-    af_khmr_uniranges @5325 DATA
-    af_khms_dflt_style_class @5326 DATA
-    af_khms_nonbase_uniranges @5327 DATA
-    af_khms_script_class @5328 DATA
-    af_khms_uniranges @5329 DATA
-    af_knda_dflt_style_class @5330 DATA
-    af_knda_nonbase_uniranges @5331 DATA
-    af_knda_script_class @5332 DATA
-    af_knda_uniranges @5333 DATA
-    af_lao_dflt_style_class @5334 DATA
-    af_lao_nonbase_uniranges @5335 DATA
-    af_lao_script_class @5336 DATA
-    af_lao_uniranges @5337 DATA
-    af_latb_dflt_style_class @5338 DATA
-    af_latb_nonbase_uniranges @5339 DATA
-    af_latb_script_class @5340 DATA
-    af_latb_uniranges @5341 DATA
-    af_latin_writing_system_class @5342 DATA
-    af_latn_c2cp_style_class @5343 DATA
-    af_latn_c2sc_style_class @5344 DATA
-    af_latn_dflt_style_class @5345 DATA
-    af_latn_nonbase_uniranges @5346 DATA
-    af_latn_ordn_style_class @5347 DATA
-    af_latn_pcap_style_class @5348 DATA
-    af_latn_script_class @5349 DATA
-    af_latn_sinf_style_class @5350 DATA
-    af_latn_smcp_style_class @5351 DATA
-    af_latn_subs_style_class @5352 DATA
-    af_latn_sups_style_class @5353 DATA
-    af_latn_titl_style_class @5354 DATA
-    af_latn_uniranges @5355 DATA
-    af_latp_dflt_style_class @5356 DATA
-    af_latp_nonbase_uniranges @5357 DATA
-    af_latp_script_class @5358 DATA
-    af_latp_uniranges @5359 DATA
-    af_limb_dflt_style_class @5360 DATA
-    af_limb_nonbase_uniranges @5361 DATA
-    af_limb_script_class @5362 DATA
-    af_limb_uniranges @5363 DATA
-    af_lisu_dflt_style_class @5364 DATA
-    af_lisu_nonbase_uniranges @5365 DATA
-    af_lisu_script_class @5366 DATA
-    af_lisu_uniranges @5367 DATA
-    af_mlym_dflt_style_class @5368 DATA
-    af_mlym_nonbase_uniranges @5369 DATA
-    af_mlym_script_class @5370 DATA
-    af_mlym_uniranges @5371 DATA
-    af_mymr_dflt_style_class @5372 DATA
-    af_mymr_nonbase_uniranges @5373 DATA
-    af_mymr_script_class @5374 DATA
-    af_mymr_uniranges @5375 DATA
-    af_nkoo_dflt_style_class @5376 DATA
-    af_nkoo_nonbase_uniranges @5377 DATA
-    af_nkoo_script_class @5378 DATA
-    af_nkoo_uniranges @5379 DATA
-    af_none_dflt_style_class @5380 DATA
-    af_none_nonbase_uniranges @5381 DATA
-    af_none_script_class @5382 DATA
-    af_none_uniranges @5383 DATA
-    af_olck_dflt_style_class @5384 DATA
-    af_olck_nonbase_uniranges @5385 DATA
-    af_olck_script_class @5386 DATA
-    af_olck_uniranges @5387 DATA
-    af_orkh_dflt_style_class @5388 DATA
-    af_orkh_nonbase_uniranges @5389 DATA
-    af_orkh_script_class @5390 DATA
-    af_orkh_uniranges @5391 DATA
-    af_orya_dflt_style_class @5392 DATA
-    af_orya_nonbase_uniranges @5393 DATA
-    af_orya_script_class @5394 DATA
-    af_orya_uniranges @5395 DATA
-    af_osge_dflt_style_class @5396 DATA
-    af_osge_nonbase_uniranges @5397 DATA
-    af_osge_script_class @5398 DATA
-    af_osge_uniranges @5399 DATA
-    af_osma_dflt_style_class @5400 DATA
-    af_osma_nonbase_uniranges @5401 DATA
-    af_osma_script_class @5402 DATA
-    af_osma_uniranges @5403 DATA
-    af_saur_dflt_style_class @5404 DATA
-    af_saur_nonbase_uniranges @5405 DATA
-    af_saur_script_class @5406 DATA
-    af_saur_uniranges @5407 DATA
-    af_script_classes @5408 DATA
-    af_shaper_buf_create @5409
-    af_shaper_buf_destroy @5410
-    af_shaper_get_cluster @5411
-    af_shaper_get_coverage @5412
-    af_shaper_get_elem @5413
-    af_shaw_dflt_style_class @5414 DATA
-    af_shaw_nonbase_uniranges @5415 DATA
-    af_shaw_script_class @5416 DATA
-    af_shaw_uniranges @5417 DATA
-    af_sinh_dflt_style_class @5418 DATA
-    af_sinh_nonbase_uniranges @5419 DATA
-    af_sinh_script_class @5420 DATA
-    af_sinh_uniranges @5421 DATA
-    af_style_classes @5422 DATA
-    af_sund_dflt_style_class @5423 DATA
-    af_sund_nonbase_uniranges @5424 DATA
-    af_sund_script_class @5425 DATA
-    af_sund_uniranges @5426 DATA
-    af_sylo_dflt_style_class @5427 DATA
-    af_sylo_nonbase_uniranges @5428 DATA
-    af_sylo_script_class @5429 DATA
-    af_sylo_uniranges @5430 DATA
-    af_taml_dflt_style_class @5431 DATA
-    af_taml_nonbase_uniranges @5432 DATA
-    af_taml_script_class @5433 DATA
-    af_taml_uniranges @5434 DATA
-    af_tavt_dflt_style_class @5435 DATA
-    af_tavt_nonbase_uniranges @5436 DATA
-    af_tavt_script_class @5437 DATA
-    af_tavt_uniranges @5438 DATA
-    af_telu_dflt_style_class @5439 DATA
-    af_telu_nonbase_uniranges @5440 DATA
-    af_telu_script_class @5441 DATA
-    af_telu_uniranges @5442 DATA
-    af_tfng_dflt_style_class @5443 DATA
-    af_tfng_nonbase_uniranges @5444 DATA
-    af_tfng_script_class @5445 DATA
-    af_tfng_uniranges @5446 DATA
-    af_thai_dflt_style_class @5447 DATA
-    af_thai_nonbase_uniranges @5448 DATA
-    af_thai_script_class @5449 DATA
-    af_thai_uniranges @5450 DATA
-    af_tibt_dflt_style_class @5451 DATA
-    af_tibt_nonbase_uniranges @5452 DATA
-    af_tibt_script_class @5453 DATA
-    af_tibt_uniranges @5454 DATA
-    af_vaii_dflt_style_class @5455 DATA
-    af_vaii_nonbase_uniranges @5456 DATA
-    af_vaii_script_class @5457 DATA
-    af_vaii_uniranges @5458 DATA
-    af_writing_system_classes @5459 DATA
-    afm_parser_funcs @5460 DATA
-    autofit_module_class @5461 DATA
-    bdf_driver_class @5462 DATA
-    cff_builder_funcs @5463 DATA
-    cff_cmap_encoding_class_rec @5464 DATA
-    cff_cmap_unicode_class_rec @5465 DATA
-    cff_decoder_funcs @5466 DATA
-    cff_driver_class @5467 DATA
-    cond_print @5468
-    cond_print_set @5469
-    do_sema_b_wait_intern @5470
-    ft_adobe_glyph_list @5471 DATA
-    ft_bitmap_glyph_class @5472 DATA
-    ft_corner_is_flat @5473
-    ft_corner_orientation @5474
-    ft_debug_init @5475
-    ft_glyphslot_alloc_bitmap @5476
-    ft_glyphslot_free_bitmap @5477
-    ft_glyphslot_preset_bitmap @5478
-    ft_glyphslot_set_bitmap @5479
-    ft_grays_raster @5480 DATA
-    ft_hash_num_init @5481
-    ft_hash_num_insert @5482
-    ft_hash_num_lookup @5483
-    ft_hash_str_free @5484
-    ft_hash_str_init @5485
-    ft_hash_str_insert @5486
-    ft_hash_str_lookup @5487
-    ft_lcd_padding @5488
-    ft_lzwstate_done @5489
-    ft_lzwstate_init @5490
-    ft_lzwstate_io @5491
-    ft_lzwstate_reset @5492
-    ft_mac_names @5493 DATA
-    ft_mem_alloc @5494
-    ft_mem_dup @5495
-    ft_mem_free @5496
-    ft_mem_qalloc @5497
-    ft_mem_qrealloc @5498
-    ft_mem_realloc @5499
-    ft_mem_strcpyn @5500
-    ft_mem_strdup @5501
-    ft_module_get_service @5502
-    ft_outline_glyph_class @5503 DATA
-    ft_property_string_set @5504
-    ft_raster1_renderer_class @5505 DATA
-    ft_service_list_lookup @5506
-    ft_sid_names @5507 DATA
-    ft_smooth_lcd_renderer_class @5508 DATA
-    ft_smooth_lcdv_renderer_class @5509 DATA
-    ft_smooth_renderer_class @5510 DATA
-    ft_standard_glyph_names @5511 DATA
-    ft_standard_raster @5512 DATA
-    ft_synthesize_vertical_metrics @5513
-    ft_validator_error @5514
-    ft_validator_init @5515
-    ft_validator_run @5516
-    glewExperimental @5517 DATA
-    glewGetErrorString @5518
-    glewGetExtension @5519
-    glewGetString @5520
-    glewInit @5521
-    glewIsSupported @5522
-    glfwCreateCursor @5523
-    glfwCreateStandardCursor @5524
-    glfwCreateWindow @5525
-    glfwCreateWindowSurface @5526
-    glfwDefaultWindowHints @5527
-    glfwDestroyCursor @5528
-    glfwDestroyWindow @5529
-    glfwExtensionSupported @5530
-    glfwFocusWindow @5531
-    glfwGetClipboardString @5532
-    glfwGetCurrentContext @5533
-    glfwGetCursorPos @5534
-    glfwGetEGLContext @5535
-    glfwGetEGLDisplay @5536
-    glfwGetEGLSurface @5537
-    glfwGetError @5538
-    glfwGetFramebufferSize @5539
-    glfwGetGamepadName @5540
-    glfwGetGamepadState @5541
-    glfwGetGammaRamp @5542
-    glfwGetInputMode @5543
-    glfwGetInstanceProcAddress @5544
-    glfwGetJoystickAxes @5545
-    glfwGetJoystickButtons @5546
-    glfwGetJoystickGUID @5547
-    glfwGetJoystickHats @5548
-    glfwGetJoystickName @5549
-    glfwGetJoystickUserPointer @5550
-    glfwGetKey @5551
-    glfwGetKeyName @5552
-    glfwGetKeyScancode @5553
-    glfwGetMonitorContentScale @5554
-    glfwGetMonitorName @5555
-    glfwGetMonitorPhysicalSize @5556
-    glfwGetMonitorPos @5557
-    glfwGetMonitorUserPointer @5558
-    glfwGetMonitorWorkarea @5559
-    glfwGetMonitors @5560
-    glfwGetMouseButton @5561
-    glfwGetOSMesaColorBuffer @5562
-    glfwGetOSMesaContext @5563
-    glfwGetOSMesaDepthBuffer @5564
-    glfwGetPhysicalDevicePresentationSupport @5565
-    glfwGetPrimaryMonitor @5566
-    glfwGetProcAddress @5567
-    glfwGetRequiredInstanceExtensions @5568
-    glfwGetTime @5569
-    glfwGetTimerFrequency @5570
-    glfwGetTimerValue @5571
-    glfwGetVersion @5572
-    glfwGetVersionString @5573
-    glfwGetVideoMode @5574
-    glfwGetVideoModes @5575
-    glfwGetWGLContext @5576
-    glfwGetWin32Adapter @5577
-    glfwGetWin32Monitor @5578
-    glfwGetWin32Window @5579
-    glfwGetWindowAttrib @5580
-    glfwGetWindowContentScale @5581
-    glfwGetWindowFrameSize @5582
-    glfwGetWindowMonitor @5583
-    glfwGetWindowOpacity @5584
-    glfwGetWindowPos @5585
-    glfwGetWindowSize @5586
-    glfwGetWindowUserPointer @5587
-    glfwHideWindow @5588
-    glfwIconifyWindow @5589
-    glfwInit @5590
-    glfwInitHint @5591
-    glfwJoystickIsGamepad @5592
-    glfwJoystickPresent @5593
-    glfwMakeContextCurrent @5594
-    glfwMaximizeWindow @5595
-    glfwPollEvents @5596
-    glfwPostEmptyEvent @5597
-    glfwRawMouseMotionSupported @5598
-    glfwRequestWindowAttention @5599
-    glfwRestoreWindow @5600
-    glfwSetCharCallback @5601
-    glfwSetCharModsCallback @5602
-    glfwSetClipboardString @5603
-    glfwSetCursor @5604
-    glfwSetCursorEnterCallback @5605
-    glfwSetCursorPos @5606
-    glfwSetCursorPosCallback @5607
-    glfwSetDropCallback @5608
-    glfwSetErrorCallback @5609
-    glfwSetFramebufferSizeCallback @5610
-    glfwSetGamma @5611
-    glfwSetGammaRamp @5612
-    glfwSetInputMode @5613
-    glfwSetJoystickCallback @5614
-    glfwSetJoystickUserPointer @5615
-    glfwSetKeyCallback @5616
-    glfwSetMonitorCallback @5617
-    glfwSetMonitorUserPointer @5618
-    glfwSetMouseButtonCallback @5619
-    glfwSetScrollCallback @5620
-    glfwSetTime @5621
-    glfwSetWindowAspectRatio @5622
-    glfwSetWindowAttrib @5623
-    glfwSetWindowCloseCallback @5624
-    glfwSetWindowContentScaleCallback @5625
-    glfwSetWindowFocusCallback @5626
-    glfwSetWindowIcon @5627
-    glfwSetWindowIconifyCallback @5628
-    glfwSetWindowMaximizeCallback @5629
-    glfwSetWindowMonitor @5630
-    glfwSetWindowOpacity @5631
-    glfwSetWindowPos @5632
-    glfwSetWindowPosCallback @5633
-    glfwSetWindowRefreshCallback @5634
-    glfwSetWindowShouldClose @5635
-    glfwSetWindowSize @5636
-    glfwSetWindowSizeCallback @5637
-    glfwSetWindowSizeLimits @5638
-    glfwSetWindowTitle @5639
-    glfwSetWindowUserPointer @5640
-    glfwShowWindow @5641
-    glfwSwapBuffers @5642
-    glfwSwapInterval @5643
-    glfwTerminate @5644
-    glfwUpdateGamepadMappings @5645
-    glfwVulkanSupported @5646
-    glfwWaitEvents @5647
-    glfwWaitEventsTimeout @5648
-    glfwWindowHint @5649
-    glfwWindowHintString @5650
-    glfwWindowShouldClose @5651
-    pcf_driver_class @5652 DATA
-    pfr_cmap_class_rec @5653 DATA
-    pfr_driver_class @5654 DATA
-    ps_builder_funcs @5655 DATA
-    ps_hints_apply @5656
-    ps_parser_funcs @5657 DATA
-    ps_property_get @5658
-    ps_property_set @5659
-    ps_table_funcs @5660 DATA
-    psaux_module_class @5661 DATA
-    pshinter_module_class @5662 DATA
-    psnames_module_class @5663 DATA
-    pthread_attr_destroy @5664
-    pthread_attr_getdetachstate @5665
-    pthread_attr_getinheritsched @5666
-    pthread_attr_getschedparam @5667
-    pthread_attr_getschedpolicy @5668
-    pthread_attr_getscope @5669
-    pthread_attr_getstack @5670
-    pthread_attr_getstackaddr @5671
-    pthread_attr_getstacksize @5672
-    pthread_attr_init @5673
-    pthread_attr_setdetachstate @5674
-    pthread_attr_setinheritsched @5675
-    pthread_attr_setschedparam @5676
-    pthread_attr_setschedpolicy @5677
-    pthread_attr_setscope @5678
-    pthread_attr_setstack @5679
-    pthread_attr_setstackaddr @5680
-    pthread_attr_setstacksize @5681
-    pthread_cancel @5682
-    pthread_cond_broadcast @5683
-    pthread_cond_destroy @5684
-    pthread_cond_init @5685
-    pthread_cond_signal @5686
-    pthread_cond_timedwait @5687
-    pthread_cond_timedwait_relative_np @5688
-    pthread_cond_wait @5689
-    pthread_condattr_destroy @5690
-    pthread_condattr_getclock @5691
-    pthread_condattr_getpshared @5692
-    pthread_condattr_init @5693
-    pthread_condattr_setclock @5694
-    pthread_condattr_setpshared @5695
-    pthread_create @5696
-    pthread_create_wrapper @5697
-    pthread_delay_np @5698
-    pthread_delay_np_ms @5699
-    pthread_detach @5700
-    pthread_equal @5701
-    pthread_exit @5702
-    pthread_get_concurrency @5703
-    pthread_getclean @5704
-    pthread_getconcurrency @5705
-    pthread_getevent @5706
-    pthread_gethandle @5707
-    pthread_getname_np @5708
-    pthread_getschedparam @5709
-    pthread_getspecific @5710
-    pthread_join @5711
-    pthread_key_create @5712
-    pthread_key_delete @5713
-    pthread_kill @5714
-    pthread_mutex_destroy @5715
-    pthread_mutex_init @5716
-    pthread_mutex_lock @5717
-    pthread_mutex_timedlock @5718
-    pthread_mutex_trylock @5719
-    pthread_mutex_unlock @5720
-    pthread_mutexattr_destroy @5721
-    pthread_mutexattr_getprioceiling @5722
-    pthread_mutexattr_getprotocol @5723
-    pthread_mutexattr_getpshared @5724
-    pthread_mutexattr_gettype @5725
-    pthread_mutexattr_init @5726
-    pthread_mutexattr_setprioceiling @5727
-    pthread_mutexattr_setprotocol @5728
-    pthread_mutexattr_setpshared @5729
-    pthread_mutexattr_settype @5730
-    pthread_num_processors_np @5731
-    pthread_once @5732
-    pthread_rwlock_destroy @5733
-    pthread_rwlock_init @5734
-    pthread_rwlock_rdlock @5735
-    pthread_rwlock_timedrdlock @5736
-    pthread_rwlock_timedwrlock @5737
-    pthread_rwlock_tryrdlock @5738
-    pthread_rwlock_trywrlock @5739
-    pthread_rwlock_unlock @5740
-    pthread_rwlock_wrlock @5741
-    pthread_rwlockattr_destroy @5742
-    pthread_rwlockattr_getpshared @5743
-    pthread_rwlockattr_init @5744
-    pthread_rwlockattr_setpshared @5745
-    pthread_self @5746
-    pthread_set_concurrency @5747
-    pthread_set_num_processors_np @5748
-    pthread_setcancelstate @5749
-    pthread_setcanceltype @5750
-    pthread_setconcurrency @5751
-    pthread_setname_np @5752
-    pthread_setschedparam @5753
-    pthread_setspecific @5754
-    pthread_spin_destroy @5755
-    pthread_spin_init @5756
-    pthread_spin_lock @5757
-    pthread_spin_trylock @5758
-    pthread_spin_unlock @5759
-    pthread_testcancel @5760
-    pthread_timechange_handler_np @5761
-    pthread_tls_init @5762
-    rwl_print @5763
-    rwl_print_set @5764
-    sched_get_priority_max @5765
-    sched_get_priority_min @5766
-    sched_getscheduler @5767
-    sched_setscheduler @5768
-    sched_yield @5769
-    sfnt_module_class @5770 DATA
-    stbi_convert_iphone_png_to_rgb @5771
-    stbi_convert_iphone_png_to_rgb_thread @5772
-    stbi_failure_reason @5773
-    stbi_hdr_to_ldr_gamma @5774
-    stbi_hdr_to_ldr_scale @5775
-    stbi_image_free @5776
-    stbi_info @5777
-    stbi_info_from_callbacks @5778
-    stbi_info_from_file @5779
-    stbi_info_from_memory @5780
-    stbi_is_16_bit @5781
-    stbi_is_16_bit_from_callbacks @5782
-    stbi_is_16_bit_from_file @5783
-    stbi_is_16_bit_from_memory @5784
-    stbi_is_hdr @5785
-    stbi_is_hdr_from_callbacks @5786
-    stbi_is_hdr_from_file @5787
-    stbi_is_hdr_from_memory @5788
-    stbi_ldr_to_hdr_gamma @5789
-    stbi_ldr_to_hdr_scale @5790
-    stbi_load @5791
-    stbi_load_16 @5792
-    stbi_load_16_from_callbacks @5793
-    stbi_load_16_from_memory @5794
-    stbi_load_from_callbacks @5795
-    stbi_load_from_file @5796
-    stbi_load_from_file_16 @5797
-    stbi_load_from_memory @5798
-    stbi_load_gif_from_memory @5799
-    stbi_loadf @5800
-    stbi_loadf_from_callbacks @5801
-    stbi_loadf_from_file @5802
-    stbi_loadf_from_memory @5803
-    stbi_set_flip_vertically_on_load @5804
-    stbi_set_flip_vertically_on_load_thread @5805
-    stbi_set_unpremultiply_on_load @5806
-    stbi_zlib_decode_buffer @5807
-    stbi_zlib_decode_malloc @5808
-    stbi_zlib_decode_malloc_guesssize @5809
-    stbi_zlib_decode_malloc_guesssize_headerflag @5810
-    stbi_zlib_decode_noheader_buffer @5811
-    stbi_zlib_decode_noheader_malloc @5812
-    t1_builder_funcs @5813 DATA
-    t1_cmap_classes @5814 DATA
-    t1_cmap_custom_class_rec @5815 DATA
-    t1_cmap_expert_class_rec @5816 DATA
-    t1_cmap_standard_class_rec @5817 DATA
-    t1_cmap_unicode_class_rec @5818 DATA
-    t1_decoder_funcs @5819 DATA
-    t1_driver_class @5820 DATA
-    t1_expert_encoding @5821 DATA
-    t1_standard_encoding @5822 DATA
-    t1cid_driver_class @5823 DATA
-    t42_driver_class @5824 DATA
-    thread_print @5825
-    thread_print_set @5826
-    tt_cmap0_class_rec @5827 DATA
-    tt_cmap10_class_rec @5828 DATA
-    tt_cmap12_class_rec @5829 DATA
-    tt_cmap13_class_rec @5830 DATA
-    tt_cmap14_class_rec @5831 DATA
-    tt_cmap2_class_rec @5832 DATA
-    tt_cmap4_class_rec @5833 DATA
-    tt_cmap6_class_rec @5834 DATA
-    tt_cmap8_class_rec @5835 DATA
-    tt_cmap_unicode_class_rec @5836 DATA
-    tt_default_graphics_state @5837 DATA
-    tt_driver_class @5838 DATA
-    wglewGetExtension @5839
-    wglewInit @5840
-    wglewIsSupported @5841
-    winfnt_driver_class @5842 DATA
+    _glfwConnectNull @5034
+    _glfwConnectWin32 @5035
+    _glfwCreateContextEGL @5036
+    _glfwCreateContextOSMesa @5037
+    _glfwCreateContextWGL @5038
+    _glfwCreateCursorNull @5039
+    _glfwCreateCursorWin32 @5040
+    _glfwCreateStandardCursorNull @5041
+    _glfwCreateStandardCursorWin32 @5042
+    _glfwCreateUTF8FromWideStringWin32 @5043
+    _glfwCreateWideStringFromUTF8Win32 @5044
+    _glfwCreateWindowNull @5045
+    _glfwCreateWindowSurfaceNull @5046
+    _glfwCreateWindowSurfaceWin32 @5047
+    _glfwCreateWindowWin32 @5048
+    _glfwDefaultMappings @5049 DATA
+    _glfwDestroyCursorNull @5050
+    _glfwDestroyCursorWin32 @5051
+    _glfwDestroyWindowNull @5052
+    _glfwDestroyWindowWin32 @5053
+    _glfwDetectJoystickConnectionWin32 @5054
+    _glfwDetectJoystickDisconnectionWin32 @5055
+    _glfwEncodeUTF8 @5056
+    _glfwFocusWindowNull @5057
+    _glfwFocusWindowWin32 @5058
+    _glfwFramebufferTransparentNull @5059
+    _glfwFramebufferTransparentWin32 @5060
+    _glfwFreeGammaArrays @5061
+    _glfwFreeJoystick @5062
+    _glfwFreeMonitor @5063
+    _glfwFreeMonitorNull @5064
+    _glfwFreeMonitorWin32 @5065
+    _glfwGetClipboardStringNull @5066
+    _glfwGetClipboardStringWin32 @5067
+    _glfwGetCursorPosNull @5068
+    _glfwGetCursorPosWin32 @5069
+    _glfwGetEGLNativeDisplayNull @5070
+    _glfwGetEGLNativeDisplayWin32 @5071
+    _glfwGetEGLNativeWindowNull @5072
+    _glfwGetEGLNativeWindowWin32 @5073
+    _glfwGetEGLPlatformNull @5074
+    _glfwGetEGLPlatformWin32 @5075
+    _glfwGetFramebufferSizeNull @5076
+    _glfwGetFramebufferSizeWin32 @5077
+    _glfwGetGammaRampNull @5078
+    _glfwGetGammaRampWin32 @5079
+    _glfwGetHMONITORContentScaleWin32 @5080
+    _glfwGetKeyScancodeNull @5081
+    _glfwGetKeyScancodeWin32 @5082
+    _glfwGetMappingNameNull @5083
+    _glfwGetMappingNameWin32 @5084
+    _glfwGetMonitorContentScaleNull @5085
+    _glfwGetMonitorContentScaleWin32 @5086
+    _glfwGetMonitorPosNull @5087
+    _glfwGetMonitorPosWin32 @5088
+    _glfwGetMonitorWorkareaNull @5089
+    _glfwGetMonitorWorkareaWin32 @5090
+    _glfwGetPhysicalDevicePresentationSupportNull @5091
+    _glfwGetPhysicalDevicePresentationSupportWin32 @5092
+    _glfwGetRequiredInstanceExtensionsNull @5093
+    _glfwGetRequiredInstanceExtensionsWin32 @5094
+    _glfwGetScancodeNameNull @5095
+    _glfwGetScancodeNameWin32 @5096
+    _glfwGetVideoModeNull @5097
+    _glfwGetVideoModeWin32 @5098
+    _glfwGetVideoModesNull @5099
+    _glfwGetVideoModesWin32 @5100
+    _glfwGetVulkanResultString @5101
+    _glfwGetWindowContentScaleNull @5102
+    _glfwGetWindowContentScaleWin32 @5103
+    _glfwGetWindowFrameSizeNull @5104
+    _glfwGetWindowFrameSizeWin32 @5105
+    _glfwGetWindowOpacityNull @5106
+    _glfwGetWindowOpacityWin32 @5107
+    _glfwGetWindowPosNull @5108
+    _glfwGetWindowPosWin32 @5109
+    _glfwGetWindowSizeNull @5110
+    _glfwGetWindowSizeWin32 @5111
+    _glfwHideWindowNull @5112
+    _glfwHideWindowWin32 @5113
+    _glfwIconifyWindowNull @5114
+    _glfwIconifyWindowWin32 @5115
+    _glfwInitEGL @5116
+    _glfwInitGamepadMappings @5117
+    _glfwInitJoysticksNull @5118
+    _glfwInitJoysticksWin32 @5119
+    _glfwInitNull @5120
+    _glfwInitOSMesa @5121
+    _glfwInitVulkan @5122
+    _glfwInitWGL @5123
+    _glfwInitWin32 @5124
+    _glfwInputChar @5125
+    _glfwInputCursorEnter @5126
+    _glfwInputCursorPos @5127
+    _glfwInputDrop @5128
+    _glfwInputError @5129
+    _glfwInputErrorWin32 @5130
+    _glfwInputFramebufferSize @5131
+    _glfwInputJoystick @5132
+    _glfwInputJoystickAxis @5133
+    _glfwInputJoystickButton @5134
+    _glfwInputJoystickHat @5135
+    _glfwInputKey @5136
+    _glfwInputMonitor @5137
+    _glfwInputMonitorWindow @5138
+    _glfwInputMouseClick @5139
+    _glfwInputScroll @5140
+    _glfwInputWindowCloseRequest @5141
+    _glfwInputWindowContentScale @5142
+    _glfwInputWindowDamage @5143
+    _glfwInputWindowFocus @5144
+    _glfwInputWindowIconify @5145
+    _glfwInputWindowMaximize @5146
+    _glfwInputWindowMonitor @5147
+    _glfwInputWindowPos @5148
+    _glfwInputWindowSize @5149
+    _glfwIsValidContextConfig @5150
+    _glfwIsWindows10BuildOrGreaterWin32 @5151
+    _glfwIsWindowsVersionOrGreaterWin32 @5152
+    _glfwMaximizeWindowNull @5153
+    _glfwMaximizeWindowWin32 @5154
+    _glfwParseUriList @5155
+    _glfwPlatformCreateMutex @5156
+    _glfwPlatformCreateTls @5157
+    _glfwPlatformDestroyMutex @5158
+    _glfwPlatformDestroyTls @5159
+    _glfwPlatformFreeModule @5160
+    _glfwPlatformGetModuleSymbol @5161
+    _glfwPlatformGetTimerFrequency @5162
+    _glfwPlatformGetTimerValue @5163
+    _glfwPlatformGetTls @5164
+    _glfwPlatformInitTimer @5165
+    _glfwPlatformLoadModule @5166
+    _glfwPlatformLockMutex @5167
+    _glfwPlatformSetTls @5168
+    _glfwPlatformUnlockMutex @5169
+    _glfwPollEventsNull @5170
+    _glfwPollEventsWin32 @5171
+    _glfwPollJoystickNull @5172
+    _glfwPollJoystickWin32 @5173
+    _glfwPollMonitorsNull @5174
+    _glfwPollMonitorsWin32 @5175
+    _glfwPostEmptyEventNull @5176
+    _glfwPostEmptyEventWin32 @5177
+    _glfwRawMouseMotionSupportedNull @5178
+    _glfwRawMouseMotionSupportedWin32 @5179
+    _glfwRefreshContextAttribs @5180
+    _glfwRequestWindowAttentionNull @5181
+    _glfwRequestWindowAttentionWin32 @5182
+    _glfwRestoreVideoModeWin32 @5183
+    _glfwRestoreWindowNull @5184
+    _glfwRestoreWindowWin32 @5185
+    _glfwSelectPlatform @5186
+    _glfwSetClipboardStringNull @5187
+    _glfwSetClipboardStringWin32 @5188
+    _glfwSetCursorModeNull @5189
+    _glfwSetCursorModeWin32 @5190
+    _glfwSetCursorNull @5191
+    _glfwSetCursorPosNull @5192
+    _glfwSetCursorPosWin32 @5193
+    _glfwSetCursorWin32 @5194
+    _glfwSetGammaRampNull @5195
+    _glfwSetGammaRampWin32 @5196
+    _glfwSetRawMouseMotionNull @5197
+    _glfwSetRawMouseMotionWin32 @5198
+    _glfwSetVideoModeWin32 @5199
+    _glfwSetWindowAspectRatioNull @5200
+    _glfwSetWindowAspectRatioWin32 @5201
+    _glfwSetWindowDecoratedNull @5202
+    _glfwSetWindowDecoratedWin32 @5203
+    _glfwSetWindowFloatingNull @5204
+    _glfwSetWindowFloatingWin32 @5205
+    _glfwSetWindowIconNull @5206
+    _glfwSetWindowIconWin32 @5207
+    _glfwSetWindowMonitorNull @5208
+    _glfwSetWindowMonitorWin32 @5209
+    _glfwSetWindowMousePassthroughNull @5210
+    _glfwSetWindowMousePassthroughWin32 @5211
+    _glfwSetWindowOpacityNull @5212
+    _glfwSetWindowOpacityWin32 @5213
+    _glfwSetWindowPosNull @5214
+    _glfwSetWindowPosWin32 @5215
+    _glfwSetWindowResizableNull @5216
+    _glfwSetWindowResizableWin32 @5217
+    _glfwSetWindowSizeLimitsNull @5218
+    _glfwSetWindowSizeLimitsWin32 @5219
+    _glfwSetWindowSizeNull @5220
+    _glfwSetWindowSizeWin32 @5221
+    _glfwSetWindowTitleNull @5222
+    _glfwSetWindowTitleWin32 @5223
+    _glfwShowWindowNull @5224
+    _glfwShowWindowWin32 @5225
+    _glfwSplitBPP @5226
+    _glfwStringInExtensionString @5227
+    _glfwTerminateEGL @5228
+    _glfwTerminateJoysticksNull @5229
+    _glfwTerminateJoysticksWin32 @5230
+    _glfwTerminateNull @5231
+    _glfwTerminateOSMesa @5232
+    _glfwTerminateVulkan @5233
+    _glfwTerminateWGL @5234
+    _glfwTerminateWin32 @5235
+    _glfwUpdateGamepadGUIDNull @5236
+    _glfwUpdateGamepadGUIDWin32 @5237
+    _glfwUpdateKeyNamesWin32 @5238
+    _glfwWaitEventsNull @5239
+    _glfwWaitEventsTimeoutNull @5240
+    _glfwWaitEventsTimeoutWin32 @5241
+    _glfwWaitEventsWin32 @5242
+    _glfwWindowFocusedNull @5243
+    _glfwWindowFocusedWin32 @5244
+    _glfwWindowHoveredNull @5245
+    _glfwWindowHoveredWin32 @5246
+    _glfwWindowIconifiedNull @5247
+    _glfwWindowIconifiedWin32 @5248
+    _glfwWindowMaximizedNull @5249
+    _glfwWindowMaximizedWin32 @5250
+    _glfwWindowVisibleNull @5251
+    _glfwWindowVisibleWin32 @5252
+    _glfw_calloc @5253
+    _glfw_free @5254
+    _glfw_max @5255
+    _glfw_min @5256
+    _glfw_realloc @5257
+    _glfw_strdup @5258
+    _pthread_cleanup_dest @5259
+    _pthread_get_state @5260
+    _pthread_invoke_cancel @5261
+    _pthread_key_dest @5262 DATA
+    _pthread_rel_time_in_ms @5263
+    _pthread_set_state @5264
+    _pthread_setnobreak @5265
+    _pthread_time_in_ms @5266
+    _pthread_time_in_ms_from_timespec @5267
+    _pthread_tryjoin @5268
+    _pthread_wait_for_multiple_objects @5269
+    _pthread_wait_for_single_object @5270
+    af_adlm_dflt_style_class @5271 DATA
+    af_adlm_nonbase_uniranges @5272 DATA
+    af_adlm_script_class @5273 DATA
+    af_adlm_uniranges @5274 DATA
+    af_arab_dflt_style_class @5275 DATA
+    af_arab_nonbase_uniranges @5276 DATA
+    af_arab_script_class @5277 DATA
+    af_arab_uniranges @5278 DATA
+    af_armn_dflt_style_class @5279 DATA
+    af_armn_nonbase_uniranges @5280 DATA
+    af_armn_script_class @5281 DATA
+    af_armn_uniranges @5282 DATA
+    af_autofitter_interface @5283 DATA
+    af_avst_dflt_style_class @5284 DATA
+    af_avst_nonbase_uniranges @5285 DATA
+    af_avst_script_class @5286 DATA
+    af_avst_uniranges @5287 DATA
+    af_bamu_dflt_style_class @5288 DATA
+    af_bamu_nonbase_uniranges @5289 DATA
+    af_bamu_script_class @5290 DATA
+    af_bamu_uniranges @5291 DATA
+    af_beng_dflt_style_class @5292 DATA
+    af_beng_nonbase_uniranges @5293 DATA
+    af_beng_script_class @5294 DATA
+    af_beng_uniranges @5295 DATA
+    af_blue_strings @5296 DATA
+    af_blue_stringsets @5297 DATA
+    af_buhd_dflt_style_class @5298 DATA
+    af_buhd_nonbase_uniranges @5299 DATA
+    af_buhd_script_class @5300 DATA
+    af_buhd_uniranges @5301 DATA
+    af_cakm_dflt_style_class @5302 DATA
+    af_cakm_nonbase_uniranges @5303 DATA
+    af_cakm_script_class @5304 DATA
+    af_cakm_uniranges @5305 DATA
+    af_cans_dflt_style_class @5306 DATA
+    af_cans_nonbase_uniranges @5307 DATA
+    af_cans_script_class @5308 DATA
+    af_cans_uniranges @5309 DATA
+    af_cari_dflt_style_class @5310 DATA
+    af_cari_nonbase_uniranges @5311 DATA
+    af_cari_script_class @5312 DATA
+    af_cari_uniranges @5313 DATA
+    af_cher_dflt_style_class @5314 DATA
+    af_cher_nonbase_uniranges @5315 DATA
+    af_cher_script_class @5316 DATA
+    af_cher_uniranges @5317 DATA
+    af_cjk_writing_system_class @5318 DATA
+    af_copt_dflt_style_class @5319 DATA
+    af_copt_nonbase_uniranges @5320 DATA
+    af_copt_script_class @5321 DATA
+    af_copt_uniranges @5322 DATA
+    af_cprt_dflt_style_class @5323 DATA
+    af_cprt_nonbase_uniranges @5324 DATA
+    af_cprt_script_class @5325 DATA
+    af_cprt_uniranges @5326 DATA
+    af_cyrl_c2cp_style_class @5327 DATA
+    af_cyrl_c2sc_style_class @5328 DATA
+    af_cyrl_dflt_style_class @5329 DATA
+    af_cyrl_nonbase_uniranges @5330 DATA
+    af_cyrl_ordn_style_class @5331 DATA
+    af_cyrl_pcap_style_class @5332 DATA
+    af_cyrl_script_class @5333 DATA
+    af_cyrl_sinf_style_class @5334 DATA
+    af_cyrl_smcp_style_class @5335 DATA
+    af_cyrl_subs_style_class @5336 DATA
+    af_cyrl_sups_style_class @5337 DATA
+    af_cyrl_titl_style_class @5338 DATA
+    af_cyrl_uniranges @5339 DATA
+    af_deva_dflt_style_class @5340 DATA
+    af_deva_nonbase_uniranges @5341 DATA
+    af_deva_script_class @5342 DATA
+    af_deva_uniranges @5343 DATA
+    af_dsrt_dflt_style_class @5344 DATA
+    af_dsrt_nonbase_uniranges @5345 DATA
+    af_dsrt_script_class @5346 DATA
+    af_dsrt_uniranges @5347 DATA
+    af_dummy_writing_system_class @5348 DATA
+    af_ethi_dflt_style_class @5349 DATA
+    af_ethi_nonbase_uniranges @5350 DATA
+    af_ethi_script_class @5351 DATA
+    af_ethi_uniranges @5352 DATA
+    af_geok_dflt_style_class @5353 DATA
+    af_geok_nonbase_uniranges @5354 DATA
+    af_geok_script_class @5355 DATA
+    af_geok_uniranges @5356 DATA
+    af_geor_dflt_style_class @5357 DATA
+    af_geor_nonbase_uniranges @5358 DATA
+    af_geor_script_class @5359 DATA
+    af_geor_uniranges @5360 DATA
+    af_glag_dflt_style_class @5361 DATA
+    af_glag_nonbase_uniranges @5362 DATA
+    af_glag_script_class @5363 DATA
+    af_glag_uniranges @5364 DATA
+    af_goth_dflt_style_class @5365 DATA
+    af_goth_nonbase_uniranges @5366 DATA
+    af_goth_script_class @5367 DATA
+    af_goth_uniranges @5368 DATA
+    af_grek_c2cp_style_class @5369 DATA
+    af_grek_c2sc_style_class @5370 DATA
+    af_grek_dflt_style_class @5371 DATA
+    af_grek_nonbase_uniranges @5372 DATA
+    af_grek_ordn_style_class @5373 DATA
+    af_grek_pcap_style_class @5374 DATA
+    af_grek_script_class @5375 DATA
+    af_grek_sinf_style_class @5376 DATA
+    af_grek_smcp_style_class @5377 DATA
+    af_grek_subs_style_class @5378 DATA
+    af_grek_sups_style_class @5379 DATA
+    af_grek_titl_style_class @5380 DATA
+    af_grek_uniranges @5381 DATA
+    af_gujr_dflt_style_class @5382 DATA
+    af_gujr_nonbase_uniranges @5383 DATA
+    af_gujr_script_class @5384 DATA
+    af_gujr_uniranges @5385 DATA
+    af_guru_dflt_style_class @5386 DATA
+    af_guru_nonbase_uniranges @5387 DATA
+    af_guru_script_class @5388 DATA
+    af_guru_uniranges @5389 DATA
+    af_hani_dflt_style_class @5390 DATA
+    af_hani_nonbase_uniranges @5391 DATA
+    af_hani_script_class @5392 DATA
+    af_hani_uniranges @5393 DATA
+    af_hebr_dflt_style_class @5394 DATA
+    af_hebr_nonbase_uniranges @5395 DATA
+    af_hebr_script_class @5396 DATA
+    af_hebr_uniranges @5397 DATA
+    af_indic_writing_system_class @5398 DATA
+    af_kali_dflt_style_class @5399 DATA
+    af_kali_nonbase_uniranges @5400 DATA
+    af_kali_script_class @5401 DATA
+    af_kali_uniranges @5402 DATA
+    af_khmr_dflt_style_class @5403 DATA
+    af_khmr_nonbase_uniranges @5404 DATA
+    af_khmr_script_class @5405 DATA
+    af_khmr_uniranges @5406 DATA
+    af_khms_dflt_style_class @5407 DATA
+    af_khms_nonbase_uniranges @5408 DATA
+    af_khms_script_class @5409 DATA
+    af_khms_uniranges @5410 DATA
+    af_knda_dflt_style_class @5411 DATA
+    af_knda_nonbase_uniranges @5412 DATA
+    af_knda_script_class @5413 DATA
+    af_knda_uniranges @5414 DATA
+    af_lao_dflt_style_class @5415 DATA
+    af_lao_nonbase_uniranges @5416 DATA
+    af_lao_script_class @5417 DATA
+    af_lao_uniranges @5418 DATA
+    af_latb_dflt_style_class @5419 DATA
+    af_latb_nonbase_uniranges @5420 DATA
+    af_latb_script_class @5421 DATA
+    af_latb_uniranges @5422 DATA
+    af_latin_writing_system_class @5423 DATA
+    af_latn_c2cp_style_class @5424 DATA
+    af_latn_c2sc_style_class @5425 DATA
+    af_latn_dflt_style_class @5426 DATA
+    af_latn_nonbase_uniranges @5427 DATA
+    af_latn_ordn_style_class @5428 DATA
+    af_latn_pcap_style_class @5429 DATA
+    af_latn_script_class @5430 DATA
+    af_latn_sinf_style_class @5431 DATA
+    af_latn_smcp_style_class @5432 DATA
+    af_latn_subs_style_class @5433 DATA
+    af_latn_sups_style_class @5434 DATA
+    af_latn_titl_style_class @5435 DATA
+    af_latn_uniranges @5436 DATA
+    af_latp_dflt_style_class @5437 DATA
+    af_latp_nonbase_uniranges @5438 DATA
+    af_latp_script_class @5439 DATA
+    af_latp_uniranges @5440 DATA
+    af_limb_dflt_style_class @5441 DATA
+    af_limb_nonbase_uniranges @5442 DATA
+    af_limb_script_class @5443 DATA
+    af_limb_uniranges @5444 DATA
+    af_lisu_dflt_style_class @5445 DATA
+    af_lisu_nonbase_uniranges @5446 DATA
+    af_lisu_script_class @5447 DATA
+    af_lisu_uniranges @5448 DATA
+    af_mlym_dflt_style_class @5449 DATA
+    af_mlym_nonbase_uniranges @5450 DATA
+    af_mlym_script_class @5451 DATA
+    af_mlym_uniranges @5452 DATA
+    af_mymr_dflt_style_class @5453 DATA
+    af_mymr_nonbase_uniranges @5454 DATA
+    af_mymr_script_class @5455 DATA
+    af_mymr_uniranges @5456 DATA
+    af_nkoo_dflt_style_class @5457 DATA
+    af_nkoo_nonbase_uniranges @5458 DATA
+    af_nkoo_script_class @5459 DATA
+    af_nkoo_uniranges @5460 DATA
+    af_none_dflt_style_class @5461 DATA
+    af_none_nonbase_uniranges @5462 DATA
+    af_none_script_class @5463 DATA
+    af_none_uniranges @5464 DATA
+    af_olck_dflt_style_class @5465 DATA
+    af_olck_nonbase_uniranges @5466 DATA
+    af_olck_script_class @5467 DATA
+    af_olck_uniranges @5468 DATA
+    af_orkh_dflt_style_class @5469 DATA
+    af_orkh_nonbase_uniranges @5470 DATA
+    af_orkh_script_class @5471 DATA
+    af_orkh_uniranges @5472 DATA
+    af_orya_dflt_style_class @5473 DATA
+    af_orya_nonbase_uniranges @5474 DATA
+    af_orya_script_class @5475 DATA
+    af_orya_uniranges @5476 DATA
+    af_osge_dflt_style_class @5477 DATA
+    af_osge_nonbase_uniranges @5478 DATA
+    af_osge_script_class @5479 DATA
+    af_osge_uniranges @5480 DATA
+    af_osma_dflt_style_class @5481 DATA
+    af_osma_nonbase_uniranges @5482 DATA
+    af_osma_script_class @5483 DATA
+    af_osma_uniranges @5484 DATA
+    af_saur_dflt_style_class @5485 DATA
+    af_saur_nonbase_uniranges @5486 DATA
+    af_saur_script_class @5487 DATA
+    af_saur_uniranges @5488 DATA
+    af_script_classes @5489 DATA
+    af_shaper_buf_create @5490
+    af_shaper_buf_destroy @5491
+    af_shaper_get_cluster @5492
+    af_shaper_get_coverage @5493
+    af_shaper_get_elem @5494
+    af_shaw_dflt_style_class @5495 DATA
+    af_shaw_nonbase_uniranges @5496 DATA
+    af_shaw_script_class @5497 DATA
+    af_shaw_uniranges @5498 DATA
+    af_sinh_dflt_style_class @5499 DATA
+    af_sinh_nonbase_uniranges @5500 DATA
+    af_sinh_script_class @5501 DATA
+    af_sinh_uniranges @5502 DATA
+    af_style_classes @5503 DATA
+    af_sund_dflt_style_class @5504 DATA
+    af_sund_nonbase_uniranges @5505 DATA
+    af_sund_script_class @5506 DATA
+    af_sund_uniranges @5507 DATA
+    af_sylo_dflt_style_class @5508 DATA
+    af_sylo_nonbase_uniranges @5509 DATA
+    af_sylo_script_class @5510 DATA
+    af_sylo_uniranges @5511 DATA
+    af_taml_dflt_style_class @5512 DATA
+    af_taml_nonbase_uniranges @5513 DATA
+    af_taml_script_class @5514 DATA
+    af_taml_uniranges @5515 DATA
+    af_tavt_dflt_style_class @5516 DATA
+    af_tavt_nonbase_uniranges @5517 DATA
+    af_tavt_script_class @5518 DATA
+    af_tavt_uniranges @5519 DATA
+    af_telu_dflt_style_class @5520 DATA
+    af_telu_nonbase_uniranges @5521 DATA
+    af_telu_script_class @5522 DATA
+    af_telu_uniranges @5523 DATA
+    af_tfng_dflt_style_class @5524 DATA
+    af_tfng_nonbase_uniranges @5525 DATA
+    af_tfng_script_class @5526 DATA
+    af_tfng_uniranges @5527 DATA
+    af_thai_dflt_style_class @5528 DATA
+    af_thai_nonbase_uniranges @5529 DATA
+    af_thai_script_class @5530 DATA
+    af_thai_uniranges @5531 DATA
+    af_tibt_dflt_style_class @5532 DATA
+    af_tibt_nonbase_uniranges @5533 DATA
+    af_tibt_script_class @5534 DATA
+    af_tibt_uniranges @5535 DATA
+    af_vaii_dflt_style_class @5536 DATA
+    af_vaii_nonbase_uniranges @5537 DATA
+    af_vaii_script_class @5538 DATA
+    af_vaii_uniranges @5539 DATA
+    af_writing_system_classes @5540 DATA
+    afm_parser_funcs @5541 DATA
+    autofit_module_class @5542 DATA
+    bdf_driver_class @5543 DATA
+    cff_builder_funcs @5544 DATA
+    cff_cmap_encoding_class_rec @5545 DATA
+    cff_cmap_unicode_class_rec @5546 DATA
+    cff_decoder_funcs @5547 DATA
+    cff_driver_class @5548 DATA
+    cond_print @5549
+    cond_print_set @5550
+    do_sema_b_wait_intern @5551
+    ft_adobe_glyph_list @5552 DATA
+    ft_bitmap_glyph_class @5553 DATA
+    ft_corner_is_flat @5554
+    ft_corner_orientation @5555
+    ft_debug_init @5556
+    ft_glyphslot_alloc_bitmap @5557
+    ft_glyphslot_free_bitmap @5558
+    ft_glyphslot_preset_bitmap @5559
+    ft_glyphslot_set_bitmap @5560
+    ft_grays_raster @5561 DATA
+    ft_hash_num_init @5562
+    ft_hash_num_insert @5563
+    ft_hash_num_lookup @5564
+    ft_hash_str_free @5565
+    ft_hash_str_init @5566
+    ft_hash_str_insert @5567
+    ft_hash_str_lookup @5568
+    ft_lcd_padding @5569
+    ft_lzwstate_done @5570
+    ft_lzwstate_init @5571
+    ft_lzwstate_io @5572
+    ft_lzwstate_reset @5573
+    ft_mac_names @5574 DATA
+    ft_mem_alloc @5575
+    ft_mem_dup @5576
+    ft_mem_free @5577
+    ft_mem_qalloc @5578
+    ft_mem_qrealloc @5579
+    ft_mem_realloc @5580
+    ft_mem_strcpyn @5581
+    ft_mem_strdup @5582
+    ft_module_get_service @5583
+    ft_outline_glyph_class @5584 DATA
+    ft_property_string_set @5585
+    ft_raster1_renderer_class @5586 DATA
+    ft_service_list_lookup @5587
+    ft_sid_names @5588 DATA
+    ft_smooth_lcd_renderer_class @5589 DATA
+    ft_smooth_lcdv_renderer_class @5590 DATA
+    ft_smooth_renderer_class @5591 DATA
+    ft_standard_glyph_names @5592 DATA
+    ft_standard_raster @5593 DATA
+    ft_synthesize_vertical_metrics @5594
+    ft_validator_error @5595
+    ft_validator_init @5596
+    ft_validator_run @5597
+    glewExperimental @5598 DATA
+    glewGetErrorString @5599
+    glewGetExtension @5600
+    glewGetString @5601
+    glewInit @5602
+    glewIsSupported @5603
+    glfwCreateCursor @5604
+    glfwCreateStandardCursor @5605
+    glfwCreateWindow @5606
+    glfwCreateWindowSurface @5607
+    glfwDefaultWindowHints @5608
+    glfwDestroyCursor @5609
+    glfwDestroyWindow @5610
+    glfwExtensionSupported @5611
+    glfwFocusWindow @5612
+    glfwGetClipboardString @5613
+    glfwGetCurrentContext @5614
+    glfwGetCursorPos @5615
+    glfwGetEGLContext @5616
+    glfwGetEGLDisplay @5617
+    glfwGetEGLSurface @5618
+    glfwGetError @5619
+    glfwGetFramebufferSize @5620
+    glfwGetGamepadName @5621
+    glfwGetGamepadState @5622
+    glfwGetGammaRamp @5623
+    glfwGetInputMode @5624
+    glfwGetInstanceProcAddress @5625
+    glfwGetJoystickAxes @5626
+    glfwGetJoystickButtons @5627
+    glfwGetJoystickGUID @5628
+    glfwGetJoystickHats @5629
+    glfwGetJoystickName @5630
+    glfwGetJoystickUserPointer @5631
+    glfwGetKey @5632
+    glfwGetKeyName @5633
+    glfwGetKeyScancode @5634
+    glfwGetMonitorContentScale @5635
+    glfwGetMonitorName @5636
+    glfwGetMonitorPhysicalSize @5637
+    glfwGetMonitorPos @5638
+    glfwGetMonitorUserPointer @5639
+    glfwGetMonitorWorkarea @5640
+    glfwGetMonitors @5641
+    glfwGetMouseButton @5642
+    glfwGetOSMesaColorBuffer @5643
+    glfwGetOSMesaContext @5644
+    glfwGetOSMesaDepthBuffer @5645
+    glfwGetPhysicalDevicePresentationSupport @5646
+    glfwGetPlatform @5647
+    glfwGetPrimaryMonitor @5648
+    glfwGetProcAddress @5649
+    glfwGetRequiredInstanceExtensions @5650
+    glfwGetTime @5651
+    glfwGetTimerFrequency @5652
+    glfwGetTimerValue @5653
+    glfwGetVersion @5654
+    glfwGetVersionString @5655
+    glfwGetVideoMode @5656
+    glfwGetVideoModes @5657
+    glfwGetWGLContext @5658
+    glfwGetWin32Adapter @5659
+    glfwGetWin32Monitor @5660
+    glfwGetWin32Window @5661
+    glfwGetWindowAttrib @5662
+    glfwGetWindowContentScale @5663
+    glfwGetWindowFrameSize @5664
+    glfwGetWindowMonitor @5665
+    glfwGetWindowOpacity @5666
+    glfwGetWindowPos @5667
+    glfwGetWindowSize @5668
+    glfwGetWindowTitle @5669
+    glfwGetWindowUserPointer @5670
+    glfwHideWindow @5671
+    glfwIconifyWindow @5672
+    glfwInit @5673
+    glfwInitAllocator @5674
+    glfwInitHint @5675
+    glfwInitVulkanLoader @5676
+    glfwJoystickIsGamepad @5677
+    glfwJoystickPresent @5678
+    glfwMakeContextCurrent @5679
+    glfwMaximizeWindow @5680
+    glfwPlatformSupported @5681
+    glfwPollEvents @5682
+    glfwPostEmptyEvent @5683
+    glfwRawMouseMotionSupported @5684
+    glfwRequestWindowAttention @5685
+    glfwRestoreWindow @5686
+    glfwSetCharCallback @5687
+    glfwSetCharModsCallback @5688
+    glfwSetClipboardString @5689
+    glfwSetCursor @5690
+    glfwSetCursorEnterCallback @5691
+    glfwSetCursorPos @5692
+    glfwSetCursorPosCallback @5693
+    glfwSetDropCallback @5694
+    glfwSetErrorCallback @5695
+    glfwSetFramebufferSizeCallback @5696
+    glfwSetGamma @5697
+    glfwSetGammaRamp @5698
+    glfwSetInputMode @5699
+    glfwSetJoystickCallback @5700
+    glfwSetJoystickUserPointer @5701
+    glfwSetKeyCallback @5702
+    glfwSetMonitorCallback @5703
+    glfwSetMonitorUserPointer @5704
+    glfwSetMouseButtonCallback @5705
+    glfwSetScrollCallback @5706
+    glfwSetTime @5707
+    glfwSetWindowAspectRatio @5708
+    glfwSetWindowAttrib @5709
+    glfwSetWindowCloseCallback @5710
+    glfwSetWindowContentScaleCallback @5711
+    glfwSetWindowFocusCallback @5712
+    glfwSetWindowIcon @5713
+    glfwSetWindowIconifyCallback @5714
+    glfwSetWindowMaximizeCallback @5715
+    glfwSetWindowMonitor @5716
+    glfwSetWindowOpacity @5717
+    glfwSetWindowPos @5718
+    glfwSetWindowPosCallback @5719
+    glfwSetWindowRefreshCallback @5720
+    glfwSetWindowShouldClose @5721
+    glfwSetWindowSize @5722
+    glfwSetWindowSizeCallback @5723
+    glfwSetWindowSizeLimits @5724
+    glfwSetWindowTitle @5725
+    glfwSetWindowUserPointer @5726
+    glfwShowWindow @5727
+    glfwSwapBuffers @5728
+    glfwSwapInterval @5729
+    glfwTerminate @5730
+    glfwUpdateGamepadMappings @5731
+    glfwVulkanSupported @5732
+    glfwWaitEvents @5733
+    glfwWaitEventsTimeout @5734
+    glfwWindowHint @5735
+    glfwWindowHintString @5736
+    glfwWindowShouldClose @5737
+    pcf_driver_class @5738 DATA
+    pfr_cmap_class_rec @5739 DATA
+    pfr_driver_class @5740 DATA
+    ps_builder_funcs @5741 DATA
+    ps_hints_apply @5742
+    ps_parser_funcs @5743 DATA
+    ps_property_get @5744
+    ps_property_set @5745
+    ps_table_funcs @5746 DATA
+    psaux_module_class @5747 DATA
+    pshinter_module_class @5748 DATA
+    psnames_module_class @5749 DATA
+    pthread_attr_destroy @5750
+    pthread_attr_getdetachstate @5751
+    pthread_attr_getinheritsched @5752
+    pthread_attr_getschedparam @5753
+    pthread_attr_getschedpolicy @5754
+    pthread_attr_getscope @5755
+    pthread_attr_getstack @5756
+    pthread_attr_getstackaddr @5757
+    pthread_attr_getstacksize @5758
+    pthread_attr_init @5759
+    pthread_attr_setdetachstate @5760
+    pthread_attr_setinheritsched @5761
+    pthread_attr_setschedparam @5762
+    pthread_attr_setschedpolicy @5763
+    pthread_attr_setscope @5764
+    pthread_attr_setstack @5765
+    pthread_attr_setstackaddr @5766
+    pthread_attr_setstacksize @5767
+    pthread_cancel @5768
+    pthread_cond_broadcast @5769
+    pthread_cond_destroy @5770
+    pthread_cond_init @5771
+    pthread_cond_signal @5772
+    pthread_cond_timedwait @5773
+    pthread_cond_timedwait_relative_np @5774
+    pthread_cond_wait @5775
+    pthread_condattr_destroy @5776
+    pthread_condattr_getclock @5777
+    pthread_condattr_getpshared @5778
+    pthread_condattr_init @5779
+    pthread_condattr_setclock @5780
+    pthread_condattr_setpshared @5781
+    pthread_create @5782
+    pthread_create_wrapper @5783
+    pthread_delay_np @5784
+    pthread_delay_np_ms @5785
+    pthread_detach @5786
+    pthread_equal @5787
+    pthread_exit @5788
+    pthread_get_concurrency @5789
+    pthread_getclean @5790
+    pthread_getconcurrency @5791
+    pthread_getevent @5792
+    pthread_gethandle @5793
+    pthread_getname_np @5794
+    pthread_getschedparam @5795
+    pthread_getspecific @5796
+    pthread_join @5797
+    pthread_key_create @5798
+    pthread_key_delete @5799
+    pthread_kill @5800
+    pthread_mutex_destroy @5801
+    pthread_mutex_init @5802
+    pthread_mutex_lock @5803
+    pthread_mutex_timedlock @5804
+    pthread_mutex_trylock @5805
+    pthread_mutex_unlock @5806
+    pthread_mutexattr_destroy @5807
+    pthread_mutexattr_getprioceiling @5808
+    pthread_mutexattr_getprotocol @5809
+    pthread_mutexattr_getpshared @5810
+    pthread_mutexattr_gettype @5811
+    pthread_mutexattr_init @5812
+    pthread_mutexattr_setprioceiling @5813
+    pthread_mutexattr_setprotocol @5814
+    pthread_mutexattr_setpshared @5815
+    pthread_mutexattr_settype @5816
+    pthread_num_processors_np @5817
+    pthread_once @5818
+    pthread_rwlock_destroy @5819
+    pthread_rwlock_init @5820
+    pthread_rwlock_rdlock @5821
+    pthread_rwlock_timedrdlock @5822
+    pthread_rwlock_timedwrlock @5823
+    pthread_rwlock_tryrdlock @5824
+    pthread_rwlock_trywrlock @5825
+    pthread_rwlock_unlock @5826
+    pthread_rwlock_wrlock @5827
+    pthread_rwlockattr_destroy @5828
+    pthread_rwlockattr_getpshared @5829
+    pthread_rwlockattr_init @5830
+    pthread_rwlockattr_setpshared @5831
+    pthread_self @5832
+    pthread_set_concurrency @5833
+    pthread_set_num_processors_np @5834
+    pthread_setcancelstate @5835
+    pthread_setcanceltype @5836
+    pthread_setconcurrency @5837
+    pthread_setname_np @5838
+    pthread_setschedparam @5839
+    pthread_setspecific @5840
+    pthread_spin_destroy @5841
+    pthread_spin_init @5842
+    pthread_spin_lock @5843
+    pthread_spin_trylock @5844
+    pthread_spin_unlock @5845
+    pthread_testcancel @5846
+    pthread_timechange_handler_np @5847
+    pthread_tls_init @5848
+    rwl_print @5849
+    rwl_print_set @5850
+    sched_get_priority_max @5851
+    sched_get_priority_min @5852
+    sched_getscheduler @5853
+    sched_setscheduler @5854
+    sched_yield @5855
+    sfnt_module_class @5856 DATA
+    stbi_convert_iphone_png_to_rgb @5857
+    stbi_convert_iphone_png_to_rgb_thread @5858
+    stbi_failure_reason @5859
+    stbi_hdr_to_ldr_gamma @5860
+    stbi_hdr_to_ldr_scale @5861
+    stbi_image_free @5862
+    stbi_info @5863
+    stbi_info_from_callbacks @5864
+    stbi_info_from_file @5865
+    stbi_info_from_memory @5866
+    stbi_is_16_bit @5867
+    stbi_is_16_bit_from_callbacks @5868
+    stbi_is_16_bit_from_file @5869
+    stbi_is_16_bit_from_memory @5870
+    stbi_is_hdr @5871
+    stbi_is_hdr_from_callbacks @5872
+    stbi_is_hdr_from_file @5873
+    stbi_is_hdr_from_memory @5874
+    stbi_ldr_to_hdr_gamma @5875
+    stbi_ldr_to_hdr_scale @5876
+    stbi_load @5877
+    stbi_load_16 @5878
+    stbi_load_16_from_callbacks @5879
+    stbi_load_16_from_memory @5880
+    stbi_load_from_callbacks @5881
+    stbi_load_from_file @5882
+    stbi_load_from_file_16 @5883
+    stbi_load_from_memory @5884
+    stbi_load_gif_from_memory @5885
+    stbi_loadf @5886
+    stbi_loadf_from_callbacks @5887
+    stbi_loadf_from_file @5888
+    stbi_loadf_from_memory @5889
+    stbi_set_flip_vertically_on_load @5890
+    stbi_set_flip_vertically_on_load_thread @5891
+    stbi_set_unpremultiply_on_load @5892
+    stbi_zlib_decode_buffer @5893
+    stbi_zlib_decode_malloc @5894
+    stbi_zlib_decode_malloc_guesssize @5895
+    stbi_zlib_decode_malloc_guesssize_headerflag @5896
+    stbi_zlib_decode_noheader_buffer @5897
+    stbi_zlib_decode_noheader_malloc @5898
+    t1_builder_funcs @5899 DATA
+    t1_cmap_classes @5900 DATA
+    t1_cmap_custom_class_rec @5901 DATA
+    t1_cmap_expert_class_rec @5902 DATA
+    t1_cmap_standard_class_rec @5903 DATA
+    t1_cmap_unicode_class_rec @5904 DATA
+    t1_decoder_funcs @5905 DATA
+    t1_driver_class @5906 DATA
+    t1_expert_encoding @5907 DATA
+    t1_standard_encoding @5908 DATA
+    t1cid_driver_class @5909 DATA
+    t42_driver_class @5910 DATA
+    thread_print @5911
+    thread_print_set @5912
+    tt_cmap0_class_rec @5913 DATA
+    tt_cmap10_class_rec @5914 DATA
+    tt_cmap12_class_rec @5915 DATA
+    tt_cmap13_class_rec @5916 DATA
+    tt_cmap14_class_rec @5917 DATA
+    tt_cmap2_class_rec @5918 DATA
+    tt_cmap4_class_rec @5919 DATA
+    tt_cmap6_class_rec @5920 DATA
+    tt_cmap8_class_rec @5921 DATA
+    tt_cmap_unicode_class_rec @5922 DATA
+    tt_default_graphics_state @5923 DATA
+    tt_driver_class @5924 DATA
+    wglewGetExtension @5925
+    wglewInit @5926
+    wglewIsSupported @5927
+    winfnt_driver_class @5928 DATA

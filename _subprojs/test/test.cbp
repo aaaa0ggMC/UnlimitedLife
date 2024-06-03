@@ -37,6 +37,11 @@
 			<Add directory="../../_depend/headers" />
 		</Compiler>
 		<Linker>
+			<Add option="-static-libstdc++" />
+			<Add option="-static-libgcc" />
+			<Add option="-static" />
+			<Add library="benchmark_main.dll" />
+			<Add library="benchmark.dll" />
 			<Add library="lua" />
 			<Add directory="../../_depend/libs" />
 		</Linker>

@@ -1,13 +1,19 @@
 #include <iostream>
 #include <sol/sol.hpp>
+#include <benchmark/benchmark.h>
 
+unsigned int i = 0;
 
-int main(){
-    using namespace std;
-    using namespace sol;
+void rmain(benchmark::State & st){
+    for(auto _ : st){
+        using namespace std;
+        using namespace sol;
 
-    sol::state lua;
-    lua.set_function("beep",[]{cout << "Hello Lua" << endl;});
-    lua.script("beep()");
+        sol::state lua;
+        lua.set_function("beep",[&]{++i;});
+        lua.script("beep()");
+    }
 }
+
+BENCHMARK(rmain);
 
