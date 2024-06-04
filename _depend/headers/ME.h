@@ -18,4 +18,6 @@
 #include <com/lights.h>
 #include <com/program.h>
 
+#include <com/audio.h>
+
 #endif // ME_H_INCLUDED

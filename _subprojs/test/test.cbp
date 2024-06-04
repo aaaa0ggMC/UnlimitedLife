@@ -30,11 +30,16 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
+			<Environment>
+				<Variable name="MSYS2" value="E:\msys2\mingw64" />
+			</Environment>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add option="-DBENCHMARK_STATIC" />
 			<Add directory="../../_depend/headers" />
+			<Add directory="$(MSYS2)/include" />
 		</Compiler>
 		<Linker>
 			<Add option="-static-libstdc++" />
@@ -44,6 +49,7 @@
 			<Add library="benchmark.dll" />
 			<Add library="lua" />
 			<Add directory="../../_depend/libs" />
+			<Add directory="$(MSYS2)/lib" />
 		</Linker>
 		<Unit filename="main.cpp">
 			<Option virtualFolder="main/" />

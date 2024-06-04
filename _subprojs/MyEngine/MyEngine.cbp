@@ -38,34 +38,46 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
+			<Environment>
+				<Variable name="MSYS2" value="E:\msys2\mingw64" />
+			</Environment>
 		</Build>
 		<Compiler>
 			<Add option="-DBUILD_ON_WINDOWS" />
 			<Add option="-DGLEW_STATIC" />
 			<Add option="-DME_BUILD_PREFABS" />
+			<Add option="-DSFML_STATIC" />
+			<Add option="-DAL_LIBTYPE_STATIC" />
 			<Add directory="../../_depend/headers" />
 			<Add directory="../aaaa0ggmcLib/headers" />
+			<Add directory="$(MSYS2)/include" />
 		</Compiler>
 		<Linker>
+			<Add library="sfml-audio-s" />
+			<Add library="sfml-system-s" />
+			<Add library="freetype" />
+			<Add library="FLAC" />
+			<Add library="aaaa0ggmclib" />
+			<Add library="glfw3" />
 			<Add library="glew32" />
 			<Add library="opengl32" />
-			<Add library="glfw3" />
-			<Add library="freetype" />
-			<Add library="sfml-system-s" />
-			<Add library="sfml-audio-s" />
-			<Add library="FLAC" />
-			<Add library="ogg" />
-			<Add library="vorbis" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="openal.dll" />
 			<Add library="vorbisenc" />
 			<Add library="vorbisfile" />
-			<Add library="gdi32" />
-			<Add library="aaaa0ggmclib" />
+			<Add library="vorbis" />
+			<Add library="ogg" />
 			<Add directory="../../_depend/libs" />
 			<Add directory="../../_build" />
+			<Add directory="$(MSYS2)/lib" />
 		</Linker>
 		<Unit filename="../../_depend/headers/ME.h">
 			<Option virtualFolder="headers/" />
 			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../_depend/headers/com/audio.h">
+			<Option virtualFolder="headers/" />
 		</Unit>
 		<Unit filename="../../_depend/headers/com/camera.h">
 			<Option virtualFolder="headers/" />
@@ -126,6 +138,9 @@
 		<Unit filename="../../_depend/headers/com/window.h">
 			<Option virtualFolder="headers/" />
 			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="audio.cpp">
+			<Option virtualFolder="main/" />
 		</Unit>
 		<Unit filename="camera.cpp">
 			<Option virtualFolder="main/" />

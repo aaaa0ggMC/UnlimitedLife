@@ -233,3 +233,32 @@
 1682685506 e:\unlimitedlife\_subprojs\aaaa0ggmclib\main.h
 	<windows.h>
 
+1716642949 e:\unlimitedlife\_depend\headers\aaa_util.h
+	<string>
+	<vector>
+	<fstream>
+
+1712147350 e:\unlimitedlife\_depend\headers\cclock.h
+	<windows.h>
+
+1716642645 e:\unlimitedlife\_depend\headers\logger.h
+	<memory>
+	<string>
+	<windows.h>
+	<fstream>
+	"CClock.h"
+
+1712290121 e:\unlimitedlife\_depend\headers\multienstring.h
+	<string>
+
+1716643268 e:\unlimitedlife\_depend\headers\translator.h
+	<string>
+	<vector>
+	<unordered_map>
+	"MultiEnString.h"
+	<stdarg.h>
+
+1682685392 e:\unlimitedlife\_depend\headers\rapidjson.h
+	<string>
+	<vector>
+
