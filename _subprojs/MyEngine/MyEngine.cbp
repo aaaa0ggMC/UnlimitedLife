@@ -38,19 +38,15 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
-			<Environment>
-				<Variable name="MSYS2" value="E:\msys2\mingw64" />
-			</Environment>
 		</Build>
 		<Compiler>
 			<Add option="-DBUILD_ON_WINDOWS" />
 			<Add option="-DGLEW_STATIC" />
 			<Add option="-DME_BUILD_PREFABS" />
 			<Add option="-DSFML_STATIC" />
-			<Add option="-DAL_LIBTYPE_STATIC" />
 			<Add directory="../../_depend/headers" />
 			<Add directory="../aaaa0ggmcLib/headers" />
-			<Add directory="$(MSYS2)/include" />
+			<Add directory="$(#msys2.include)" />
 		</Compiler>
 		<Linker>
 			<Add library="sfml-audio-s" />
@@ -63,14 +59,14 @@
 			<Add library="opengl32" />
 			<Add library="gdi32" />
 			<Add library="winmm" />
-			<Add library="openal.dll" />
+			<Add library="openal" />
 			<Add library="vorbisenc" />
 			<Add library="vorbisfile" />
 			<Add library="vorbis" />
 			<Add library="ogg" />
 			<Add directory="../../_depend/libs" />
 			<Add directory="../../_build" />
-			<Add directory="$(MSYS2)/lib" />
+			<Add directory="$(#msys2.lib)" />
 		</Linker>
 		<Unit filename="../../_depend/headers/ME.h">
 			<Option virtualFolder="headers/" />

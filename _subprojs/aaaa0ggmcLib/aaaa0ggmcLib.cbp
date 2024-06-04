@@ -40,22 +40,19 @@
 					<Add library="user32" />
 				</Linker>
 			</Target>
-			<Environment>
-				<Variable name="MSYS2" value="E:\msys2\mingw64" />
-			</Environment>
 		</Build>
 		<Compiler>
 			<Add option="-std=c++20" />
 			<Add option="-fexceptions" />
 			<Add directory="../../_depend/headers" />
-			<Add directory="$(MSYS2)/include" />
+			<Add directory="$(#msys2.include)" />
 		</Compiler>
 		<Linker>
 			<Add option="-static-libstdc++" />
 			<Add option="-static-libgcc" />
 			<Add library="user32" />
 			<Add library="winmm" />
-			<Add directory="$(MSYS2)/lib" />
+			<Add directory="$(#msys2.lib)" />
 		</Linker>
 		<Unit filename="../../_depend/headers/CClock.h">
 			<Option virtualFolder="comhds/" />

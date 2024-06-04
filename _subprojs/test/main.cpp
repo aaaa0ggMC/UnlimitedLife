@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sol/sol.hpp>
 #include <benchmark/benchmark.h>
+#include <typeinfo>
 
 unsigned int i = 0;
 
