@@ -1,6 +1,6 @@
 #include "CClock.h"
 
-inline double timeGetTimeEx(LARGE_INTEGER & feq){
+static inline double timeGetTimeEx(LARGE_INTEGER & feq){
     LARGE_INTEGER lg;
     QueryPerformanceCounter(&lg);
     return ((double)lg.QuadPart/(double)feq.QuadPart * 1000);
