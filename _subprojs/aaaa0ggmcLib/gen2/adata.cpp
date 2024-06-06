@@ -122,7 +122,6 @@ public:
 std::optional<const char *> GDoc::get(dstring key){
     if(!analyser)return std::nullopt;
     auto it = analyser->mapping.find(key);
-    cout << key << "ÕÒÄãÅ£Ä§" << endl;
     if(it == analyser->mapping.end())return std::nullopt;
     return it->second.c_str();
 }
