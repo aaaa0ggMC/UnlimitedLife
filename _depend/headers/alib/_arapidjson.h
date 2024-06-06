@@ -2,6 +2,7 @@
 #define AA_RAPIDJSON_H_INCLUDED
 #include <string>
 #include <vector>
+#include <alib/autil.h>
 
 #ifndef DLL_EXPORT
 #ifdef BUILD_DLL
@@ -36,10 +37,10 @@ namespace alib::ng{
 
         Document();
         ~Document();
-        bool parse(std::string data);
-        std::string getValue(std::string name);
+        bool parse(dstring data);
+        std::string getValue(dstring name);
         std::string getValueI(std::vector<std::string> names);
-        void foreach(void (*fun)(std::string,std::string,void*),void* = NULL);
+        void foreach(void (*fun)(dstring,dstring,void*),void* = NULL);
     };
 
 }

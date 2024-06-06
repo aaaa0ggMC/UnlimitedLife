@@ -4,14 +4,34 @@
 #include <alib/autil.h>
 #include <alib/aclock.h>
 #include <alib/alogger.h>
+#include <alib/adata.h>
 #include <benchmark/benchmark.h>
 #include <glm/glm.hpp>
 
 using namespace alib::ng;
 
 
+int main(){
+    const char* json = R"({
+        "name": "John",
+        "age": 30,
+        "isStudent": false,
+        "scores": [85, 90, 92],
+        "address": {
+            "city": "New York",
+            "zip": "10001"
+        }
+    })";
+    GDoc doc;
+    doc.read_parseStringJSON(json);
+
+    for(auto& [key,str] : doc.mapping){
+        cout << key << "/" << str << endl;
+    }
+}
 
 
+/*
 template<bool returnACopy = false> auto test(){
  if constexpr(returnACopy)return 1;
 }
@@ -20,8 +40,10 @@ int main(){
     Logger logger;
     logger.setOutputFile("test.log");
     LogFactory lg("Test",logger);
-}
 
+    (lg(LOG_CRITI,APCF_RED | APCB_BRIGHT_WHITE) << "²ÝÄàÂí" << endlog)(LOG_CRITI,APCF_BLUE) << "Hahahahaha!" << endlog;
+}
+*/
 /*
 ifstream ifs,ifs2;
 int init(){

@@ -13,7 +13,7 @@ struct alib::ng::Document::Impl{
 
 extern std::string GVToString(Value & v);
 
-std::string alib::ng::Document::getValue(std::string name){
+std::string alib::ng::Document::getValue(dstring name){
     if(!data->doc.HasMember(name.c_str()))return name;
     return GVToString(data->doc[name.c_str()]);
 }
@@ -30,7 +30,7 @@ std::string alib::ng::Document::getValueI(std::vector<std::string> names){
     return GVToString(o);
 }
 
-bool alib::ng::Document::parse(std::string da){
+bool alib::ng::Document::parse(dstring da){
     data->doc.Parse(da.c_str());
     return !data->doc.HasParseError();
 }
@@ -40,7 +40,7 @@ alib::ng::Document::Document(){
     data->doc.SetObject();
 }
 
-void alib::ng::Document::foreach(void (*fun)(std::string,std::string,void*),void* reserved){
+void alib::ng::Document::foreach(void (*fun)(dstring,dstring,void*),void* reserved){
     for(auto i = data->doc.MemberBegin();i < data->doc.MemberEnd();++i){
         fun(GVToString((*i).name),GVToString((*i).value),reserved);
     }

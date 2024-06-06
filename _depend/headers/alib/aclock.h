@@ -14,8 +14,9 @@
 extern "C"
 {
 #endif
-
-namespace alib::ng{
+///这么写是因为Codeblocks识别不了alib::ng
+namespace alib{
+namespace ng{
     /** \brief time
      *  all : millisec time since launched
      *  offset : millisec time since last recorded "bookmark"
@@ -111,7 +112,8 @@ namespace alib::ng{
         Clock * m_clock;
         double rec;
     };
-};
+}
+}
 
 #ifdef __cplusplus
 }

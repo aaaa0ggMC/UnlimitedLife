@@ -43,7 +43,8 @@
 #endif
 #endif // DLL_EXPORT
 
-namespace alib::ng{
+namespace alib{
+namespace ng{
 
     struct DLL_EXPORT IData{
         const char * str;
@@ -152,6 +153,7 @@ namespace alib::ng{
         #endif // ALIB_DISABLE_GLM_EXTENSIONS
 
     };
+}
 }
 
 #endif // ALOGGER_H_INCLUDED

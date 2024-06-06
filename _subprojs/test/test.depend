@@ -1,12 +1,14 @@
 # depslib dependency file v1.0
-1717654503 source:e:\unlimitedlife\_subprojs\test\main.cpp
+1717677998 source:e:\unlimitedlife\_subprojs\test\main.cpp
 	<iostream>
 	<string>
 	<fstream>
 	<alib/autil.h>
 	<alib/aclock.h>
 	<alib/alogger.h>
+	<alib/adata.h>
 	<benchmark/benchmark.h>
+	<glm/glm.hpp>
 
 1717235390 e:\unlimitedlife\_depend\headers\sol\sol.hpp
 	<sol/config.hpp>
@@ -1650,15 +1652,15 @@
 
 1694011567 e:\msys2\mingw64\include\benchmark\export.h
 
-1717652778 e:\unlimitedlife\_depend\headers\alib\autil.h
+1717669199 e:\unlimitedlife\_depend\headers\alib\autil.h
 	<string>
 	<vector>
 	<fstream>
 
-1717647219 e:\unlimitedlife\_depend\headers\alib\aclock.h
+1717673874 e:\unlimitedlife\_depend\headers\alib\aclock.h
 	<windows.h>
 
-1717654722 e:\unlimitedlife\_depend\headers\alib\alogger.h
+1717673908 e:\unlimitedlife\_depend\headers\alib\alogger.h
 	<memory>
 	<string>
 	<windows.h>
@@ -2362,4 +2364,11 @@
 	"quaternion_common_simd.inl"
 
 1709273652 e:\msys2\mingw64\include\glm\ext\quaternion_common_simd.inl
+
+1717678400 e:\unlimitedlife\_depend\headers\alib\adata.h
+	<string>
+	<unordered_map>
+	<optional>
+	<stdarg.h>
+	<alib/autil.h>
 

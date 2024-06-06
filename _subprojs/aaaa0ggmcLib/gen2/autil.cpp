@@ -10,9 +10,6 @@
 #include <psapi.h>
 using namespace alib::ng;
 
-#define ALIB_SUCCESS 0
-#define ALIB_ERROR -1
-
 int Util::io_printColor(dstring message,int color) {
     static CONSOLE_SCREEN_BUFFER_INFO info;
     [[maybe_unused]] static BOOL v = GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE),&info);

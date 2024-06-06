@@ -262,7 +262,7 @@
 	<string>
 	<vector>
 
-1717646152 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\_arapidjson.cpp
+1717669683 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\_arapidjson.cpp
 	<alib/_arapidjson.h>
 	<rapidjson/rapidjson.h>
 	<rapidjson/document.h>
@@ -273,11 +273,19 @@
 1717645809 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\aclock.cpp
 	<alib/aclock.h>
 
-1717627346 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\adata.cpp
+1717680292 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\adata.cpp
+	<alib/adata.h>
+	<rapidjson/rapidjson.h>
+	<rapidjson/document.h>
+	<rapidjson/allocators.h>
+	<rapidjson/stringbuffer.h>
+	<rapidjson/writer.h>
+	<toml.hpp>
+	<iostream>
 
 1717627346 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\aio.cpp
 
-1717654535 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\alogger.cpp
+1717655446 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\alogger.cpp
 	<windows.h>
 	<time.h>
 	<string.h>
@@ -292,7 +300,7 @@
 
 1717627346 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\atranslator.cpp
 
-1717643495 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\autil.cpp
+1717669192 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\autil.cpp
 	<alib/autil.h>
 	<time.h>
 	<malloc.h>
@@ -304,19 +312,20 @@
 	<stdint.h>
 	<psapi.h>
 
-1717652778 e:\unlimitedlife\_depend\headers\alib\autil.h
+1717669199 e:\unlimitedlife\_depend\headers\alib\autil.h
 	<string>
 	<vector>
 	<fstream>
 
-1717647219 e:\unlimitedlife\_depend\headers\alib\aclock.h
+1717673874 e:\unlimitedlife\_depend\headers\alib\aclock.h
 	<windows.h>
 
-1717646192 e:\unlimitedlife\_depend\headers\alib\_arapidjson.h
+1717672587 e:\unlimitedlife\_depend\headers\alib\_arapidjson.h
 	<string>
 	<vector>
+	<alib/autil.h>
 
-1717654587 e:\unlimitedlife\_depend\headers\alib\alogger.h
+1717673908 e:\unlimitedlife\_depend\headers\alib\alogger.h
 	<memory>
 	<string>
 	<windows.h>
@@ -1228,4 +1237,52 @@
 
 1709273652 e:\msys2\mingw64\include\glm\gtc\type_ptr.inl
 	<cstring>
+
+1717678565 e:\unlimitedlife\_depend\headers\alib\adata.h
+	<string>
+	<unordered_map>
+	<optional>
+	<stdarg.h>
+	<alib/autil.h>
+
+1717062960 e:\unlimitedlife\_depend\headers\toml.hpp
+	<CodeAnalysis/Warnings.h>
+	<cassert>
+	<new>
+	<string_view>
+	<string>
+	<optional>
+	<cstdint>
+	<cstddef>
+	<cstring>
+	<cfloat>
+	<climits>
+	<cmath>
+	<limits>
+	<memory>
+	<iosfwd>
+	<type_traits>
+	<vector>
+	<iterator>
+	<utility>
+	<initializer_list>
+	<map>
+	<iterator>
+	<stdexcept>
+	<Windows.h>
+	<ostream>
+	<charconv>
+	<sstream>
+	<iomanip>
+	<charconv>
+	<sstream>
+	<charconv>
+	<sstream>
+	<smmintrin.h>
+	<emmintrin.h>
+	<istream>
+	<fstream>
+	<charconv>
+	<sstream>
+	<iomanip>
 
