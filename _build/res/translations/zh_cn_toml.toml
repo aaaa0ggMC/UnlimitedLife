@@ -1,0 +1,23 @@
+Language = "简体中文(TOML)"
+Access = "zh_cn_toml"
+
+[game]
+defaultCaption = "无尽人生"
+menu.startGame = "开始游戏"
+menu.modList = "模组列表"
+menu.settings = "设置"
+menu.exit = "退出"
+text.back = "返回"
+
+[choice]
+on = "开"
+off = "关"
+
+[setting]
+choseLan = "语言:%s"
+
+[gm.err]
+fnt = "无法加载默认字体，可能你需要重新安装这个程序"
+path = "模组加载出现错误，见文件  %s"
+critical = "致命错误！建议查看日志，继续运行游戏容易崩溃！"
+norm = "模组加载出现错误！"

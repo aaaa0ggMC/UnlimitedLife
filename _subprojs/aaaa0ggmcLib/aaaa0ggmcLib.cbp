@@ -72,9 +72,6 @@
 		<Unit filename="../../_depend/headers/aaa_util.h">
 			<Option virtualFolder="gen1/comhds/" />
 		</Unit>
-		<Unit filename="../../_depend/headers/alib/_arapidjson.h">
-			<Option virtualFolder="gen2/alib/" />
-		</Unit>
 		<Unit filename="../../_depend/headers/alib/aclock.h">
 			<Option virtualFolder="gen2/alib/" />
 		</Unit>
@@ -98,9 +95,6 @@
 		</Unit>
 		<Unit filename="../../_depend/headers/rapidjson.h">
 			<Option virtualFolder="gen1/comhds/" />
-		</Unit>
-		<Unit filename="gen2/_arapidjson.cpp">
-			<Option virtualFolder="gen2/impl/" />
 		</Unit>
 		<Unit filename="gen2/aclock.cpp">
 			<Option virtualFolder="gen2/impl/" />

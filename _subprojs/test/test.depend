@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1717677998 source:e:\unlimitedlife\_subprojs\test\main.cpp
+1717725632 source:e:\unlimitedlife\_subprojs\test\main.cpp
 	<iostream>
 	<string>
 	<fstream>
@@ -9,6 +9,7 @@
 	<alib/adata.h>
 	<benchmark/benchmark.h>
 	<glm/glm.hpp>
+	<alib/atranslator.h>
 
 1717235390 e:\unlimitedlife\_depend\headers\sol\sol.hpp
 	<sol/config.hpp>
@@ -2365,10 +2366,22 @@
 
 1709273652 e:\msys2\mingw64\include\glm\ext\quaternion_common_simd.inl
 
-1717678400 e:\unlimitedlife\_depend\headers\alib\adata.h
+1717717355 e:\unlimitedlife\_depend\headers\alib\adata.h
 	<string>
 	<unordered_map>
 	<optional>
 	<stdarg.h>
+	<alib/autil.h>
+
+1717725240 e:\unlimitedlife\_depend\headers\alib\atranslator.h
+	<string>
+	<vector>
+	<unordered_map>
+	<optional>
+	<stdarg.h>
+	<alib/astring.h>
+
+1717725143 e:\unlimitedlife\_depend\headers\alib\astring.h
+	<string>
 	<alib/autil.h>
 

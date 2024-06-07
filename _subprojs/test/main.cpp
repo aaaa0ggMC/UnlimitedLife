@@ -7,27 +7,29 @@
 #include <alib/adata.h>
 #include <benchmark/benchmark.h>
 #include <glm/glm.hpp>
+#include <alib/atranslator.h>
 
 using namespace alib::ng;
 
 
 int main(){
-    const char* json = R"({
-        "name": "John",
-        "age": 30,
-        "isStudent": false,
-        "scores": [85, 90, 92],
-        "address": {
-            "city": "New York",
-            "zip": "10001"
-        }
-    })";
-    GDoc doc;
-    doc.read_parseStringJSON(json);
+    alib::ng::Translator t;
 
-    for(auto& [key,str] : doc.mapping){
-        cout << key << "/" << str << endl;
+    t.readTranslationFiles("res/translations");
+
+    for(auto&[access,map0] : t.translations){
+        cout << "ACCESS----" << access << endl;
+        for(auto&[key,v] : map0){
+            cout << key << ":" << v.ansi << endl;
+        }
+        cout << endl;
     }
+
+    t.loadTranslation("en_us");
+
+    string writer;
+    cout <<
+    t.translate_args_def("gm.err.path212","hello%s",ALIB_ENC_UTF8,"HelloWorld")<< endl;
 }
 
 

@@ -53,6 +53,8 @@ namespace ng{
             return get(keyfn);
         }
 
+        std::optional<const char*> operator [](dstring key);
+
     };
 }
 }

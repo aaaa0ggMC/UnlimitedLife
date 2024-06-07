@@ -27,7 +27,7 @@
 	<vector>
 	<fstream>
 
-1716643025 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\aaa_util.cpp
+1717725413 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\aaa_util.cpp
 	"aaa_util.h"
 	<time.h>
 	<malloc.h>
@@ -201,7 +201,7 @@
 1637766706 e:\unlimitedlife\_depend\headers\rapidjson\internal\itoa.h
 	"../rapidjson.h"
 
-1716643238 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\multienstring.cpp
+1717718676 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\headers\multienstring.cpp
 	"MultiEnString.h"
 	"aaa_util.h"
 	<locale>
@@ -273,7 +273,7 @@
 1717645809 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\aclock.cpp
 	<alib/aclock.h>
 
-1717680292 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\adata.cpp
+1717727488 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\adata.cpp
 	<alib/adata.h>
 	<rapidjson/rapidjson.h>
 	<rapidjson/document.h>
@@ -296,11 +296,22 @@
 	<alib/autil.h>
 	<glm/gtc/type_ptr.hpp>
 
-1717627346 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\astring.cpp
+1717720898 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\astring.cpp
+	<alib/astring.h>
+	<alib/autil.h>
+	<codecvt>
+	<locale>
 
-1717627346 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\atranslator.cpp
+1717726469 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\atranslator.cpp
+	<alib/atranslator.h>
+	<alib/autil.h>
+	<alib/adata.h>
+	<unordered_map>
+	<algorithm>
+	<string.h>
+	<iostream>
 
-1717669192 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\autil.cpp
+1717727338 source:e:\unlimitedlife\_subprojs\aaaa0ggmclib\gen2\autil.cpp
 	<alib/autil.h>
 	<time.h>
 	<malloc.h>
@@ -1238,7 +1249,7 @@
 1709273652 e:\msys2\mingw64\include\glm\gtc\type_ptr.inl
 	<cstring>
 
-1717678565 e:\unlimitedlife\_depend\headers\alib\adata.h
+1717717355 e:\unlimitedlife\_depend\headers\alib\adata.h
 	<string>
 	<unordered_map>
 	<optional>
@@ -1285,4 +1296,16 @@
 	<charconv>
 	<sstream>
 	<iomanip>
+
+1717725143 e:\unlimitedlife\_depend\headers\alib\astring.h
+	<string>
+	<alib/autil.h>
+
+1717725240 e:\unlimitedlife\_depend\headers\alib\atranslator.h
+	<string>
+	<vector>
+	<unordered_map>
+	<optional>
+	<stdarg.h>
+	<alib/astring.h>
 

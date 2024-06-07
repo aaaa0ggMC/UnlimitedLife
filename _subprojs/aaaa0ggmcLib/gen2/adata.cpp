@@ -105,7 +105,8 @@ public:
         try{
             tml = toml::parse(data);
             tml.prune();
-        }catch(...){
+        }catch(const toml::parse_error& err){
+            //cout << err << endl;
             return ALIB_EHAS_PARSE_ERROR;
         }
         return ALIB_SUCCESS;
@@ -178,6 +179,7 @@ int GDoc::read_parseFileJSON(dstring fp){
 
 int GDoc::read_parseFileTOML(dstring fp){
     string data = Util::io_readAll(fp);
+    Util::str_trim(data);
     return read_parseStringTOML(data);
 }
 
@@ -199,3 +201,8 @@ int GDoc::read_parseStringTOML(dstring data){
 
     return ALIB_SUCCESS;
 }
+
+std::optional<const char*> GDoc::operator [](dstring key){
+    return this->get(key);
+}
+

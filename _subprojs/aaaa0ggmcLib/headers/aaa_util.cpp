@@ -295,6 +295,6 @@ GlMem Util::GetGlobalMemoryUsage(){
 
 CPUInfo::CPUInfo(){
     #ifdef BUILD_ON_WINDOWS
-    this->CpuID = _Windows_getCPUInfo();
+    this->CpuID = Util::Windows_getCPUInfo();
     #endif // BUILD_ON_WINDOWS
 }
