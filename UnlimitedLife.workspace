@@ -5,5 +5,6 @@
 		<Project filename="_subprojs/aaaa0ggmcLib/aaaa0ggmcLib.cbp" />
 		<Project filename="_subprojs/MyEngine/MyEngine.cbp" />
 		<Project filename="_subprojs/test/test.cbp" />
+		<Project filename="_subprojs/supportive_libraries/supportive_libraries.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

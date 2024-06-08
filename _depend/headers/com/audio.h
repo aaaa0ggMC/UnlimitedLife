@@ -12,7 +12,6 @@ using namespace std;
     #include <SFML/Audio.hpp>
     using namespace sf;
     using pMusic = Music*;
-    #pragma GCC diagnostic pop
 #else
     using pMusic = void*;
 #endif // USE_SFML
