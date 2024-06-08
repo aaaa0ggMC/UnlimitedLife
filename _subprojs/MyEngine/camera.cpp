@@ -13,7 +13,7 @@ void Camera::BuildOrth(float l,float r,float b,float t,float n,float f){
 void Camera::UpdateModelMat(){
     mat = glm::translate(glm::mat4(1.0),glm::vec3(-position.x,-position.y,-position.z));
     if(updateVRP)vrp_matrix = perspec * glm::transpose(rmat) * mat;
-//    mat = mat * rmat;×ªµ½ÁíÒ»¸ö
+//    mat = mat * rmat;è½¬åˆ°å¦ä¸€ä¸ª
 }
 
 Camera::Camera(float x,float y,float z,bool m,bool uvrp){

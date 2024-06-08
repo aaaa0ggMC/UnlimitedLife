@@ -37,7 +37,7 @@ namespace alib{
 namespace ng{
 
 
-    ///ÎÄ×Ö¶àÓïÑÔÖ§³Ö,Ä¿Ç°Ö§³ÖjsonÓëtomlÎÄ¼şµÄ¶ÁÈ¡
+    ///æ–‡å­—å¤šè¯­è¨€æ”¯æŒ,ç›®å‰æ”¯æŒjsonä¸tomlæ–‡ä»¶çš„è¯»å–
     class DLL_EXPORT Translator{
     private:
         static Translator * instance;
@@ -82,7 +82,7 @@ namespace ng{
         void setAccessToken(dstring accessUTF8);
 
         dstring translate_def(dstring id,dstring def,int enc);
-        ///·µ»Øu8
+        ///è¿”å›u8
         std::string translate_args_def(dstring id,dstring def,int enc,...);
 
 

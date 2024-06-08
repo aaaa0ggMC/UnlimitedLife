@@ -102,7 +102,7 @@ bool ObjLoader::LoadFromObj(const char * obj_path){
     case 'v':
         v.x = v.y = v.z = 0;
         fobj.get(token);
-        //fobj >> token; ÓÃ·ûºÅ>>»áÌø¹ı¿Õ°× use operator ">>" would skip spaces
+        //fobj >> token; ç”¨ç¬¦å·>>ä¼šè·³è¿‡ç©ºç™½ use operator ">>" would skip spaces
         if(token == ' '){
             fobj >> v.x >> v.y >> v.z;
 //            cout << "V:" << v.x << " " << v.y << " " << v.z << endl;
@@ -119,11 +119,11 @@ bool ObjLoader::LoadFromObj(const char * obj_path){
         break;
     //faces
     case 'f':{
-        ///×¢Òâ:faceµÄËùÓĞÆğÊ¼Ë÷ÒıÎª1¶ø·Ç0£¬×¢Òâ¶ÔÆë
+        ///æ³¨æ„:faceçš„æ‰€æœ‰èµ·å§‹ç´¢å¼•ä¸º1è€Œé0ï¼Œæ³¨æ„å¯¹é½
         int index = 0;
         vertc += 3;
         for(int xx = 0;xx < 3;++xx){
-            ///Ô­À´Ë³ĞòÊÇvtn,vertex/texcoord/normal ÆøËÀÎÒÁË£¡
+            ///åŸæ¥é¡ºåºæ˜¯vtn,vertex/texcoord/normal æ°”æ­»æˆ‘äº†ï¼
             fobj >> index;
             if(index != 0){
 //                vindices.push_back(index-1);
@@ -135,7 +135,7 @@ bool ObjLoader::LoadFromObj(const char * obj_path){
             if(token != '/')continue;
 
             fobj >> index;
-            ///È±µã£ºf±êÇ©±ØĞëÔÚv,vt,vn±êÇ©Ö®ºó
+            ///ç¼ºç‚¹ï¼šfæ ‡ç­¾å¿…é¡»åœ¨v,vt,vnæ ‡ç­¾ä¹‹å
             if(index != 0){
 //                tindices.push_back(index-1);
                 vtexc.push_back(tcoords[index-1].x);
@@ -207,7 +207,7 @@ bool ObjLoader::LoadFromStlBin(const char * fp){
         }
         fread(&v,2,1,file);
     }
-    //½oµÄÊÇÃæµÄ”µÁ¿
+    //çµ¦çš„æ˜¯é¢çš„æ•¸é‡
     vertc *= 3;
     fclose(file);
     return true;

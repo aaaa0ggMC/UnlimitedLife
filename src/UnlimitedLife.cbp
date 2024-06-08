@@ -81,7 +81,7 @@
 		<Linker>
 			<Add library="opengl32" />
 			<Add library="../_build/libMyEngine.a" />
-			<Add library="../_build/libaaaa0ggmcLib.a" />
+			<Add library="../_build/libaaaa0ggmcLib-g2.a" />
 			<Add library="lua" />
 			<Add directory="../_depend/libs" />
 			<Add directory="$(#msys2.lib)" />
@@ -97,6 +97,30 @@
 		</Unit>
 		<Unit filename="-terrarian/properties.h">
 			<Option virtualFolder="terrarian/" />
+		</Unit>
+		<Unit filename="../_build/res/shaders/blocks.vert">
+			<Option virtualFolder="reses/shaders/" />
+		</Unit>
+		<Unit filename="../_build/res/shaders/glass_like.frag">
+			<Option virtualFolder="reses/shaders/" />
+		</Unit>
+		<Unit filename="../_build/res/shaders/main.lua">
+			<Option virtualFolder="reses/shaders/" />
+		</Unit>
+		<Unit filename="../_build/res/translations/en_us.json">
+			<Option virtualFolder="reses/translations/" />
+		</Unit>
+		<Unit filename="../_build/res/translations/ikunYHY.json">
+			<Option virtualFolder="reses/translations/" />
+		</Unit>
+		<Unit filename="../_build/res/translations/zh_cn.json">
+			<Option virtualFolder="reses/translations/" />
+		</Unit>
+		<Unit filename="../_build/res/translations/zh_cn_toml.toml">
+			<Option virtualFolder="reses/translations/" />
+		</Unit>
+		<Unit filename="../_build/res/translations/语言文件说明.txt">
+			<Option virtualFolder="reses/translations/" />
 		</Unit>
 		<Unit filename="main.cpp">
 			<Option virtualFolder="main/" />

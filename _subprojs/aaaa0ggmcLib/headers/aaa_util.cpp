@@ -60,18 +60,18 @@ std::string Util::Windows_getCPUInfo(){
 }
 
 void Util::getFileNames(std::string path, std::vector<std::string>& files){
-	//ÎÄ¼ş¾ä±ú
-	//×¢Òâ£ºÎÒ·¢ÏÖÓĞĞ©ÎÄÕÂ´úÂë´Ë´¦ÊÇlongÀàĞÍ£¬Êµ²âÔËĞĞÖĞ»á±¨´í·ÃÎÊÒì³£
+	//æ–‡ä»¶å¥æŸ„
+	//æ³¨æ„ï¼šæˆ‘å‘ç°æœ‰äº›æ–‡ç« ä»£ç æ­¤å¤„æ˜¯longç±»å‹ï¼Œå®æµ‹è¿è¡Œä¸­ä¼šæŠ¥é”™è®¿é—®å¼‚å¸¸
 	intptr_t hFile = 0;
-	//ÎÄ¼şĞÅÏ¢
+	//æ–‡ä»¶ä¿¡æ¯
 	struct _finddata_t fileinfo;
 	std::string p;
 	if ((hFile = _findfirst(p.assign(path).append("\\*").c_str(), &fileinfo)) != -1)
 	{
 		do
 		{
-			//Èç¹ûÊÇÄ¿Â¼,µİ¹é²éÕÒ
-			//Èç¹û²»ÊÇ,°ÑÎÄ¼ş¾ø¶ÔÂ·¾¶´æÈëvectorÖĞ
+			//å¦‚æœæ˜¯ç›®å½•,é€’å½’æŸ¥æ‰¾
+			//å¦‚æœä¸æ˜¯,æŠŠæ–‡ä»¶ç»å¯¹è·¯å¾„å­˜å…¥vectorä¸­
 			if ((fileinfo.attrib & _A_SUBDIR))
 			{
 			    ///In this app,we do not need to do it
@@ -126,9 +126,9 @@ std::string Util::GetTranslateString(std::string in){
 int Util::file_size(char* filename){
     struct stat statbuf;
     int ret;
-    ret = stat(filename,&statbuf);//µ÷ÓÃstatº¯Êı
-    if(ret != 0) return -1;//»ñÈ¡Ê§°Ü¡£
-    return statbuf.st_size;//·µ»ØÎÄ¼ş´óĞ¡¡£
+    ret = stat(filename,&statbuf);//è°ƒç”¨statå‡½æ•°
+    if(ret != 0) return -1;//è·å–å¤±è´¥ã€‚
+    return statbuf.st_size;//è¿”å›æ–‡ä»¶å¤§å°ã€‚
 }
 
 int Util::writeAll(std::string fth,std::string s){
@@ -186,17 +186,17 @@ void Util::split(std::vector<std::string> & vct,const std::string & line,const c
 
 void Util::Stringsplit(std::string str, std::string splits, std::vector<std::string>& res){
     if (str == "")		return;
-    //ÔÚ×Ö·û´®Ä©Î²Ò²¼ÓÈë·Ö¸ô·û£¬·½±ã½ØÈ¡×îºóÒ»¶Î
+    //åœ¨å­—ç¬¦ä¸²æœ«å°¾ä¹ŸåŠ å…¥åˆ†éš”ç¬¦ï¼Œæ–¹ä¾¿æˆªå–æœ€åä¸€æ®µ
     std::string strs = str + splits;
     size_t pos = strs.find(splits);
     int step = splits.size();
 
-    // ÈôÕÒ²»µ½ÄÚÈİÔò×Ö·û´®ËÑË÷º¯Êı·µ»Ø npos
+    // è‹¥æ‰¾ä¸åˆ°å†…å®¹åˆ™å­—ç¬¦ä¸²æœç´¢å‡½æ•°è¿”å› npos
     while (pos != strs.npos)
     {
         std::string temp = strs.substr(0, pos);
         res.push_back(temp);
-        //È¥µôÒÑ·Ö¸îµÄ×Ö·û´®,ÔÚÊ£ÏÂµÄ×Ö·û´®ÖĞ½øĞĞ·Ö¸î
+        //å»æ‰å·²åˆ†å‰²çš„å­—ç¬¦ä¸²,åœ¨å‰©ä¸‹çš„å­—ç¬¦ä¸²ä¸­è¿›è¡Œåˆ†å‰²
         strs = strs.substr(pos + step, strs.size());
         pos = strs.find(splits);
     }

@@ -1034,11 +1034,11 @@
 	<vector>
 	<fstream>
 
-1717304088 source:e:\unlimitedlife\_subprojs\myengine\font.cpp
+1717755775 source:e:\unlimitedlife\_subprojs\myengine\font.cpp
 	"com/font.h"
-	<MultiEnString.h>
+	<alib/astring.h>
 
-1717304001 e:\unlimitedlife\_depend\headers\com\font.h
+1717804007 e:\unlimitedlife\_depend\headers\com\font.h
 	<com/utility.h>
 	<com/texture.h>
 	<unordered_map>
@@ -1170,7 +1170,7 @@
 1717467566 source:e:\unlimitedlife\_subprojs\myengine\audio.cpp
 	<com/audio.h>
 
-1717467304 e:\unlimitedlife\_depend\headers\com\audio.h
+1717805034 e:\unlimitedlife\_depend\headers\com\audio.h
 	<string>
 	<vector>
 	<com/utility.h>
@@ -2649,4 +2649,13 @@
 	"../simd/integer.h"
 
 1709273652 e:\msys2\mingw64\include\glm\simd\integer.h
+
+1717756042 e:\unlimitedlife\_depend\headers\alib\astring.h
+	<string>
+	<alib/autil.h>
+
+1717802523 e:\unlimitedlife\_depend\headers\alib\autil.h
+	<string>
+	<vector>
+	<fstream>
 

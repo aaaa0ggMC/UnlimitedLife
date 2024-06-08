@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1717249755 source:e:\unlimitedlife\src\main.cpp
+1717803007 source:e:\unlimitedlife\src\main.cpp
 	<ME.h>
-	<CClock.h>
-	<aaa_util.h>
-	<MultiEnstring.h>
+	<alib/autil.h>
+	<alib/aclock.h>
+	<alib/astring.h>
 	<toml.hpp>
 	<sol/sol.hpp>
 	"-terrarian/Chunk.h"
@@ -1315,7 +1315,7 @@
 	<com/macros.h>
 	<com/utility.h>
 
-1717304001 e:\unlimitedlife\_depend\headers\com\font.h
+1717804007 e:\unlimitedlife\_depend\headers\com\font.h
 	<com/utility.h>
 	<com/texture.h>
 	<unordered_map>
@@ -2271,7 +2271,7 @@
 
 1709273652 e:\msys2\mingw64\include\glm\simd\integer.h
 
-1717467304 e:\unlimitedlife\_depend\headers\com\audio.h
+1717804167 e:\unlimitedlife\_depend\headers\com\audio.h
 	<string>
 	<vector>
 	<com/utility.h>
@@ -3939,4 +3939,16 @@
 1712399907 e:\msys2\mingw64\include\boost\optional\detail\optional_swap.hpp
 	<boost/core/invoke_swap.hpp>
 	<boost/optional/optional_fwd.hpp>
+
+1717802523 e:\unlimitedlife\_depend\headers\alib\autil.h
+	<string>
+	<vector>
+	<fstream>
+
+1717800000 e:\unlimitedlife\_depend\headers\alib\aclock.h
+	<windows.h>
+
+1717756042 e:\unlimitedlife\_depend\headers\alib\astring.h
+	<string>
+	<alib/autil.h>
 

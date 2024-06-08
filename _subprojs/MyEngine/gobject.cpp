@@ -73,7 +73,7 @@ void GObject::SetMovement(bool v){
 
 void GObject::MoveDirectional(float l,float u,float f){
     if(!movement){
-        ///处理错误，不需要很节省
+        ///澶勭悊閿欒锛屼笉闇�瑕佸緢鑺傜渷
         ME_SIV("Using MoveDirectional without setting the movement field!",0);
         return;
     }

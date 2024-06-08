@@ -149,7 +149,7 @@
 #else
 
 // Static build doesn't need import/export macros
-#define SFML_API_EXPORT
-#define SFML_API_IMPORT
+#define SFML_API_EXPORT __attribute__ ((visibility ("hidden")))
+#define SFML_API_IMPORT __attribute__ ((visibility ("hidden")))
 
 #endif

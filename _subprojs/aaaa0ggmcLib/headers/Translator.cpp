@@ -39,11 +39,11 @@ int Translator::LoadTranslateFiles(::string path){
             continue;
         }
         unordered_map<::string,::string> trs;
-        ///大错误！！！AnalyseAFile前面没加上非符号浪费了我好多时间
+        ///澶ч敊璇紒锛侊紒AnalyseAFile鍓嶉潰娌″姞涓婇潪绗﹀彿娴垂浜嗘垜濂藉鏃堕棿
         if(!AnalyseAFile(ss,trs)){
             if(trs.find(VERIFY_TOKEN) != trs.end()){
                 if(trs.find(ACCESS_TOKEN) != trs.end()){
-                    ///防止占用InnerUS
+                    ///闃叉鍗犵敤InnerUS
                     if(trs[ACCESS_TOKEN].compare(""))summTrans.insert(make_pair(trs[ACCESS_TOKEN],trs));
                 }
             }
@@ -54,7 +54,7 @@ int Translator::LoadTranslateFiles(::string path){
 
 int Translator::LoadTranslate(string id){
     currentTranslates = NULL;
-    ///使用系统翻译
+    ///浣跨敤绯荤粺缈昏瘧
     if(!id.compare(""))return 0;
     auto iter = summTrans.find(id);
     if(iter == summTrans.end()){

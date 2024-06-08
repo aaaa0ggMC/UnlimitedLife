@@ -7,25 +7,26 @@
 		<Option compiler="gcc" />
 		<Option virtualFolders="def/;gen1/;gen1/comhds/;gen1/com/;gen2/;gen2/alib/;gen2/impl/" />
 		<Build>
-			<Target title="Debug">
-				<Option output="../../_build/aaaa0ggmcLibD" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
+			<Target title="gen1">
+				<Option output="../../_build/aaaa0ggmcLib-g1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/gen1/" />
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
+					<Add option="-O2" />
 					<Add option="-Wall" />
-					<Add option="-g" />
 					<Add option="-DBUILD_DLL" />
 				</Compiler>
 				<Linker>
+					<Add option="-s" />
 					<Add library="user32" />
 				</Linker>
 			</Target>
-			<Target title="Release">
-				<Option output="../../_build/aaaa0ggmcLib" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
+			<Target title="gen2">
+				<Option output="../../_build/aaaa0ggmcLib-g2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/gen2/" />
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option createDefFile="1" />
@@ -59,87 +60,114 @@
 		</Linker>
 		<Unit filename="../../_depend/headers/CClock.h">
 			<Option virtualFolder="gen1/comhds/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/Logger.h">
 			<Option virtualFolder="gen1/comhds/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/MultiEnString.h">
 			<Option virtualFolder="gen1/comhds/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/Translator.h">
 			<Option virtualFolder="gen1/comhds/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/aaa_util.h">
 			<Option virtualFolder="gen1/comhds/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/alib/aclock.h">
 			<Option virtualFolder="gen2/alib/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/alib/adata.h">
 			<Option virtualFolder="gen2/alib/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/alib/aio.h">
 			<Option virtualFolder="gen2/alib/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/alib/alogger.h">
 			<Option virtualFolder="gen2/alib/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/alib/astring.h">
 			<Option virtualFolder="gen2/alib/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/alib/atranslator.h">
 			<Option virtualFolder="gen2/alib/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/alib/autil.h">
 			<Option virtualFolder="gen2/alib/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="../../_depend/headers/rapidjson.h">
 			<Option virtualFolder="gen1/comhds/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="gen2/aclock.cpp">
 			<Option virtualFolder="gen2/impl/" />
+			<Option target="gen2" />
 		</Unit>
 		<Unit filename="gen2/adata.cpp">
 			<Option virtualFolder="gen2/impl/" />
+			<Option target="gen2" />
 		</Unit>
 		<Unit filename="gen2/aio.cpp">
 			<Option virtualFolder="gen2/impl/" />
+			<Option target="gen2" />
 		</Unit>
 		<Unit filename="gen2/alogger.cpp">
 			<Option virtualFolder="gen2/impl/" />
+			<Option target="gen2" />
 		</Unit>
 		<Unit filename="gen2/astring.cpp">
 			<Option virtualFolder="gen2/impl/" />
+			<Option target="gen2" />
 		</Unit>
 		<Unit filename="gen2/atranslator.cpp">
 			<Option virtualFolder="gen2/impl/" />
+			<Option target="gen2" />
 		</Unit>
 		<Unit filename="gen2/autil.cpp">
 			<Option virtualFolder="gen2/impl/" />
+			<Option target="gen2" />
 		</Unit>
 		<Unit filename="headers/CClock.cpp">
 			<Option virtualFolder="gen1/com/" />
+			<Option target="gen1" />
 		</Unit>
 		<Unit filename="headers/Logger.cpp">
 			<Option virtualFolder="gen1/com/" />
+			<Option target="gen1" />
 		</Unit>
 		<Unit filename="headers/MultiEnString.cpp">
 			<Option virtualFolder="gen1/com/" />
+			<Option target="gen1" />
 		</Unit>
 		<Unit filename="headers/Translator.cpp">
 			<Option virtualFolder="gen1/com/" />
+			<Option target="gen1" />
 		</Unit>
 		<Unit filename="headers/aaa_util.cpp">
 			<Option virtualFolder="gen1/com/" />
+			<Option target="gen1" />
 		</Unit>
 		<Unit filename="headers/rapidjson.cpp">
 			<Option virtualFolder="gen1/com/" />
+			<Option target="gen1" />
 		</Unit>
 		<Unit filename="main.cpp">
 			<Option virtualFolder="def/" />
 		</Unit>
 		<Unit filename="main.h">
 			<Option virtualFolder="def/" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -173,12 +173,13 @@ int GDoc::read_parseStringJSON(dstring data){
 }
 
 int GDoc::read_parseFileJSON(dstring fp){
-    string data = Util::io_readAll(fp);
-    return read_parseStringJSON(data);
+    string data = "";
+    return Util::io_readAll(fp,data) | read_parseStringJSON(data);
 }
 
 int GDoc::read_parseFileTOML(dstring fp){
-    string data = Util::io_readAll(fp);
+    string data = "";
+    Util::io_readAll(fp,data);
     Util::str_trim(data);
     return read_parseStringTOML(data);
 }

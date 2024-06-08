@@ -69,7 +69,7 @@ double Clock::getAllTime(){
     return now().all;
 }
 
-//ÏÖÔÚgetoffset²»»áÇåÁã£¡
+//çŽ°åœ¨getoffsetä¸ä¼šæ¸…é›¶ï¼
 double Clock::getOffset(){
     if(!m_start)return 0;
     double off = now().offset;
@@ -103,8 +103,12 @@ Trigger::Trigger(Clock & clk,double d){
     rec = clk.getAllTime();
 }
 
-bool Trigger::test(){
-    return (m_clock->getAllTime() - rec) >= duration;
+bool Trigger::test(bool v){
+    bool ret = (m_clock->getAllTime() - rec) >= duration;
+    if(v && ret){
+        reset();
+    }
+    return ret;
 }
 
 void Trigger::setClock(Clock & c){m_clock = &c;}

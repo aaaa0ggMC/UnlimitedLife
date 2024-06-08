@@ -34,9 +34,9 @@ void Util::PrintOpenGLError(){
 size_t Util::file_size(const char*filename){
     struct stat statbuf;
     int ret;
-    ret = stat(filename,&statbuf);//µ÷ÓÃstatº¯Êı
-    if(ret != 0) return 0;//»ñÈ¡Ê§°Ü¡£ 2023 6 5:ÕâÀïÓĞ¸Ä¶¯
-    return statbuf.st_size;//·µ»ØÎÄ¼ş´óĞ¡¡£
+    ret = stat(filename,&statbuf);//è°ƒç”¨statå‡½æ•°
+    if(ret != 0) return 0;//è·å–å¤±è´¥ã€‚ 2023 6 5:è¿™é‡Œæœ‰æ”¹åŠ¨
+    return statbuf.st_size;//è¿”å›æ–‡ä»¶å¤§å°ã€‚
 }
 
 int Util::InitGlew(){

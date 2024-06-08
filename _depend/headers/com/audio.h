@@ -6,11 +6,13 @@
 #include <com/utility.h>
 
 using namespace std;
+#define DO_PRAGMA(x) _Pragma (#x)
 
 #ifdef USE_SFML
     #include <SFML/Audio.hpp>
     using namespace sf;
     using pMusic = Music*;
+    #pragma GCC diagnostic pop
 #else
     using pMusic = void*;
 #endif // USE_SFML

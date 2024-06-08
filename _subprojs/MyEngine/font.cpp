@@ -1,5 +1,5 @@
 #include "com/font.h"
-#include <MultiEnString.h>
+#include <alib/astring.h>
 
 using namespace std;
 using namespace me;
@@ -282,20 +282,20 @@ void GlFont::_UpdateOpenGL(unsigned int index){
 unsigned int GlFont::LoadCharUnicode(FT_ULong charcode_un){
     wstring wstr = L"";
     wstr += charcode_un;
-    return LoadCharGB2312(alib::MultiEnString(wstr,alib::MultiEnString::Unicode).GetGBK()[0]);
+    return LoadCharGB2312(alib::ng::converter::utf16_to_ansi(wstr)[0]);
 }
 
 unsigned int GlFont::LoadCharUTF8(FT_ULong charcode_u8){
     string str = "";
     str += charcode_u8;
-    return LoadCharGB2312(alib::MultiEnString(str,alib::MultiEnString::UTF8).GetGBK()[0]);
+    return LoadCharGB2312(alib::ng::converter::utf8_to_ansi(str)[0]);
 }
 
 ///CharProperty hash
  size_t std::hash<CharProperty>::operator()(const CharProperty& cp) const {
-    // Ê¹ÓÃcharcodeµÄ¹şÏ£Öµ×÷Îª»ù´¡
+    // ä½¿ç”¨charcodeçš„å“ˆå¸Œå€¼ä½œä¸ºåŸºç¡€
     size_t hashValue = std::hash<FT_ULong>()(cp.charcode);
-    // »ìºÏÆäËû³ÉÔ±µÄ¹şÏ£Öµ
+    // æ··åˆå…¶ä»–æˆå‘˜çš„å“ˆå¸Œå€¼
     hashValue ^= std::hash<unsigned int>()(cp.attribute) + 0x9e3779b9 + (hashValue << 6) + (hashValue >> 2);
     hashValue ^= std::hash<unsigned int>()(cp.bold_strength) + 0x9e3779b9 + (hashValue << 6) + (hashValue >> 2);
     hashValue ^= std::hash<unsigned int>()(cp.font_size) + 0x9e3779b9 + (hashValue << 6) + (hashValue >> 2);

@@ -1,7 +1,7 @@
 #include <ME.h>
-#include <CClock.h>
-#include <aaa_util.h>
-#include <MultiEnstring.h>
+#include <alib/autil.h>
+#include <alib/aclock.h>
+#include <alib/astring.h>
 #include <toml.hpp>
 #include <sol/sol.hpp>
 #include "-terrarian/Chunk.h"
@@ -15,6 +15,7 @@
 
 using namespace std;
 using namespace me;
+using namespace alib;
 
 Window window;
 Shader shader(false);
@@ -34,7 +35,7 @@ GLuint vao[numVAOs];
 
 Texture test,test3d;
 
-cck::Clock clk(false);
+ng::Clock clk(false);
 
 bool reloadTag = false;
 
@@ -81,7 +82,7 @@ int rmain(){
 
     testFont.LoadFromFile((resbeg + "/fonts/rtest.ttf").c_str());
     ///Setup projection matrix
-    ///³¤¶È¸ø¸ºÖµ¿ÉÒÔºÍÍ¸ÊÓÍ¶Ó°·½ÏòÆëÆ½
+    ///é•¿åº¦ç»™è´Ÿå€¼å¯ä»¥å’Œé€è§†æŠ•å½±æ–¹å‘é½å¹³
     //c.BuildOrthA(4,4,-8,&window,-1,10000);
 	c.BuildPerspec(1.0472f, &window , 0.1f, 1000.0f);
     glfwSetWindowSizeCallback(window.GetGLFW(),
@@ -98,7 +99,7 @@ int rmain(){
     glfont.CreateBuffer();
     init();
 
-    clk.Start();
+    clk.start();
     while(!window.ShouldClose()){
         window.MakeCurrent();
         window.PollEvents();
@@ -111,6 +112,8 @@ int rmain(){
 void paint(Window& w,double currentTime,Camera*c){
     static ShaderArg m_mat = ShaderArg(shader.GetProgram(),1);
     static ShaderArg vrp = ShaderArg(shader.GetProgram(),2);
+    static ng::Trigger trigger_title_update(clk,100);
+
     window.Clear();
 
     c->Update();
@@ -144,10 +147,14 @@ void paint(Window& w,double currentTime,Camera*c){
     static char buf[48];
     static unsigned int smfps = 0;
     static unsigned int all = 0;
-    if(clk.Now().offset > 100){
-        float elapse = clk.GetOffset();
+    if(trigger_title_update.test()){
+        //trigger_title_update.reset(); testé»˜è®¤è‡ªåŠ¨æ‰§è¡Œreset
         memset(buf,0,sizeof(char) * 48);
-        sprintf(buf,"HiGLEW-% .2ffps | average %.2ffps | % .2fmspf",1000/elapse * smfps,1000 * all / clk.Now().all,elapse / smfps);
+        sprintf(buf,
+                "HiGLEW-% .2ffps | average %.2ffps | % .2fmspf",
+                1000.0/trigger_title_update.duration * smfps,
+                1000 * all / clk.getAllTime(),
+                trigger_title_update.duration / (float)smfps);
         SetWindowText((HWND)(long long)window.GetSystemHandle(),buf);
         smfps = 0;
         if(reloadTag){
@@ -219,9 +226,9 @@ void init(){
     vcx.SetBindings(0,1);
 
     {
-        ifstream ifs(resbeg + MAIN_SHADER_LUA);
-        string data = alib::Util::readAll(ifs);
-        ifs.close();
+        string path = resbeg + MAIN_SHADER_LUA;
+        string data = "";
+        ng::Util::io_readAll(path,data);
 
         shader_inter.set("vert","");
         shader_inter.set("frag","");
@@ -282,7 +289,7 @@ void input(Window& w,double elapseus,Camera * cx){
     }
 
     if(glfwGetKey(w.GetGLFW(),GLFW_KEY_M) == GLFW_PRESS){
-        ///ÑªµÄ½ÌÑµ£ºÓÉÓÚinputÓÉglfwÒì²½Ö´ĞĞ£¬Òò´ËÕâÀïÎŞ·¨Ê¹ÓÃOpenGLµÄ´ó²¿·Öº¯Êı£¡
+        ///è¡€çš„æ•™è®­ï¼šç”±äºinputç”±glfwå¼‚æ­¥æ‰§è¡Œï¼Œå› æ­¤è¿™é‡Œæ— æ³•ä½¿ç”¨OpenGLçš„å¤§éƒ¨åˆ†å‡½æ•°ï¼
         ///Mistake!!:Due to the async-running of input executed by glfw,most of the functions of OpenGL are unavailable
         reloadTag = true;
     }

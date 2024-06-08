@@ -27,7 +27,7 @@ extern "C"
 
 namespace alib{
 
-    ///文字多语言支持
+    ///鏂囧瓧澶氳瑷�鏀寔
     class DLL_EXPORT Translator{
     private:
         static Translator * instance;
@@ -38,7 +38,7 @@ namespace alib{
 
         using TransMap = unordered_map<::string,::string>;
         using LocalTransMap = unordered_map<::string,astring*>;
-        ///返回得到的语言数量
+        ///杩斿洖寰楀埌鐨勮瑷�鏁伴噺
         TransMap *currentTranslates;
         LocalTransMap localData;
         unordered_map<::string,TransMap> summTrans;

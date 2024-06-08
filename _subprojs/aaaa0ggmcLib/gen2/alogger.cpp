@@ -333,7 +333,7 @@ LogFactory& LogFactory::operator<<(glm::quat data){
 }
 
 LogFactory& LogFactory::operator<<(glm::mat2 data){
-    //按列->按行 ChatGPT告诉我默认按列的，具体是不是按列我不知道
+    //鎸夊垪->鎸夎 ChatGPT鍛婅瘔鎴戦粯璁ゆ寜鍒楃殑锛屽叿浣撴槸涓嶆槸鎸夊垪鎴戜笉鐭ラ亾
     glm::mat2 tp = glm::transpose(data);
     const float * dt = glm::value_ptr(tp);
     cachedStr += "[(";
@@ -349,7 +349,7 @@ LogFactory& LogFactory::operator<<(glm::mat2 data){
 }
 
 LogFactory& LogFactory::operator<<(glm::mat3 data){
-    //按列->按行 ChatGPT告诉我默认按列的，具体是不是按列我不知道
+    //鎸夊垪->鎸夎 ChatGPT鍛婅瘔鎴戦粯璁ゆ寜鍒楃殑锛屽叿浣撴槸涓嶆槸鎸夊垪鎴戜笉鐭ラ亾
     glm::mat3 tp = glm::transpose(data);
     const float * dt = glm::value_ptr(tp);
     {
@@ -379,7 +379,7 @@ LogFactory& LogFactory::operator<<(glm::mat3 data){
 
 
 LogFactory& LogFactory::operator<<(glm::mat4 data){
-    //按列->按行 ChatGPT告诉我默认按列的，具体是不是按列我不知道
+    //鎸夊垪->鎸夎 ChatGPT鍛婅瘔鎴戦粯璁ゆ寜鍒楃殑锛屽叿浣撴槸涓嶆槸鎸夊垪鎴戜笉鐭ラ亾
     glm::mat4 tp = glm::transpose(data);
     const float * dt = glm::value_ptr(tp);
     {

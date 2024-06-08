@@ -23,7 +23,7 @@ namespace me{
 
         static Window * GetCurrent();
         static void MakeCurrent(Window *);
-        //Ä¬ÈÏ²»¿ªÆô´¹Ö±Í¬²½
+        //é»˜è®¤ä¸å¼€å¯å‚ç›´åŒæ­¥
         static void SetSwapInterval(unsigned int = 0);
 
         Window(int major = 4,int minor = 3);

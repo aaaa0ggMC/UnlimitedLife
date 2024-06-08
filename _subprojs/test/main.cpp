@@ -11,7 +11,11 @@
 
 using namespace alib::ng;
 
+int main(){
 
+}
+
+/*
 int main(){
     alib::ng::Translator t;
 
@@ -31,7 +35,7 @@ int main(){
     cout <<
     t.translate_args_def("gm.err.path212","hello%s",ALIB_ENC_UTF8,"HelloWorld")<< endl;
 }
-
+*/
 
 /*
 template<bool returnACopy = false> auto test(){

@@ -13,7 +13,7 @@ namespace ng{
         std::wstring utf16;
     };
 
-    class converter{
+    class DLL_EXPORT converter{
     public:
         static std::string utf8_to_ansi(dstring utf8);
         static std::string utf16_to_ansi(dwstring utf8);

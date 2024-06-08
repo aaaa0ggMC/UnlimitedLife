@@ -14,7 +14,7 @@
 extern "C"
 {
 #endif
-///这么写是因为Codeblocks识别不了alib::ng
+///杩欎箞鍐欐槸鍥犱负Codeblocks璇嗗埆涓嶄簡alib::ng
 namespace alib{
 namespace ng{
     /** \brief time
@@ -83,7 +83,7 @@ namespace ng{
 
         /** \brief select clock freq,
         * toggle timer while the clock is running has undefined behavior
-        * 你脑残在clock运行时切换也不是不可以，后果自己承担
+        * 浣犺剳娈嬪湪clock杩愯鏃跺垏鎹篃涓嶆槸涓嶅彲浠ワ紝鍚庢灉鑷繁鎵挎媴
         */
         void toggleTimer(bool useHighTimerIfSup);
     private:
@@ -99,7 +99,7 @@ namespace ng{
     public:
         Trigger(Clock& clock,double duration);
         /** \brief test the trigger,does nothing if no clock*/
-        bool test();
+        bool test(bool resetIfSucceeds = true);
         /** \brief reset the trigger*/
         void reset();
         /** \brief set duration */

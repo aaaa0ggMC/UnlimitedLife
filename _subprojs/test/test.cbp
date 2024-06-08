@@ -48,7 +48,7 @@
 			<Add library="benchmark_main" />
 			<Add library="lua" />
 			<Add library="shlwapi" />
-			<Add library="../../_build/libaaaa0ggmcLibD.a" />
+			<Add library="../../_build/libaaaa0ggmcLib-g2.a" />
 			<Add directory="../../_depend/libs" />
 			<Add directory="$(#msys2.lib)" />
 		</Linker>

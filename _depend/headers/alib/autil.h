@@ -16,7 +16,7 @@
 #define ALIB_SUCCESS 0
 #define ALIB_ERROR -1
 
-// Ç°¾°ÑÕÉ«ºê¶¨Òå
+// å‰æ™¯é¢œè‰²å®å®šä¹‰
 #define APCF_BLACK 0
 #define APCF_BLUE 1
 #define APCF_GREEN 2
@@ -34,7 +34,7 @@
 #define APCF_LIGHT_YELLOW 14
 #define APCF_BRIGHT_WHITE 15
 
-// ±³¾°ÑÕÉ«ºê¶¨Òå
+// èƒŒæ™¯é¢œè‰²å®å®šä¹‰
 #define APCB_BLACK (0 << 4)
 #define APCB_BLUE (1 << 4)
 #define APCB_GREEN (2 << 4)
@@ -60,19 +60,19 @@ using dstring = const std::string&;
 using mem_bytes = __int64;
 
 
-/** \brief Program Memory ³ÌĞòÊ¹ÓÃÄÚ´æ
- *  mem memory ÄÚ´æ
- *  vmem virtual memory ĞéÄâÄÚ´æ
+/** \brief Program Memory ç¨‹åºä½¿ç”¨å†…å­˜
+ *  mem memory å†…å­˜
+ *  vmem virtual memory è™šæ‹Ÿå†…å­˜
  */
 struct DLL_EXPORT MemTp {
     mem_bytes mem;
     mem_bytes vmem;
 };
-/** \brief Global Memory Usage È«¾ÖÄÚ´æÊ¹ÓÃÇé¿ö£¨²»ÊÇ(not)OpenGL!!!)
- * percent currently_being_used_mem/mem_all ÄÚ´æÊ¹ÓÃ°Ù·Ö±È
- * phy_all capacity of physical mem ÎïÀíÄÚ´æ×ÜÁ¿
+/** \brief Global Memory Usage å…¨å±€å†…å­˜ä½¿ç”¨æƒ…å†µï¼ˆä¸æ˜¯(not)OpenGL!!!)
+ * percent currently_being_used_mem/mem_all å†…å­˜ä½¿ç”¨ç™¾åˆ†æ¯”
+ * phy_all capacity of physical mem ç‰©ç†å†…å­˜æ€»é‡
  * vir_all ...
- * you can understand ÄãÄÜ¿´¶®µÄ
+ * you can understand ä½ èƒ½çœ‹æ‡‚çš„
  */
 struct DLL_EXPORT GlMem {
     unsigned int percent;
@@ -84,77 +84,79 @@ struct DLL_EXPORT GlMem {
     mem_bytes page_used;
 };
 
-/** \brief GetCPUInfo »ñÈ¡CPUĞÅÏ¢
- * Ä¿Ç°Ö»Ö§³Ö»ñÈ¡CPU Id
+/** \brief GetCPUInfo è·å–CPUä¿¡æ¯
+ * ç›®å‰åªæ”¯æŒè·å–CPU Id
  */
 struct DLL_EXPORT CPUInfo {
     std::string CpuID;
     CPUInfo();
 };
 
-/** \brief Utility ¹¤¾ßÀà
- * Õâ»¹ÓĞÊ²Ã´Òª½²µÄ£¿£¿
+/** \brief Utility å·¥å…·ç±»
+ * è¿™è¿˜æœ‰ä»€ä¹ˆè¦è®²çš„ï¼Ÿï¼Ÿ
  */
 class DLL_EXPORT Util {
 public:
 ///io
-    //Í¨¹ıconst³£Á¿ÒıÓÃÖ§³Öconst char*Óëstd::string
-    /** \brief print with colors ÑÕÉ«Êä³ö
+    //é€šè¿‡constå¸¸é‡å¼•ç”¨æ”¯æŒconst char*ä¸std::string
+    /** \brief print with colors é¢œè‰²è¾“å‡º
     *
     * print something with a custom color
-    * Êä³ö´ø×Ô¶¨ÒåÑÕÉ«µÄ×Ö·û´®
+    * è¾“å‡ºå¸¦è‡ªå®šä¹‰é¢œè‰²çš„å­—ç¬¦ä¸²
     *
-    * \param what u want to print ÄãÒª´òÓ¡Ê²Ã´
-    * \param color ÑÕÉ«
-    * \return just like printf ºÍprintfÒ»Ñù
+    * \param what u want to print ä½ è¦æ‰“å°ä»€ä¹ˆ
+    * \param color é¢œè‰²
+    * \return just like printf å’Œprintfä¸€æ ·
     */
     static int io_printColor(dstring message,int color);
-    /** \brief traverse files ±éÀúÎÄ¼ş
+    /** \brief traverse files éå†æ–‡ä»¶
     *
     * traverse all files in a folder(not included sub-folders)
-    * ±éÀúÒ»¸öÎÄ¼ş¼ĞÏÂÃæµÄËùÓĞÎÄ¼ş£¨²»°üÀ¨×ÓÎÄ¼ş¼Ğ£©
+    * éå†ä¸€ä¸ªæ–‡ä»¶å¤¹ä¸‹é¢çš„æ‰€æœ‰æ–‡ä»¶ï¼ˆä¸åŒ…æ‹¬å­æ–‡ä»¶å¤¹ï¼‰
     *
-    * \param folder path ÎÄ¼ş¼ĞÂ·¾¶
-    * \param a vector to store these file names Ò»¸östd::vectorÓÃÓÚ´æ·ÅÊı¾İ
+    * \param folder path æ–‡ä»¶å¤¹è·¯å¾„
+    * \param a vector to store these file names ä¸€ä¸ªstd::vectorç”¨äºå­˜æ”¾æ•°æ®
     */
     static void io_traverseFiles(dstring path, std::vector<std::string>& files);
-    /** \brief get file size »ñÈ¡ÎÄ¼ş´óĞ¡
+    /** \brief get file size è·å–æ–‡ä»¶å¤§å°
      *
      * get file size efficiently using direct.h (better than fstream::seekg&tellg[ChatGPT says])
-     * Ê¹ÓÃdirect.h¿ìËÙ»ñÈ¡ÎÄ¼ş´óĞ¡(±Èfstream::seekg&tellg¿ì[ChatGPTËµµÄ]£©
+     * ä½¿ç”¨direct.hå¿«é€Ÿè·å–æ–‡ä»¶å¤§å°(æ¯”fstream::seekg&tellgå¿«[ChatGPTè¯´çš„]ï¼‰
      *
-     * \param file path ÎÄ¼şÂ·¾¶
-     * \return file size ÎÄ¼ş´óĞ¡
+     * \param file path æ–‡ä»¶è·¯å¾„
+     * \return file size æ–‡ä»¶å¤§å°
      */
     static long io_fileSize(dstring filePath);
     /** \brief read a file
      *
      * read the rest content of a std::ifstream
-     * ¶ÁÈ¡std::ifstream³ÔÊ£ÏÂµÄËùÓĞÄÚÈİ
+     * è¯»å–std::ifstreamåƒå‰©ä¸‹çš„æ‰€æœ‰å†…å®¹
      *
      * \param ifstream
-     * \return content ÄÚÈİ£¨²Ğ¸şÊ£·¹£©
+     * \param storer content å†…å®¹ï¼ˆæ®‹ç¾¹å‰©é¥­ï¼‰
+     * \return status çŠ¶æ€
      */
-    static std::string io_readAll(std::ifstream & reader);
+    static int io_readAll(std::ifstream & reader,std::string & out);
     /** \brief read a file
      *
      *  read a file
-     *  ¶ÁÈ¡ÎÄ¼ş
+     *  è¯»å–æ–‡ä»¶
      *
      * \param path
-     * \return content
+     * \param storer content æ»¡æ±‰å…¨å¸­
+     * \return status
      */
-    static std::string io_readAll(dstring path);
-    /** \brief write data Ğ´ÈëÊı¾İ
+    static int io_readAll(dstring path,std::string & out);
+    /** \brief write data å†™å…¥æ•°æ®
      *
      * \param file path
      * \param
      * \return 0 success,-1 error
      */
     static int io_writeAll(dstring path,dstring data);
-    /** \brief check file/directory existence ¼ì²éÎÄ¼ş»òÕßÎÄ¼ş¼Ğ£¨Ä¿Â¼£©´æÔÚÓë·ñ
+    /** \brief check file/directory existence æ£€æŸ¥æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹ï¼ˆç›®å½•ï¼‰å­˜åœ¨ä¸å¦
      * \param path
-     * \return ÊÇ·ñ´æÔÚ
+     * \return æ˜¯å¦å­˜åœ¨
      *
      */
     static bool io_checkExistence(dstring path);
@@ -163,14 +165,14 @@ public:
     /** \brief returns a time formatted as string
      *
      * time!!!!
-     * Ê±¼ä!!!
+     * æ—¶é—´!!!
      *
-     * \return time as string,fmt: "YY-MM-DD HH:MM:SS" ·µ»Ø×Ö·û´®µÄÊ±¼ä£¬¸ñÊ½ "ÄêÄê-ÔÂÔÂ-ÌìÌì Ê±Ê±:·Ö·Ö:ÃëÃë"
+     * \return time as string,fmt: "YY-MM-DD HH:MM:SS" è¿”å›å­—ç¬¦ä¸²çš„æ—¶é—´ï¼Œæ ¼å¼ "å¹´å¹´-æœˆæœˆ-å¤©å¤© æ—¶æ—¶:åˆ†åˆ†:ç§’ç§’"
      */
     static string ot_getTime();
-    /** \brief format duration ¸ñÊ½»¯¼ä¸ôÊ±¼ä
-     * \param seconds ÃëÊı
-     * \return formatted string ¸ñÊ½»¯µÄ×Ö·û´®
+    /** \brief format duration æ ¼å¼åŒ–é—´éš”æ—¶é—´
+     * \param seconds ç§’æ•°
+     * \return formatted string æ ¼å¼åŒ–çš„å­—ç¬¦ä¸²
      */
     static std::string ot_formatDuration(int msecs);
 
@@ -180,39 +182,39 @@ public:
      * \return CPUId
      */
     static string sys_GetCPUId();
-    /** \brief get program memory usage(bytes) currently »ñÈ¡³ÌĞòÄ¿Ç°ÄÚ´æÊ¹ÓÃÇé¿ö(µ¥Î»:B)
-     * \return mem stats ÄÚ´æÊ¹ÓÃÇé¿ö
+    /** \brief get program memory usage(bytes) currently è·å–ç¨‹åºç›®å‰å†…å­˜ä½¿ç”¨æƒ…å†µ(å•ä½:B)
+     * \return mem stats å†…å­˜ä½¿ç”¨æƒ…å†µ
      */
     static MemTp sys_getProgramMemoryUsage();
-    /** \brief get global(bytes) »ñÈ¡È«¾ÖÄÚ´æÊ¹ÓÃÇé¿ö(µ¥Î»:B)
+    /** \brief get global(bytes) è·å–å…¨å±€å†…å­˜ä½¿ç”¨æƒ…å†µ(å•ä½:B)
      * \return usage
      */
     static GlMem sys_getGlobalMemoryUsage();
 
 ///data_string
-    /** \brief unescaping strings Äæ×ªÒå×Ö·û´®
+    /** \brief unescaping strings é€†è½¬ä¹‰å­—ç¬¦ä¸²
      * \param data
      * \return unescaped string
      */
     static std::string str_unescapeString(dstring in);
-    //ÓĞ·µ»ØÖµºÍÃ»·µ»ØÖµµÄÇø±ğ
+    //æœ‰è¿”å›å€¼å’Œæ²¡è¿”å›å€¼çš„åŒºåˆ«
     static void str_trim_nrt(std::string& str);
     static std::string str_trim_rt(std::string& str);
-    /** \brief trim string ÒÆ³ı×Ö·û´®Ç°ºó¿Õ°××Ö·û
-     * \param template<bool returnACopy = false> ×Ô¼º¿´
-     * \param string to be modified ÒªĞŞ¸ÄµÄstring
+    /** \brief trim string ç§»é™¤å­—ç¬¦ä¸²å‰åç©ºç™½å­—ç¬¦
+     * \param template<bool returnACopy = false> è‡ªå·±çœ‹
+     * \param string to be modified è¦ä¿®æ”¹çš„string
      */
     template<bool returnACopy = false> static inline auto str_trim(std::string& str) {
         if constexpr(returnACopy)return str_trim_rt(str);
         else str_trim_nrt(str);
     }
-    /** \brief split strings as small tokens ·Ö¸î×Ö·û´®
+    /** \brief split strings as small tokens åˆ†å‰²å­—ç¬¦ä¸²
      * \param source
      * \param a token
      * \param a storer
      */
     static void str_split(dstring source,const char separator,std::vector<std::string> & restorer);
-    /** \brief split strings as small tokens ·Ö¸î×Ö·û´®
+    /** \brief split strings as small tokens åˆ†å‰²å­—ç¬¦ä¸²
      * \param source
      * \param a token as string
      * \param a storer
@@ -220,12 +222,12 @@ public:
     static void str_split(dstring source,dstring separatorString,std::vector<std::string>& restorer);
 
 ///data_string_encoding
-    /** \brief transcode ×ªÂë
+    /** \brief transcode è½¬ç 
      * \param ansi
      * \return utf8
      */
     static std::string str_encAnsiToUTF8(dstring strAnsi);
-    /** \brief transcode ×ªÂë
+    /** \brief transcode è½¬ç 
      * \param utf8
      * \return ansi
      */

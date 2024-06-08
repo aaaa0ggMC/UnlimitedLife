@@ -27,12 +27,12 @@ int Translator::readTranslationFiles(dstring path,int enc){
         if(tail.compare("json") && tail.compare("toml")){
             continue;
         }
-        ///删除之前留下来的translation
+        ///鍒犻櫎涔嬪墠鐣欎笅鏉ョ殑translation
         doc.clearMapping();
         int ret = 0;
         if(tail.compare("json")){
             ///TOML
-            //std::cout << "我读了toml" << std::endl;
+            //std::cout << "鎴戣浜唗oml" << std::endl;
             ret = doc.read_parseFileTOML(ss);
         }else ret = doc.read_parseFileJSON(ss);
         if(!ret){
@@ -77,7 +77,7 @@ int Translator::readTranslationFiles(dstring path,int enc){
 
 int Translator::loadTranslation(dstring id){
     currentTranslation = NULL;
-    ///使用系统翻译
+    ///浣跨敤绯荤粺缈昏瘧
     if(!id.compare(""))return 0;
     auto iter = translations.find(id);
     if(iter == translations.end()){
@@ -129,7 +129,7 @@ Translator::Translator(bool v,dstring x){
 Translator* Translator::get(){return instance;}
 
 void Translator::translate_args_internal(dstring u8_str,string& u8s,va_list va){
-    ///strBuffer看起来也不需要clear
+    ///strBuffer鐪嬭捣鏉ヤ篃涓嶉渶瑕乧lear
     int sz = vsnprintf(strBuffer.data(),TEXT_MAX_SIZE,u8_str.c_str(),va);
     u8s = strBuffer.substr(0,sz);
 }
