@@ -2,6 +2,8 @@
 #include <alib/autil.h>
 #include <alib/aclock.h>
 #include <alib/astring.h>
+#include <alib/alogger.h>
+#include <alib/adata.h>
 #include <toml.hpp>
 #include <sol/sol.hpp>
 #include "-terrarian/Chunk.h"
@@ -9,96 +11,87 @@
 #define numVBOs 32
 #define numVAOs 1
 
-
-#include <ft2build.h>
-#include FT_FREETYPE_H
-
 using namespace std;
 using namespace me;
 using namespace alib;
 
+///general
+string resbeg = "res";
+Velocity camSpeed(10);
+ng::Clock clk(false);
 Window window;
-Shader shader(false);
-
 Program game;
+ng::Logger loggerSaver;
+ng::LogFactory logger("UnlimitedLife",loggerSaver);
 
-VBOs vbos;
-
+///gameobjects
 Camera c(0,0,6);
-
 GObject vcx(0,0,0),cube(0,-5,-5);
 
-Velocity camSpeed(10);
-
-VBOs vbo;
-GLuint vao[numVAOs];
-
-Texture test,test3d;
-
-ng::Clock clk(false);
-
+///textures
 bool reloadTag = false;
-
 unsigned int offset = 0;
 const unsigned int maxium = 512;
+Texture test,test3d;
 
-string resbeg = "res";
+///shaders
+Shader shader(false);
 sol::state shader_inter;
+
+///fonts
+MemFont testFont;
+GlFont glfont(testFont);
+
+///opengl
+VBOs vbo;
+GLuint vao[numVAOs];
 
 void init();
 void paint(Window& w,double currentTime,Camera*cam);
 void input(Window& w,double elapseus,Camera * c);
-int rmain();
+int real_main();
 
-MemFont testFont;
-GlFont glfont(testFont);
 
 int main()
 {
     try{
-        return rmain();
+        return real_main();
     }catch(...){
         MessageBox(NULL,"Exception Appeared!","ERROR",MB_OK | MB_ICONERROR | MB_TOPMOST);
     }
     return -1;
 }
 
-int rmain(){
-    Util::RegisterTerminal();
-    window.Create(800,600,"UnlimitedLife",0);
-    window.MakeCurrent();
-    window.SetPaintFunction(paint);
-    window.OnKeyPressEvent(input);
-    window.UseCamera(c);
+int real_main(){
+    ng::GDoc doc;
 
-    try{
-        toml::table table;
-        table = toml::parse_file("options.toml");
-        auto res_path = table["res_path"];;
-        if(!!res_path){
-            resbeg = res_path.as_string()->get();
+    ///初始化Logger
+    Util::SetLogger(loggerSaver);
+    loggerSaver.setOutputFile("data/logs/latest.log");
+
+    ///初始化窗口
+    MEQuickCreateWindow(window,800,600,"UnlimitedLife",paint,input,c);
+    MEApplyCameraPerspecAndReSize(window,c,60,0.1,1000);
+    /*(c).SetPerspec(1.0f,0.1,1000);
+    (c).BuildPerspec(&window);
+    (window).OnResize([](Window&win,int nw,int nh){
+        win.SetViewport(0,0,nw,nh);\
+        if(win.curCam)win.curCam->Build(&window);
+    });*/
+
+
+    int ret = doc.read_parseFileTOML(URES_OPTIONS);
+    if(!ret){
+        auto data = doc["res_path"];
+        if(!!data){
+            resbeg = *data;
         }
-    }catch(...){}
+    }else{
+        ///TODO:错误处理
+        logger << "Failed to read \"" URES_OPTIONS "\",use default values.Error code:" << ret << alib::ng::endlog;
+    }
 
-    testFont.LoadFromFile((resbeg + "/fonts/rtest.ttf").c_str());
-    ///Setup projection matrix
-    ///长度给负值可以和透视投影方向齐平
-    //c.BuildOrthA(4,4,-8,&window,-1,10000);
-	c.BuildPerspec(1.0472f, &window , 0.1f, 1000.0f);
-    glfwSetWindowSizeCallback(window.GetGLFW(),
-    [](GLFWwindow* w,int nw,int nh){
-        //When the window is minimized,an error would occur,
-        //which is raised by glm,maybe due to the act ogf dividing zero
-        if(!nw | !nh)return;
-        glViewport(0,0,nw,nh);
-        //c.BuildOrthA(-4,-4,8,nw / (float)nh,-1,10000);
-        c.BuildPerspec(1.0472f, &window , 0.1f, 1000.0f);
-    });
-
-    glfont.SetBufferSize(64,64,maxium);
-    glfont.CreateBuffer();
     init();
-
     clk.start();
     while(!window.ShouldClose()){
         window.MakeCurrent();
@@ -175,6 +168,10 @@ void paint(Window& w,double currentTime,Camera*c){
 }
 
 void init(){
+    testFont.LoadFromFile((resbeg + "/fonts/rtest.ttf").c_str());
+    glfont.SetBufferSize(64,64,maxium);
+    glfont.CreateBuffer();
+
     glGenVertexArrays(numVAOs,vao);
     glBindVertexArray(vao[0]);
 
@@ -226,7 +223,7 @@ void init(){
     vcx.SetBindings(0,1);
 
     {
-        string path = resbeg + MAIN_SHADER_LUA;
+        string path = resbeg + URES_MAIN_SHADER_LUA;
         string data = "";
         ng::Util::io_readAll(path,data);
 

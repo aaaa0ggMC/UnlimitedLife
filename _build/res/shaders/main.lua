@@ -1,5 +1,5 @@
 vert = [[
-#version 460 core
+#version 430 core
 
 layout(location = 0) in vec3 pos;
 layout(location = 1) in vec2 cd;
@@ -31,7 +31,12 @@ in vec2 coord;
 in flat int depth;
 
 void main(){
-    vec4 pick = texture2DArray(tex,vec3(coord,depth));
-    color = pick;
+    vec2 minus = abs(coord - vec2(.5));
+    if(minus.x >= 0.49 || minus.y >= 0.49){
+        color = vec4(1.0);
+    }else{
+        vec4 pick = texture2DArray(tex,vec3(coord,depth));
+        color = pick;
+    }
 }
 ]]

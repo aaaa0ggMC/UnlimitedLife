@@ -175,10 +175,10 @@ int Util::io_readAll(dstring fpath,std::string & ss) {
     std::ifstream reader(fpath);
     if(!reader.good())return ALIB_ERROR;
 
-    char * buf = new char[size];
+    char * buf = new char[size+1];
 
-    reader.read(buf,size-1);
-    buf[size-1] = 0;
+    reader.read(buf,size);
+    buf[size] = 0;
     reader.close();
 
     ss.append(buf);

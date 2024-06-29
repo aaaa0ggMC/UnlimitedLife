@@ -21,6 +21,7 @@ Camera::Camera(float x,float y,float z,bool m,bool uvrp){
     movement = m;
     SetRotation(0,0,0);
     updateVRP = uvrp;
+    buildMethod = ME_CAMERA_BUILD_PERSPEC;
 }
 
 void Camera::BuildPerspec(float fieldOfView,float ratio,float nearPlane,float farPlane){
@@ -42,4 +43,57 @@ void Camera::BuildOrthA(float left,float top,float xlen,void*w,float znear,float
 }
 void Camera::BuildOrthA(float left,float top,float xlen,float aspectRatio,float znear,float zfar){
     BuildOrth(left,left + xlen,top + xlen / aspectRatio,top,znear,zfar);
+}
+
+void Camera::SetPerspec(float fv,float n,float f){
+    fov = fv;
+    nearPlane = n;
+    farPlane = f;
+}
+
+void Camera::SetOrtho(float l,float r,float b,float t,float n,float f){
+    left = l;
+    right = r;
+    top = t;
+    bottom = b;
+    znear = n;
+    zfar = f;
+}
+
+void Camera::BuildPerspec(float ratio){
+    BuildPerspec(fov,ratio,nearPlane,farPlane);
+}
+
+void Camera::BuildPerspec(void * w){
+    BuildPerspec(fov,w,nearPlane,farPlane);
+}
+
+void Camera::BuildOrth(){
+    BuildOrth(left,right,bottom,top,znear,zfar);
+}
+
+void Camera::SetBuildMethod(unsigned int method){
+    buildMethod = method;
+}
+
+void Camera::Build(float ratio){
+    switch(buildMethod){
+    case ME_CAMERA_BUILD_ORTH:
+        BuildOrth();
+        break;
+    default:
+        BuildPerspec(ratio);
+        break;
+    }
+}
+
+void Camera::Build(void *w){
+    switch(buildMethod){
+    case ME_CAMERA_BUILD_ORTH:
+        BuildOrth();
+        break;
+    default:
+        BuildPerspec(w);
+        break;
+    }
 }

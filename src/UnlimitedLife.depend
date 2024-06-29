@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1717803007 source:e:\unlimitedlife\src\main.cpp
+1719671132 source:e:\unlimitedlife\src\main.cpp
 	<ME.h>
 	<alib/autil.h>
 	<alib/aclock.h>
 	<alib/astring.h>
+	<alib/alogger.h>
+	<alib/adata.h>
 	<toml.hpp>
 	<sol/sol.hpp>
 	"-terrarian/Chunk.h"
 	"reses.h"
-	<ft2build.h>
 
-1717466986 e:\unlimitedlife\_depend\headers\me.h
+1719671280 e:\unlimitedlife\_depend\headers\me.h
 	<com/macros.h>
 	<com/utility.h>
 	<com/me_math.h>
@@ -987,7 +988,7 @@
 
 1712147353 e:\unlimitedlife\src\-gameobjects\tile.h
 
-1717249290 e:\unlimitedlife\src\reses.h
+1719668584 e:\unlimitedlife\src\reses.h
 
 1717241605 source:e:\unlimitedlife\src\-terrarian\terrarian.cpp
 	"Chunk.h"
@@ -1240,14 +1241,17 @@
 	"lua.h"
 	<assert.h>
 
-1717304073 e:\unlimitedlife\_depend\headers\com\macros.h
+1719671183 e:\unlimitedlife\_depend\headers\com\macros.h
 
-1717303919 e:\unlimitedlife\_depend\headers\com\utility.h
+1719665612 e:\unlimitedlife\_depend\headers\com\utility.h
 	<string>
 	<unordered_set>
 	<com/macros.h>
+	<memory>
+	<optional>
 	"util/GPUInfo.h"
 	"util/glsupport.h"
+	<alib/alogger.h>
 
 1717303950 e:\unlimitedlife\_depend\headers\com\util\gpuinfo.h
 	<string>
@@ -1274,7 +1278,7 @@
 	<com/macros.h>
 	<com/utility.h>
 
-1717304151 e:\unlimitedlife\_depend\headers\com\window.h
+1719669254 e:\unlimitedlife\_depend\headers\com\window.h
 	<com/utility.h>
 	<GL/glew.h>
 	<GLFW/glfw3.h>
@@ -1283,12 +1287,13 @@
 	<glm/gtc/matrix_transform.hpp>
 	<glm/gtc/quaternion.hpp>
 	<thread>
+	<unordered_map>
 	<com/camera.h>
 	<com/model.h>
 	<com/gobject.h>
 	<com/utility.h>
 
-1717303750 e:\unlimitedlife\_depend\headers\com\camera.h
+1719670273 e:\unlimitedlife\_depend\headers\com\camera.h
 	"gobject.h"
 	<vector>
 	"macros.h"
@@ -2271,7 +2276,7 @@
 
 1709273652 e:\msys2\mingw64\include\glm\simd\integer.h
 
-1717804167 e:\unlimitedlife\_depend\headers\com\audio.h
+1719665755 e:\unlimitedlife\_depend\headers\com\audio.h
 	<string>
 	<vector>
 	<com/utility.h>
@@ -2307,7 +2312,7 @@
 1717062707 e:\unlimitedlife\_depend\headers\sfml\audio\export.hpp
 	<SFML/Config.hpp>
 
-1717062707 e:\unlimitedlife\_depend\headers\sfml\config.hpp
+1717805561 e:\unlimitedlife\_depend\headers\sfml\config.hpp
 	"TargetConditionals.h"
 
 1717062708 e:\unlimitedlife\_depend\headers\sfml\audio\soundfilereader.hpp
@@ -3940,15 +3945,32 @@
 	<boost/core/invoke_swap.hpp>
 	<boost/optional/optional_fwd.hpp>
 
-1717802523 e:\unlimitedlife\_depend\headers\alib\autil.h
+1717851075 e:\unlimitedlife\_depend\headers\alib\autil.h
 	<string>
 	<vector>
 	<fstream>
 
-1717800000 e:\unlimitedlife\_depend\headers\alib\aclock.h
+1717851027 e:\unlimitedlife\_depend\headers\alib\aclock.h
 	<windows.h>
 
 1717756042 e:\unlimitedlife\_depend\headers\alib\astring.h
 	<string>
+	<alib/autil.h>
+
+1717673908 e:\unlimitedlife\_depend\headers\alib\alogger.h
+	<memory>
+	<string>
+	<windows.h>
+	<fstream>
+	<alib/aclock.h>
+	<alib/autil.h>
+	<glm/glm.hpp>
+	<glm/ext/quaternion_common.hpp>
+
+1717717355 e:\unlimitedlife\_depend\headers\alib\adata.h
+	<string>
+	<unordered_map>
+	<optional>
+	<stdarg.h>
 	<alib/autil.h>
 

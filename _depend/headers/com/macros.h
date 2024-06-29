@@ -68,11 +68,11 @@
 #endif // PI
 
 #ifndef rad2deg
-    #define rad2deg(r) (180*((r)/PI))
+    #define rad2deg(r) (180.0*((r)/PI))
 #endif // rad2deg
 
 #ifndef deg2rad
-    #define deg2rad(d) (((d)/180)*PI)
+    #define deg2rad(d) (((d)/180.0)*PI)
 #endif // deg2rad
 
 

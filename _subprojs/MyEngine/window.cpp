@@ -7,6 +7,8 @@ using namespace std;
 using namespace me;
 
 Window* Window::current = NULL;
+std::unordered_map<GLFWwindow*,Window*> Window::instances;
+
 void Window::Clear(bool clearColor,bool clearDepth){
     if(clearColor)glClear(GL_COLOR_BUFFER_BIT);
     if(clearDepth)glClear(GL_DEPTH_BUFFER_BIT);
@@ -37,10 +39,12 @@ void Window::SetFrontFace(unsigned int dr){
 }
 
 Window::Window(int major,int minor){
+    Util::Init();
     Util::InitGLFW(major,minor);
     paint = NULL;
     win = NULL;
     curCam = NULL;
+    onResizeFunc = NULL;
     flimit = frame_start = twait = 0;
     limitedF = false;
     press = NULL;
@@ -71,6 +75,7 @@ int Window::Create(unsigned int width,unsigned int height,const char* title,Wind
             std::this_thread::sleep_for(1000ms / (*interval));
         }
     },&isOpen,&press,&interval,this);
+    instances.emplace(win,this);
     return win?ME_ENO_ERROR:ME_EBAD_MEM;
 }
 
@@ -112,7 +117,11 @@ void Window::Destroy(){
     isOpen = false;
     glfwDestroyWindow(win);
     if(intervalThread.joinable())intervalThread.join();
+    auto tg = instances.find(win);
     this->win = NULL;
+    if(tg != instances.end()){
+        instances.erase(tg);
+    }
     MakeCurrent(NULL);
 }
 
@@ -222,4 +231,27 @@ glm::vec2 Window::GetBufferSize(){
     int w,h;
     glfwGetFramebufferSize(win,&w,&h);
     return glm::vec2(w,h);
+}
+
+void Window::SetViewport(int x,int y,unsigned int sx,unsigned int sy){
+    glViewport(x,y,sx,sy);
+}
+
+void Window::OnResize(Window::OnResizeFn fn){
+    static bool setted = false;
+    onResizeFunc = fn;
+    if(!setted){
+        setted = true;
+        glfwSetWindowSizeCallback(GetGLFW(),[](GLFWwindow* glwin,int nx,int ny){
+            auto instance = Window::instances.find(glwin);
+            if(instance != instances.end()){
+                //防止glm出错
+                if(nx == 0)nx = 1;
+                if(ny == 0)ny = 1;
+                if((instance->second)->onResizeFunc)(instance->second)->onResizeFunc(*(instance->second),nx,ny);
+            }else{
+                ME_SIVD("Failed to get current instance!",0);
+            }
+        });
+    }
 }

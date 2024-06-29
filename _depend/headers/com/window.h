@@ -8,6 +8,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/quaternion.hpp>
 #include <thread>
+#include <unordered_map>
 #include <com/camera.h>
 #include <com/model.h>
 #include <com/gobject.h>
@@ -20,6 +21,7 @@ namespace me{
         typedef void (*WPaintFn)(Window&,double currentTime,Camera*cam);
         typedef void (*OnKeyPress)(Window&,double elapseus,Camera*cam);
         typedef void (*DiscreteKeyListener)(GLFWwindow * win,int key,int scancode,int action,int mods);
+        typedef void (*OnResizeFn)(Window& w,int new_w,int new_h);
 
         static Window * GetCurrent();
         static void MakeCurrent(Window *);
@@ -35,6 +37,7 @@ namespace me{
         bool ShouldClose();
         void Display();
         void Clear(bool clearColor = true,bool clearDepth = true);
+        static void SetViewport(int x,int y,unsigned int sizex,unsigned int sizey);
 
         void PollEvents();
 
@@ -52,6 +55,7 @@ namespace me{
 
         void SetPaintFunction(WPaintFn);
         void OnKeyPressEvent(OnKeyPress);
+        void OnResize(OnResizeFn fn);
         void SetDiscreteKeyListener(DiscreteKeyListener l);
         void UseCamera(Camera& cam);
 
@@ -74,18 +78,20 @@ namespace me{
         glm::vec2 GetBufferSize();
 
         Camera uiCam;
+        Camera * curCam;
     private:
         static Window * current;
+        static std::unordered_map<GLFWwindow*,Window*> instances;
         std::thread intervalThread;
         GLFWwindow* win;
         WPaintFn paint;
         OnKeyPress press;
+        OnResizeFn onResizeFunc;
         DiscreteKeyListener keyListener;
         unsigned int flimit;
         float twait,frame_start;
         unsigned int interval;
         bool limitedF;
-        Camera * curCam;
         float firstTime;
         bool isOpen;
     };

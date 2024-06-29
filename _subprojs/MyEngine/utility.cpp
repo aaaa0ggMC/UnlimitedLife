@@ -1,14 +1,37 @@
-#include <com/utility.h>
+#include <GL/glew.h>
 #include <iostream>
 #include <sys/stat.h>
 #include <GLFW/glfw3.h>
+//卑鄙的手段临时访问LogFactory
+#define private public
+#include <com/utility.h>
+#undef private
+
+#define _SimpOut(X) \
+if(!(!logger)){\
+    alib::ng::LogFactory & lgt = **logger;\
+    lgt(LOG_ERROR,APCF_LIGHT_YELLOW) << X << alib::ng::endlog;\
+}else{\
+    std::cout << X << alib::ng::endlog;\
+}\
 
 using namespace me;
 using namespace std;
+namespace me{
+    struct AUtilImpl{
+        bool inited;
+        bool initedGlew;
+        bool initedGLFW;
 
+        AUtilImpl(){
+            inited = initedGlew = initedGLFW = false;
+        }
+    };
+}
 unordered_set<string> Util::sessions;
-bool Util::initedGlew = false;
-bool Util::initedGLFW = false;
+AUtilImpl* Util::impl = new AUtilImpl();
+bool Util::out2console = true;
+optional<alib::ng::LogFactory*> Util::logger = std::nullopt;
 
 bool Util::GetOpenGLError(std::string&appender,const char * sigStr){
     bool hasError = false;
@@ -27,7 +50,7 @@ bool Util::GetOpenGLError(std::string&appender,const char * sigStr){
 void Util::PrintOpenGLError(){
     string inner = "";
     if(GetOpenGLError(inner)){
-        cout << inner << endl;
+       _SimpOut("[OpenGL Error]" << inner);
     }
 }
 
@@ -40,17 +63,17 @@ size_t Util::file_size(const char*filename){
 }
 
 int Util::InitGlew(){
-    if(!initedGlew){
+    if(!(impl->initedGlew)){
         int ret = glewInit();
-        if(!ret)initedGlew = true;
+        if(!ret)impl->initedGlew = true;
         return ret;
     }
     return GLEW_OK;
 }
 
 void Util::InitGLFW(int major,int minor){
-    if(!initedGLFW){
-        initedGLFW = true;
+    if(!impl->initedGLFW){
+        impl->initedGLFW = true;
         glfwInit();
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,major);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,minor);
@@ -72,7 +95,7 @@ void Util::PrintShaderLog(GLuint shader){
     string s = "";
     bool ret = GetShaderLog(shader,s);
     if(ret){
-        cout << s << endl;
+        _SimpOut(s);
     }
 }
 
@@ -92,31 +115,30 @@ void Util::PrintProgramLog(GLuint shader){
     string s = "";
     bool ret = GetProgramLog(shader,s);
     if(ret){
-        cout << s << endl;
+        _SimpOut(s);
     }
 }
 
-void Util::RegisterTerminal(){
+void Util::Init(){
+    if(impl->inited)return;
     std::atexit(Util::OnTerminal);
+    impl->inited = true;
 }
 
 void Util::OnTerminal(){
-    #ifdef DEBUG
-        cout << "Game Terminated" << endl;
-    #endif
     glfwTerminate();
+    delete *logger;
+    delete impl;
 }
 
 void Util::InvokeConsole(const char * s,bool onlyOnce,const char * sessionId,long sig){
-    #ifdef DEBUG
-        string sd = sessionId?sessionId:"";
-        sd += " : ";
-        sd += to_string(sig);
-        auto it = sessions.find(sd);
-        if(onlyOnce &&  it != sessions.end())return;
-        if(it == sessions.end() && sessionId)sessions.insert(sd);
-        cout << "Invoked[" << sd << "]:" << s << "\n";
-    #endif // DEBUG
+    string sd = sessionId?sessionId:"";
+    sd += " : ";
+    sd += to_string(sig);
+    auto it = sessions.find(sd);
+    if(onlyOnce &&  it != sessions.end())return;
+    if(it == sessions.end() && sessionId)sessions.insert(sd);
+    _SimpOut("[" << sd << "]" << s);
 }
 
 ///Counter
@@ -186,4 +208,12 @@ bool GLSupport::Enable(GLSupport::GLType tp,float v){
         }
     }
     return false;
+}
+
+void Util::SetLogger(alib::ng::Logger & lg){
+    logger = new alib::ng::LogFactory("MyEngine",lg);
+}
+
+void Util::ToggleConsoleOutput(bool v){
+    out2console = v;
 }

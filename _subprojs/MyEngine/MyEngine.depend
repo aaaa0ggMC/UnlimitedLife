@@ -1044,12 +1044,15 @@
 	<unordered_map>
 	<ft2build.h>
 
-1717303919 e:\unlimitedlife\_depend\headers\com\utility.h
+1719665612 e:\unlimitedlife\_depend\headers\com\utility.h
 	<string>
 	<unordered_set>
 	<com/macros.h>
+	<memory>
+	<optional>
 	"util/GPUInfo.h"
 	"util/glsupport.h"
+	<alib/alogger.h>
 
 1717304073 e:\unlimitedlife\_depend\headers\com\macros.h
 
@@ -1087,13 +1090,13 @@
 	<com/camera.h>
 	<com/window.h>
 
-1717303750 e:\unlimitedlife\_depend\headers\com\camera.h
+1719670273 e:\unlimitedlife\_depend\headers\com\camera.h
 	"gobject.h"
 	<vector>
 	"macros.h"
 	"utility.h"
 
-1717851011 e:\unlimitedlife\_depend\headers\com\window.h
+1719669254 e:\unlimitedlife\_depend\headers\com\window.h
 	<com/utility.h>
 	<GL/glew.h>
 	<GLFW/glfw3.h>
@@ -1102,6 +1105,7 @@
 	<glm/gtc/matrix_transform.hpp>
 	<glm/gtc/quaternion.hpp>
 	<thread>
+	<unordered_map>
 	<com/camera.h>
 	<com/model.h>
 	<com/gobject.h>
@@ -1156,13 +1160,14 @@
 1717304288 source:e:\unlimitedlife\_subprojs\myengine\vbo.cpp
 	<com/vbo.h>
 
-1717850893 source:e:\unlimitedlife\_subprojs\myengine\utility.cpp
-	<com/utility.h>
+1719667690 source:e:\unlimitedlife\_subprojs\myengine\utility.cpp
+	<GL/glew.h>
 	<iostream>
 	<sys/stat.h>
 	<GLFW/glfw3.h>
+	<com/utility.h>
 
-1717304370 source:e:\unlimitedlife\_subprojs\myengine\window.cpp
+1719667999 source:e:\unlimitedlife\_subprojs\myengine\window.cpp
 	<com/window.h>
 	<GLFW/glfw3native.h>
 	<com/texture.h>
@@ -1170,7 +1175,7 @@
 1717467566 source:e:\unlimitedlife\_subprojs\myengine\audio.cpp
 	<com/audio.h>
 
-1717857271 e:\unlimitedlife\_depend\headers\com\audio.h
+1719665755 e:\unlimitedlife\_depend\headers\com\audio.h
 	<string>
 	<vector>
 	<com/utility.h>
@@ -2658,4 +2663,17 @@
 	<string>
 	<vector>
 	<fstream>
+
+1717673908 e:\unlimitedlife\_depend\headers\alib\alogger.h
+	<memory>
+	<string>
+	<windows.h>
+	<fstream>
+	<alib/aclock.h>
+	<alib/autil.h>
+	<glm/glm.hpp>
+	<glm/ext/quaternion_common.hpp>
+
+1717851027 e:\unlimitedlife\_depend\headers\alib\aclock.h
+	<windows.h>
 

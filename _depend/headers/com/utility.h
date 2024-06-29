@@ -3,18 +3,24 @@
 #include <string>
 #include <unordered_set>
 #include <com/macros.h>
+#include <memory>
+#include <optional>
 
 #include "util/GPUInfo.h"
 #include "util/glsupport.h"
 
+#include <alib/alogger.h>
+
 namespace me{
     using namespace std;
+    struct AUtilImpl;
     class Util{
     public:
         ///created for InvokeConsole
         static unordered_set<string> sessions;
-        static bool initedGlew;
-        static bool initedGLFW;
+        static AUtilImpl* impl;
+        static std::optional<alib::ng::LogFactory*> logger;
+        static bool out2console;
 
         //Get OpenGL errors,appender is a string used to append the errors,sig is the prefix of the line
         //Returns whether there exists opengl errors
@@ -35,9 +41,13 @@ namespace me{
         static bool GetProgramLog(GLuint prog,string&appender);
         //print the program's log if exists
         static void PrintProgramLog(GLuint prog);
-        //register terminal function,used to free glfw resources
-        static void RegisterTerminal();
+        //init
+        static void Init();
         static void OnTerminal();
+
+        static void ToggleConsoleOutput(bool out = true);
+        static void SetLogger(alib::ng::Logger & logger);
+
         //invoke an error to the console,requires define DEBUG macros!
         static void InvokeConsole(const char * s,bool onlyOnce = false,const char * sessionId = NULL,long = 0);
 
