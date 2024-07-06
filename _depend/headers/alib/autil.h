@@ -196,7 +196,7 @@ public:
      * \param data
      * \return unescaped string
      */
-    static std::string str_unescapeString(dstring in);
+    static std::string str_unescape(dstring in);
     //有返回值和没返回值的区别
     static void str_trim_nrt(std::string& str);
     static std::string str_trim_rt(std::string& str);

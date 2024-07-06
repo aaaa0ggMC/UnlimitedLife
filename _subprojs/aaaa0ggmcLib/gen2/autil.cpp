@@ -83,7 +83,7 @@ void Util::io_traverseFiles(dstring path, std::vector<std::string>& files) {
     }
 }
 
-std::string Util::str_unescapeString(dstring in) {
+std::string Util::str_unescape(dstring in) {
     std::string out = "";
     for(size_t i = 0; i < in.length(); i++) {
         if(in[i] == '\\') {

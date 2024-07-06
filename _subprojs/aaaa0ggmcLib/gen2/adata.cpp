@@ -10,6 +10,8 @@
 using namespace alib::ng;
 using namespace std;
 
+const string Analyser::empty_ret = "";
+
 class JSONAnalyser : public Analyser{
 public:
     rapidjson::Document document;
@@ -104,9 +106,8 @@ public:
     int parseString(dstring data) override{
         try{
             tml = toml::parse(data);
-            tml.prune();
         }catch(const toml::parse_error& err){
-            //cout << err << endl;
+            cout << err << endl;
             return ALIB_EHAS_PARSE_ERROR;
         }
         return ALIB_SUCCESS;
@@ -180,8 +181,7 @@ int GDoc::read_parseFileJSON(dstring fp){
 int GDoc::read_parseFileTOML(dstring fp){
     string data = "";
     Util::io_readAll(fp,data);
-    Util::str_trim(data);
-    return read_parseStringTOML(data);
+    return read_parseStringTOML(Util::str_trim<true>(data));
 }
 
 int GDoc::read_parseStringTOML(dstring data){

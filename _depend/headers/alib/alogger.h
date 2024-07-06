@@ -127,7 +127,7 @@ namespace ng{
         void setContentColor(int color);
         int getContentColor();
 
-        LogFactory& operator()(int logType,int content_color = -1);
+        LogFactory& operator()(int logType = LOG_INFO,int content_color = -1);
         LogFactory& operator<<(dstring data);
 
         LogFactory& operator<<(int data);

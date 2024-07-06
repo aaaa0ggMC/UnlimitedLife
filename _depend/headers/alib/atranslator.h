@@ -81,7 +81,7 @@ namespace ng{
         void setVerifyToken(dstring verifyUTF8);
         void setAccessToken(dstring accessUTF8);
 
-        dstring translate_def(dstring id,dstring def,int enc);
+        dstring translate_def(dstring id,dstring def,int enc=ALIB_ENC_UTF8);
         ///返回u8
         std::string translate_args_def(dstring id,dstring def,int enc,...);
 

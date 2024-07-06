@@ -23,7 +23,7 @@ namespace ng{
         virtual ~Analyser();
         Analyser(mapping_tp & mtp);
 
-        constexpr static const string empty_ret = "";
+        const static string empty_ret;
     };
 
     class DLL_EXPORT GDoc{
@@ -58,5 +58,6 @@ namespace ng{
     };
 }
 }
+
 
 #endif // ADATA_H_INCLUDED
