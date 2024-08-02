@@ -6,7 +6,8 @@
 #include <windows.h>
 
 using namespace alib;
-using namespace std;
+using std::string;
+using std::wstring;
 
 std::string ANSIToUTF8(string in){
     //定义输入值并获取其长度

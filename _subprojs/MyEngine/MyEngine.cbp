@@ -42,6 +42,7 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-m64" />
 			<Add option="-DBUILD_ON_WINDOWS" />
 			<Add option="-DGLEW_STATIC" />
 			<Add option="-DME_BUILD_PREFABS" />
@@ -53,6 +54,8 @@
 		<Linker>
 			<Add option="-static-libstdc++" />
 			<Add option="-static-libgcc" />
+			<Add option="-static" />
+			<Add option="-m64" />
 			<Add option="-Wl,--exclude-libs,libsfml-audio-s.a" />
 			<Add option="-Wl,--exclude-libs,libsfml-system-s.a" />
 			<Add option="-Wl,--exclude-libs,libfreetype.a" />

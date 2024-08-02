@@ -54,9 +54,8 @@
 			<Add option="-static-libgcc" />
 			<Add library="user32" />
 			<Add library="winmm" />
-			<Add library="glm_static" />
-			<Add directory="$(#msys2.lib)" />
 			<Add directory="../../_depend/libs" />
+			<Add directory="$(#msys2.lib)" />
 		</Linker>
 		<Unit filename="../../_depend/headers/CClock.h">
 			<Option virtualFolder="gen1/comhds/" />

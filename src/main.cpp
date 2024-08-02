@@ -134,8 +134,6 @@ void paint(Window& w,double currentTime,Camera*c){
 	w.Draw(cube,36);
 	shader.unbind();
 
-
-
 	///fps display
     static char buf[48];
     static unsigned int smfps = 0;

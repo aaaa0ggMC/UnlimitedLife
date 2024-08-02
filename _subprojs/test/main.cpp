@@ -10,10 +10,11 @@
 #include <alib/atranslator.h>
 
 using namespace alib::ng;
-
+/*
 int main(){
 
 }
+*/
 
 /*
 int main(){
