@@ -1,11 +1,22 @@
 vert = [[
-#version 430 core
+#version 430
 
 layout(location = 0) in vec3 pos;
 layout(location = 1) in vec2 cd;
 
+
+
 layout(location=1) uniform mat4 m_matrix;
 layout(location=2) uniform mat4 vrp_matrix;
+layout(location=3) uniform uint basic;
+/*
+layout(std430,binding = 0) buffer TextBuffer{
+    struct{
+        uint size;
+    } infos[];
+};
+*/
+
 
 out vec2 coord;
 out flat int depth;

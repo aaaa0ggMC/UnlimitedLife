@@ -396,3 +396,27 @@ glm::mat3& ShaderArg::UploadMat3(glm::mat3 &v){
     UploadMat3((GLfloat*)glm::value_ptr(v));
     return v;
 }
+
+///ShaderStorageBuffer
+ShaderStorageBuffer::ShaderStorageBuffer(){
+    glCreateBuffers(1,&buffer);
+    allocated = false;
+}
+
+void ShaderStorageBuffer::Allocate(uint32_t sz,void * data){
+    if(allocated)return;
+    allocated = true;
+    glBindBuffer(GL_SHADER_STORAGE_BUFFER,buffer);
+    glBufferData(GL_SHADER_STORAGE_BUFFER,sz,data,GL_DYNAMIC_DRAW);
+    glBindBuffer(GL_SHADER_STORAGE_BUFFER,0);
+}
+
+void ShaderStorageBuffer::Bind(uint32_t id){
+    glBindBuffer(GL_SHADER_STORAGE_BUFFER,buffer);
+    glBindBufferBase(GL_SHADER_STORAGE_BUFFER,id,buffer);
+}
+
+void ShaderStorageBuffer::Upload(uint32_t offset,size_t sz,void * data){
+    glBindBuffer(GL_SHADER_STORAGE_BUFFER,buffer);
+    glBufferSubData(GL_SHADER_STORAGE_BUFFER,offset,sz,data);
+}

@@ -5,5 +5,6 @@
 		<Project filename="_subprojs/aaaa0ggmcLib/aaaa0ggmcLib.cbp" />
 		<Project filename="_subprojs/MyEngine/MyEngine.cbp" />
 		<Project filename="_subprojs/test/test.cbp" />
+		<Project filename="../../../../CC/Cpp/UnlimitedLife/_subprojs/ULServer/ULServer.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

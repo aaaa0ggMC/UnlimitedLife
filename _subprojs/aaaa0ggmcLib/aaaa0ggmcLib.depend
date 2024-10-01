@@ -3573,15 +3573,15 @@
 	<stdint.h>
 	<psapi.h>
 
-1722145250 source:e:\ct\ishall\f\ul\_subprojs\aaaa0ggmclib\gen2\aclock.cpp
+1727065952 source:e:\ct\ishall\f\ul\_subprojs\aaaa0ggmclib\gen2\aclock.cpp
 	<alib/aclock.h>
 
-1722146282 e:\ct\ishall\f\ul\_depend\headers\alib\aclock.h
+1727065942 e:\ct\ishall\f\ul\_depend\headers\alib\aclock.h
 	<windows.h>
 
 1722075094 source:e:\ct\ishall\f\ul\_subprojs\aaaa0ggmclib\gen2\aio.cpp
 
-1722146336 source:e:\ct\ishall\f\ul\_subprojs\aaaa0ggmclib\gen2\alogger.cpp
+1727238679 source:e:\ct\ishall\f\ul\_subprojs\aaaa0ggmclib\gen2\alogger.cpp
 	<windows.h>
 	<time.h>
 	<string.h>
@@ -3592,7 +3592,7 @@
 	<alib/autil.h>
 	<glm/gtc/type_ptr.hpp>
 
-1722083059 e:\ct\ishall\f\ul\_depend\headers\alib\alogger.h
+1727238866 e:\ct\ishall\f\ul\_depend\headers\alib\alogger.h
 	<memory>
 	<string>
 	<windows.h>
@@ -5692,4 +5692,55 @@
 
 1709273652 e:\cc\cpp\unlimitedlife\_depend\headers\glm\gtc\type_ptr.inl
 	<cstring>
+
+1722502448 source:e:\ct\ishall\f\ul\_subprojs\aaaa0ggmclib\gen2\adata.cpp
+	<alib/adata.h>
+	<rapidjson/rapidjson.h>
+	<rapidjson/document.h>
+	<rapidjson/allocators.h>
+	<rapidjson/stringbuffer.h>
+	<rapidjson/writer.h>
+	<toml.hpp>
+	<iostream>
+
+1722075093 e:\ct\ishall\f\ul\_depend\headers\toml.hpp
+	<CodeAnalysis/Warnings.h>
+	<cassert>
+	<new>
+	<string_view>
+	<string>
+	<optional>
+	<cstdint>
+	<cstddef>
+	<cstring>
+	<cfloat>
+	<climits>
+	<cmath>
+	<limits>
+	<memory>
+	<iosfwd>
+	<type_traits>
+	<vector>
+	<iterator>
+	<utility>
+	<initializer_list>
+	<map>
+	<iterator>
+	<stdexcept>
+	<Windows.h>
+	<ostream>
+	<charconv>
+	<sstream>
+	<iomanip>
+	<charconv>
+	<sstream>
+	<charconv>
+	<sstream>
+	<smmintrin.h>
+	<emmintrin.h>
+	<istream>
+	<fstream>
+	<charconv>
+	<sstream>
+	<iomanip>
 

@@ -97,6 +97,7 @@ namespace ng{
 
     struct DLL_EXPORT Trigger{
     public:
+        friend struct RPSRestrict;
         Trigger(Clock& clock,double duration);
         /** \brief test the trigger,does nothing if no clock*/
         bool test(bool resetIfSucceeds = true);
@@ -111,6 +112,21 @@ namespace ng{
     private:
         Clock * m_clock;
         double rec;
+    };
+
+
+    ///Run persecond
+    struct DLL_EXPORT RPSRestrict{
+        Clock clk;
+        float desire;
+        Trigger trig;
+
+        RPSRestrict(float wantRps);
+
+        void wait();
+
+        void reset(float wantRps);
+
     };
 }
 }

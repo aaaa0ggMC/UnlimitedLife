@@ -122,7 +122,6 @@ void Logger::log(int level,dstring msg,dstring head){
     if(mode & LOG_SHOW_ELAP){
         restOut.append("[");
         restOut.append(to_string(clk.getOffset()));
-        clk.clearOffset();
         restOut.append(" ms]");
     }
     if(mode & LOG_SHOW_PROC){
@@ -156,7 +155,7 @@ void Logger::log(int level,dstring msg,dstring head){
         if(neon_color != -1){
             Util::io_printColor(msg,neon_color);
         }else cout << msg;
-        cout << "\n";
+        cout << endl;
     }
 }
 
@@ -191,7 +190,6 @@ std::string Logger::makeMsg(int level,dstring & msg,dstring &head,bool ends){
     if(mode & LOG_SHOW_ELAP){
         rout.append("[");
         rout.append(to_string(clk.getOffset()));
-        clk.clearOffset();
         rout.append("ms]");
     }
     if(mode & LOG_SHOW_PROC){

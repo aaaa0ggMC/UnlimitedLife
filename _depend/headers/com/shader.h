@@ -53,6 +53,40 @@ namespace me{
         GLuint offset;
     };
 
+    class ShaderStorageBuffer{
+    public:
+        ShaderStorageBuffer();
+
+        void Allocate(uint32_t sz,void * data = NULL);
+        void Bind(uint32_t id);
+        void Upload(uint32_t offset,size_t sz,void * data);
+
+        GLuint buffer;
+        bool allocated;
+    };
+
+    template<class T>
+    class ShaderStorageBufferT{
+    public:
+        ShaderStorageBufferT():inner(){}
+
+        void Allocate(uint32_t count,T * data = nullptr){
+            inner.Allocate(tp_size * count,(void*)data);
+        }
+
+        void Bind(uint32_t id){
+            inner.Bind(id);
+        }
+
+        void Upload(uint32_t offset_index,size_t vcount,T * data){
+            inner.Upload(offset_index * tp_size,vcount * tp_size,(void*)data);
+        }
+
+        constexpr static uint32_t tp_size = sizeof(T);
+
+        ShaderStorageBuffer inner;
+    };
+
     class Shader{
     public:
         Shader(bool initProgram = false);

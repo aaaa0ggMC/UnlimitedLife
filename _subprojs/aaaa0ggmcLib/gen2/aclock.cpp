@@ -73,7 +73,7 @@ double Clock::getAllTime(){
 double Clock::getOffset(){
     if(!m_start)return 0;
     double off = now().offset;
-    this->m_PreTime = AssertSt;
+    //this->m_PreTime = AssertSt;
     return off;
 }
 
@@ -119,4 +119,19 @@ void Trigger::reset(){
 
 void Trigger::setDuration(double duration){
     this->duration = duration;
+}
+
+RPSRestrict::RPSRestrict(float wantFps):trig(clk,0){
+    desire = 1000 / wantFps;
+    trig.setDuration(desire);
+}
+
+void RPSRestrict::wait(){
+    if(trig.test())return;
+    Sleep(desire - (clk.getAllTime() - trig.rec));
+}
+
+void RPSRestrict::reset(float wantFps){
+    desire = 1000 / wantFps;
+    trig.setDuration(desire);
 }

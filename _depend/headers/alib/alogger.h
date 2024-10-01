@@ -128,6 +128,8 @@ namespace ng{
         int getContentColor();
 
         LogFactory& operator()(int logType = LOG_INFO,int content_color = -1);
+
+        ///Multithread is not supported below!!!!
         LogFactory& operator<<(dstring data);
 
         LogFactory& operator<<(int data);

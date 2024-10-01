@@ -2,14 +2,43 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="gen2" />
-	<File name="headers\aaa_util.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="headers\Translator.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="8711" topLine="254" />
+			<Cursor1 position="16" topLine="1" />
 		</Cursor>
 	</File>
-	<File name="gen2\astring.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\..\_depend\headers\alib\adata.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="199" topLine="0" />
+			<Cursor1 position="727" topLine="14" />
+		</Cursor>
+	</File>
+	<File name="gen2\autil.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="290" topLine="3" />
+		</Cursor>
+		<Folding>
+			<Collapse line="22" />
+			<Collapse line="38" />
+			<Collapse line="137" />
+			<Collapse line="145" />
+			<Collapse line="206" />
+			<Collapse line="219" />
+			<Collapse line="244" />
+		</Folding>
+	</File>
+	<File name="headers\CClock.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="30" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\..\_depend\headers\Translator.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="209" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="..\..\_depend\headers\alib\autil.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="841" topLine="30" />
 		</Cursor>
 	</File>
 	<File name="..\..\_depend\headers\rapidjson.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,14 +46,24 @@
 			<Cursor1 position="780" topLine="26" />
 		</Cursor>
 	</File>
-	<File name="headers\Logger.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\..\_depend\headers\alib\alogger.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3139" topLine="108" />
+			<Cursor1 position="3470" topLine="117" />
 		</Cursor>
 	</File>
-	<File name="..\..\_depend\headers\alib\autil.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="..\..\_depend\headers\MultiEnString.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="841" topLine="30" />
+			<Cursor1 position="81" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\..\_depend\headers\Logger.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="728" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="headers\aaa_util.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8711" topLine="254" />
 		</Cursor>
 	</File>
 	<File name="gen2\atranslator.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -43,88 +82,9 @@
 			<Collapse line="180" />
 		</Folding>
 	</File>
-	<File name="gen2\aclock.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="136" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="..\..\_depend\headers\alib\atranslator.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1998" topLine="62" />
-		</Cursor>
-	</File>
-	<File name="gen2\adata.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4637" topLine="148" />
-		</Cursor>
-	</File>
-	<File name="gen2\alogger.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="609" topLine="11" />
-		</Cursor>
-	</File>
-	<File name="headers\rapidjson.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="18" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="..\..\_depend\headers\alib\aclock.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="597" topLine="20" />
-		</Cursor>
-	</File>
-	<File name="headers\Translator.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="16" topLine="1" />
-		</Cursor>
-	</File>
-	<File name="headers\CClock.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="30" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="..\..\_depend\headers\Translator.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="209" topLine="1" />
-		</Cursor>
-	</File>
-	<File name="..\..\_depend\headers\alib\alogger.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="203" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="gen2\autil.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="290" topLine="3" />
-		</Cursor>
-		<Folding>
-			<Collapse line="22" />
-			<Collapse line="38" />
-			<Collapse line="137" />
-			<Collapse line="145" />
-			<Collapse line="206" />
-			<Collapse line="219" />
-			<Collapse line="244" />
-		</Folding>
-	</File>
 	<File name="..\..\_depend\headers\aaa_util.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="773" topLine="27" />
-		</Cursor>
-	</File>
-	<File name="..\..\_depend\headers\MultiEnString.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="81" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="..\..\_depend\headers\alib\adata.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="727" topLine="14" />
-		</Cursor>
-	</File>
-	<File name="..\..\_depend\headers\Logger.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="728" topLine="6" />
 		</Cursor>
 	</File>
 	<File name="headers\MultiEnString.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -132,9 +92,49 @@
 			<Cursor1 position="190" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="gen2\alogger.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4735" topLine="145" />
+		</Cursor>
+	</File>
+	<File name="gen2\adata.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4637" topLine="148" />
+		</Cursor>
+	</File>
 	<File name="..\..\_depend\headers\alib\astring.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="179" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="headers\rapidjson.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="18" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="gen2\astring.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="199" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="gen2\aclock.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1710" topLine="65" />
+		</Cursor>
+	</File>
+	<File name="..\..\_depend\headers\alib\aclock.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2498" topLine="97" />
+		</Cursor>
+	</File>
+	<File name="..\..\_depend\headers\alib\atranslator.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1998" topLine="62" />
+		</Cursor>
+	</File>
+	<File name="headers\Logger.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3139" topLine="108" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
